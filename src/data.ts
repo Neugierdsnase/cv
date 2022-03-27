@@ -1,4 +1,4 @@
-import type { value CvItemType } from './types/CvItemType'
+import { type CvItemType } from './types/CvItemType'
 
 const cvItems: CvItemType[] = [
   {

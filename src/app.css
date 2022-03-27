@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-richBlack text-cultured;
+  }
+}
+
+@layer components {
+  .h-screen\/2 {
+    height: 50vh;
+  }
+}

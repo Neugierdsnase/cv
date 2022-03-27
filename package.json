@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "watch:tailwind": "npx tailwind -i src/app.css -o public/build/bundle.css --watch",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "concurrently \"rollup -c -w\" \"npm run watch:tailwind\"",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },

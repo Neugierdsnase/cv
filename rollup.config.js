@@ -50,9 +50,8 @@ export default {
         dev: !production,
       },
     }),
-    // we'll extract any component CSS out into
-    // a separate file - better for performance
-    css({ output: 'bundle.css' }),
+    // only used so tailwind directives don't trow errors during compile time
+    css(),
 
     // If you have external dependencies installed from
     // npm, you'll most likely need these plugins. In
