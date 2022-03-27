@@ -3,12 +3,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'richBlack': '#0e1116',
-        'cultured': '#f4f4f6',
-        'babyBlue': {
-          'bright': '#61bbe5',
-          'medium': '#84caeb',
-          'dark': '#b9e1f4',
+        black: { rich: '#0e1116', dark: '#28303e' },
+        cultured: '#f4f4f6',
+        babyBlue: {
+          400: '#19749F',
+          300: '#61bbe5',
+          200: '#84caeb',
+          100: '#b9e1f4',
+        },
+      },
+      keyframes: {
+        gradientAnimation: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },

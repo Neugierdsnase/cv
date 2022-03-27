@@ -1,5 +1,6 @@
 {
-  "name": "svelte-app",
+  "name": "konstantin-kovar-cv",
+  "author": "Konstantin Kovar <mail@vomkonstant.in>",
   "version": "1.0.0",
   "private": true,
   "scripts": {

@@ -4,12 +4,17 @@
 
 @layer base {
   body {
-    @apply bg-richBlack text-cultured;
+    @apply w-screen overflow-x-hidden bg-black-rich text-cultured;
+    max-width: 100vw;
   }
 }
 
 @layer components {
   .h-screen\/2 {
     height: 50vh;
+  }
+
+  .text-cover {
+    font-size: clamp(2.8rem, 9vw, 7rem);
   }
 }

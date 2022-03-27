@@ -1,19 +1,13 @@
 <script lang="ts">
-	import CvItem from './components/CvItem.svelte';
 	import { CvItemType } from './types/CvItemType';
   import "./app.css";
+	import Header from './components/Header.svelte';
+	import Main from './components/Main.svelte';
 
 	export let cvItems: CvItemType[];
 </script>
 
-<header class="h-screen/2 bg-gradient-to-b from-babyBlue-bright to-richBlack">
-	<h1>Lebenslauf Konstantin Kovar</h1>
-</header>
-
-<main>
-	{#each cvItems as cvItem}
-	<CvItem cvItem={cvItem} />
-	{/each}
-</main>
+<Header />
+<Main cvItems={cvItems} />
 
 

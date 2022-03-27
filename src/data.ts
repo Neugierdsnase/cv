@@ -11,7 +11,7 @@ const cvItems: CvItemType[] = [
   },
   {
     heading: 'der brutkasten',
-    tag: 'WordPress & Frontend Developer',
+    tagLine: 'WordPress & Frontend Developer',
     time: '1.4.2018 - 30.11.2018',
     list: [
       'WordPress Theme-Programmierung mit altem Legacy Code',
@@ -21,7 +21,7 @@ const cvItems: CvItemType[] = [
   },
   {
     heading: 'Projektarbeiten',
-    tag: '',
+    tagLine: '',
     time: '2008 - 2018',
     list: [
       'Logo- und Corporatedesign für <a href="https://sgreening.io/">sgreening</a>',
@@ -35,7 +35,7 @@ const cvItems: CvItemType[] = [
   },
   {
     heading: 'Bezirksämter 16 & 17 <span></span>',
-    tag: 'Verwaltungstrafen und Gewerberecht',
+    tagLine: 'Verwaltungstrafen und Gewerberecht',
     time: 'seit 1.5.2015',
     list: [
       'gewissenhaftes juristisches Arbeiten',
@@ -45,7 +45,7 @@ const cvItems: CvItemType[] = [
   },
   {
     heading: 'Magistratsabteilung 35',
-    tag: 'Einwanderungsverfahren',
+    tagLine: 'Einwanderungsverfahren',
     time: '22.12.2012 – 30.04.2015',
     list: [
       'brisante politische und rechtliche Materie',
