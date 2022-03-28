@@ -1,7 +1,12 @@
 <script lang="ts">
-  export let text;
+  import clsx from 'clsx'
+import { ListItemType } from '../../types/CvItemType';
+
+  export let listItem: ListItemType;
+  export let index: number;
+  export let show: boolean;
 </script>
 
-<li class="border-t-2 border-cultured py-2">
-  <p class="text-sm">{@html text}</p>
+<li class={clsx(`flex items-center border-t-0 border-babyBlue-300 px-2 custom-delay-${index} overflow-hidden h-0 transition-all`, show && 'border-t-2 h-12')}>
+  <p class="text-sm">{@html listItem.label}</p>
 </li>

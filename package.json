@@ -8,13 +8,14 @@
     "build": "rollup -c",
     "dev": "concurrently \"rollup -c -w\" \"npm run watch:tailwind\"",
     "start": "sirv public --no-clear",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-check --tsconfig tsconfig.json"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "autoprefixer": "^10.4.4",
+    "phosphor-svelte": "^1.1.2",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",
     "prettier-plugin-tailwindcss": "^0.1.8",
@@ -31,6 +32,7 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "clsx": "^1.1.1",
     "sirv-cli": "^2.0.0"
   }
 }

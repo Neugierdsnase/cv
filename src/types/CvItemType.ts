@@ -1,15 +1,28 @@
-type Tags =
+type Tag =
   | 'frontend'
   | 'backend'
   | 'devops/sre'
   | 'tech health/monitoring'
+  | 'consulting'
   | 'other'
-  | 'non-technical'
+  | 'non&#8209;tech' // non-breaking hyphen
+
+type Level =
+  | 'expert'
+  | 'well-versed'
+  | 'familiar'
+  | 'used before'
+  | 'heard of it'
+
+export type ListItemType = {
+  label: string
+  tags?: Tag[]
+}
 
 export type CvItemType = {
   heading: string
   time: string
   tagLine?: string
-  list: string[]
-  tags?: Tags[]
+  list: ListItemType[]
+  tags?: Tag[]
 }
