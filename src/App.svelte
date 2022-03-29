@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { CvItemType } from './types/CvItemType';
+	import { CvItemsType } from './types';
   import "./app.css";
 	import Hero from './components/Hero.svelte';
 	import Main from './components/Main.svelte';
 
-	export let cvJobItems: CvItemType[];
+	export let cvJobItems: CvItemsType;
+	export let cvEduItems: CvItemsType;
 </script>
 
 <Hero />
-<Main cvItems={cvJobItems} />
+<Main cvJobItems={cvJobItems} cvEduItems={cvEduItems} />

@@ -28,6 +28,6 @@ export type CvItemType = {
 }
 
 export type CvItemsType = {
-  heading: string,
+  heading: string
   items: CvItemType[]
 }

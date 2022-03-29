@@ -1,7 +1,6 @@
 <script lang="ts">
   import clsx from 'clsx'
-import { ListItemType } from '../../types/CvItemType';
-
+  import { ListItemType } from '../../types';
   export let listItem: ListItemType;
   export let index: number;
   export let show: boolean;

@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { CvItemType } from '../../types/CvItemType';
-  import {CaretDown} from 'phosphor-svelte'
+  import { CvItemType } from '../../types';
   import clsx from 'clsx'
 
 	import ListItem from './ListItem.svelte';
   import CvItemTag from './CvItemTag.svelte';
+import { CaretDown } from 'phosphor-svelte';
   export let cvItem: CvItemType;
 
   let {heading, time, tagLine, list, tags} = cvItem;

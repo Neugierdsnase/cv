@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { type CvItemsType } from "../../types/CvItemType"
-  import CvItem from './CvItems/CvItem.svelte'
+  import { type CvItemsType } from "../../types"
+  import CvItem from "./CvItem.svelte";
 
   export let cvItems: CvItemsType
 </script>

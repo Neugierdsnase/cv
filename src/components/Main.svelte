@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { CvItemsType } from '../types/CvItemType'
+  import { CvItemsType } from '../types'
   import CvItems from './CvItems/CvItems.svelte'
 
   export let cvJobItems: CvItemsType
