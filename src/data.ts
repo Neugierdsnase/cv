@@ -1,4 +1,4 @@
-import { type CvItemsType } from './types'
+import { type SkillGroup, type CvItemsType, UnstructuredSection } from './types'
 
 const cvJobItems: CvItemsType = {
   heading: 'Berufserfahrung',
@@ -149,7 +149,108 @@ const cvEduItems: CvItemsType = {
   ],
 }
 
+const skills: SkillGroup[] = [
+  {
+    heading: 'Markup',
+    items: [
+      { label: "HTML", level: 3 },
+      { label: "XML", level: 3 },
+      { label: "JSX/TSX", level: 3 },
+      { label: "Markdown", level: 3 },
+      { label: "Pug", level: 3 },
+      { label: "Jinja2", level: 3 },
+      { label: "Handlebars", level: 3 },
+    ]
+  }, {
+    heading: 'Styles',
+    items: [
+      { label: "CSS", level: 3 },
+      { label: "Sass & SCSS", level: 3 },
+      { label: "styled-components & emotionJS)", level: 3 },
+      { label: "Tailwind CSS", level: 3 },
+      { label: "Material UI", level: 3 },
+      { label: "Bootstrap", level: 3 },
+    ]
+  },
+  {
+    heading: 'JavaScript',
+    items: [
+      { label: "Frontend VanillaJS", level: 3 },
+      { label: "jQuery", level: 3 },
+      { label: "ReactJS", level: 3 },
+      { label: "NodeJS", level: 3 },
+      { label: "ExpressJS", level: 3 },
+      { label: "NextJS", level: 3 },
+      { label: "NestJS", level: 3 },
+      { label: "Svelte", level: 3 },
+      { label: "D3.js", level: 3 },
+      { label: "socketIO", level: 3 },
+    ]
+  }, {
+    heading: 'Other Things (kind of) I know', items: [
+      { label: "Python", level: 3 },
+      { label: "Flask, SQAlchemy + Ecosystem", level: 3 },
+      { label: "Kotlin", level: 3 },
+      { label: "PHP für WordPress", level: 3 },
+      { label: "Rust", level: 3 },
+      { label: "GraphQL", level: 3 },
+      { label: "REST", level: 3 },
+      { label: "Heroku", level: 3 },
+      { label: "Docker", level: 3 },
+      { label: "SQL", level: 3 },
+      { label: "Jira", level: 3 },
+      { label: "Gitlab", level: 3 },
+      { label: "BitBucket", level: 3 },
+      { label: "CypressJS", level: 3 },
+      { label: "SonarQube", level: 3 },
+      { label: "Grafana", level: 3 },
+      { label: "Prometheus", level: 3 },
+      { label: "Sentry", level: 3 },
+      { label: "Lighthouse", level: 3 },
+      { label: "Storybook", level: 3 },
+      { label: "Agile Workflow", level: 3 },
+      { label: "Scrum", level: 3 },
+      { label: "Object-oriented programming", level: 3 },
+      { label: "Test-driven development", level: 3 },
+      { label: "Confluence", level: 3 },
+      { label: "UserZoom", level: 3 },
+    ]
+  }, {
+    heading: 'persönliche Roadmap',
+    items: [
+      { label: "Webassembly mit Rust", level: 3 },
+      { label: "Web3", level: 3 },
+    ]
+  }, {
+    heading: 'Sprachen',
+    items: [
+      { label: "Deutsch <i>(Muttersprache)</i>" },
+      { label: "Englisch <i>(muttersprachliches Niveau)</i>" },
+      { label: "Latein <i>(sehr hilfreich)</i>" },
+      { label: "Altgriechisch <i>(noch viel hilfreicher)</i>" },
+      { label: "Russisch <i>(A2)</i>" },
+    ]
+  }, {
+    heading: 'schon wieder verlernte Skills',
+    items: [
+      { label: "Adobe After Effects" },
+      { label: "Adobe Illustrator" },
+      { label: "Adobe InDesign" },
+      { label: "Adobe Photoshop" },
+      { label: "Blender 3D" },
+      { label: "Godot" },
+    ]
+  }
+]
+
+const misc: UnstructuredSection = {
+  heading: 'Hobbies & Misc',
+  text: '(relativ) früher Bitcoininvestor; bei den Vienna Vikings (American Football) gespielt; 40 kg in 7  Monaten abgenommen; Landesmeister in Karate (U14); Videospiele; Crossfit; K-Pop; digitaler Minimalist; mal mehr mal weniger vegan unterwegs;',
+}
+
 export default {
   cvJobItems,
   cvEduItems,
+  skills,
+  misc,
 }

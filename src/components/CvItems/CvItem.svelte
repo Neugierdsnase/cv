@@ -11,7 +11,7 @@
   let listOpen = false
 </script>
 
-<article class="border-t-4 border-babyBlue-300 px-4 pb-8 lg:pt-8">
+<article class="border-t-4 border-babyBlue-300 px-4 pb-8 lg:w-2/3 lg:pt-8">
   <div class="flex flex-col lg:flex-row">
     {#if tags}
       <ul
@@ -25,41 +25,43 @@
     {/if}
 
     <div class="relative flex w-full flex-col">
-      <h2 class="text-cover w-2/3 font-display font-bold">
+      <h3 class="text-cover w-2/3 font-display font-bold">
         {@html heading}
-      </h2>
+      </h3>
       <p
         class="font-cover font-2xl absolute top-4 right-4 w-1/4 rotate-90 text-right font-bold opacity-60 print:relative print:rotate-0 md:rotate-0"
       >
         {time}
       </p>
       {#if Boolean(tagLine)}
-        <subtitle class="font-cover">
+        <subtitle class="font-cover  w-2/3">
           {@html tagLine}
         </subtitle>
       {/if}
     </div>
   </div>
 
-  <div
-    on:click={() => {
-      listOpen = !listOpen
-    }}
-    class={`${clsx(
-      'w-fit',
-      'transition-transform',
-      'fill-babyBlue-300',
-      'ml-auto',
-      'cursor-pointer',
-      'print:hidden',
-      listOpen && 'rotate-180',
-    )}`}
-  >
-    <CaretDown size="36px" color="inherit" />
-  </div>
-  <ul class="mt-8 bg-cultured bg-opacity-10">
-    {#each list as listItem, index}
-      <ListItem {index} {listItem} show={listOpen} />
-    {/each}
-  </ul>
+  {#if list && list.length}
+    <div
+      on:click={() => {
+        listOpen = !listOpen
+      }}
+      class={`${clsx(
+        'w-fit',
+        'transition-transform',
+        'fill-babyBlue-300',
+        'ml-auto',
+        'cursor-pointer',
+        'print:hidden',
+        listOpen && 'rotate-180',
+      )}`}
+    >
+      <CaretDown size="36px" color="inherit" />
+    </div>
+    <ul class="mt-8 bg-cultured bg-opacity-10">
+      {#each list as listItem, index}
+        <ListItem {index} {listItem} show={listOpen} />
+      {/each}
+    </ul>
+  {/if}
 </article>

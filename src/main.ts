@@ -3,9 +3,7 @@ import data from './data'
 
 const app = new App({
   target: document.body,
-  props: {
-    ...data,
-  },
+  props: { data },
 })
 
 export default app

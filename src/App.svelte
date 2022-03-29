@@ -1,12 +1,16 @@
 <script lang="ts">
-  import { CvItemsType } from './types'
+  import { CvItemsType, SkillGroup, UnstructuredSection } from './types'
   import './app.css'
   import Hero from './components/Hero.svelte'
   import Main from './components/Main.svelte'
 
-  export let cvJobItems: CvItemsType
-  export let cvEduItems: CvItemsType
+  export let data: {
+    cvJobItems: CvItemsType
+    cvEduItems: CvItemsType
+    skills: SkillGroup
+    misc: UnstructuredSection
+  }
 </script>
 
 <Hero />
-<Main {cvJobItems} {cvEduItems} />
+<Main {...data} />
