@@ -4,10 +4,8 @@
 	import Hero from './components/Hero.svelte';
 	import Main from './components/Main.svelte';
 
-	export let cvItems: CvItemType[];
+	export let cvJobItems: CvItemType[];
 </script>
 
 <Hero />
-<Main cvItems={cvItems} />
-
-
+<Main cvItems={cvJobItems} />

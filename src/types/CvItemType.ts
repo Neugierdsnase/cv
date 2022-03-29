@@ -23,6 +23,11 @@ export type CvItemType = {
   heading: string
   time: string
   tagLine?: string
-  list: ListItemType[]
+  list?: ListItemType[]
   tags?: Tag[]
+}
+
+export type CvItemsType = {
+  heading: string,
+  items: CvItemType[]
 }

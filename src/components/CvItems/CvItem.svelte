@@ -15,7 +15,8 @@
   <div class="flex flex-col lg:flex-row">
 
     {#if tags}
-      <ul class="flex flex-row lg:flex-col print:none lg:border-r-4 border-babyBlue-300 lg:mr-8">
+      <ul class="flex flex-row lg:flex-col print:none h-10 lg:h-auto items-stretch lg:border-r-4 border-babyBlue-300 lg:mr-8">
+        <li class="lg:hidden print:hidden w-24 mr-2 stripes"></li>
         {#each tags as tag}
           <CvItemTag {tag} />
         {/each}
