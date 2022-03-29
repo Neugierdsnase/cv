@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "watch:tailwind": "npx tailwind -i src/app.css -o public/build/bundle.css --watch",
-    "build": "rollup -c",
+    "format": "npx prettier --write .",
+    "build": "npm run format && rollup -c",
     "dev": "concurrently \"rollup -c -w\" \"npm run watch:tailwind\"",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig tsconfig.json"

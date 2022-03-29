@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let tag: string;
+  export let tag: string
   // TODO: onclick: filter by tag
 </script>
 
-<li class="bg-babyBlue-300 py-1 px-4 mr-2 lg:mb-4">
-  <span class="text-black-rich text-xs font-bold">
+<li class="mr-2 bg-babyBlue-300 py-1 px-4 lg:mb-4">
+  <span class="text-xs font-bold text-black-rich">
     {@html tag}
   </span>
 </li>
