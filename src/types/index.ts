@@ -8,7 +8,7 @@ export type Tag =
   | 'non&#8209;tech' // non-breaking hyphen
 
 enum Level {
-  'heard of it',
+  'been confronted',
   'used before',
   'familiar',
   'well-versed',
