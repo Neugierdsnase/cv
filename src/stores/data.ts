@@ -1,4 +1,4 @@
-import { writable } from "svelte/store"
+import { writable } from 'svelte/store'
 import data from '../data'
 
 export const cvJobItems = writable(data.cvJobItems)

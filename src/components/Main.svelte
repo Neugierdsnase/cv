@@ -1,7 +1,12 @@
 <script lang="ts">
   import Skills from './Skills/Skills.svelte'
   import CvItems from './CvItems/CvItems.svelte'
-  import { cvEduItems, cvJobItems, misc, skills } from '../stores/data'
+  import {
+    cvEduItems,
+    cvJobItems,
+    misc,
+    skills,
+  } from '../stores/data'
 </script>
 
 <main class="my-8 px-4">

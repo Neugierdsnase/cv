@@ -18,6 +18,7 @@ export enum Level {
 export type UnstructuredSection = {
   label: string
   text: string
+  tags?: Tag[]
 }
 
 export type ListItemType = {
@@ -34,10 +35,7 @@ export type CvItemType = {
   level?: Level
 }
 
-export interface ICvSection {
+export type CvSectionType = {
   heading: string
   items: CvItemType[]
-  filterItems: (filterList: Tag[]) => void
-  hide: (tagToHide: Tag) => void
-  showOnly: (tagToShow: Tag) => void
 }

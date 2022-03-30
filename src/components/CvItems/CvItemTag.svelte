@@ -1,30 +1,45 @@
 <script lang="ts">
   import clsx from 'clsx'
-  import {
-    cvEduItems,
-    cvJobItems,
-    skills,
-  } from '../../stores/data'
+  import { cvEduItems, cvJobItems } from '../../stores/data'
   import { activeFilters } from '../../stores/filters'
-  import { Tag } from '../../types'
+  import { CvItemType, Tag } from '../../types'
   import _ from 'lodash'
+  import data from '../../data'
 
   export let tag: Tag
   $: isActive = Boolean(
     $activeFilters.find((f) => f === tag),
   )
 
+  const compareFiltersToItems = (
+    items: CvItemType[],
+    filters: Tag[],
+  ): CvItemType[] => {
+    if (!filters.length) {
+      return items
+    }
+    return items.filter(({ tags }) =>
+      Boolean(_.intersection(tags, filters).length),
+    )
+  }
+
   const filterData = (filters: Tag[]) => {
     cvJobItems.update((s) => {
-      const t = _.cloneDeep(s)
-      t.filterItems(filters)
-      return t
+      s.items = compareFiltersToItems(
+        data.cvJobItems.items,
+        filters,
+      )
+
+      return s
     })
 
     cvEduItems.update((s) => {
-      const t = _.cloneDeep(s)
-      t.filterItems(filters)
-      return t
+      s.items = compareFiltersToItems(
+        data.cvEduItems.items,
+        filters,
+      )
+
+      return s
     })
 
     // skills.update((s) => {

@@ -6,7 +6,9 @@
   export let item: CvItemType
   const { label, level, tags } = item
 
-  $: isActive = Boolean($activeFilters.find((f) => f === label))
+  $: isActive = Boolean(
+    $activeFilters.find((f) => f === label),
+  )
 </script>
 
 <dt>{@html label}</dt>

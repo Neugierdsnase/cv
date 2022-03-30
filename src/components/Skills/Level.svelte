@@ -8,7 +8,10 @@
 
 <template>
   {#if level}
-    <div title={Level[level]} class="flex fill-babyBlue-300">
+    <div
+      title={Level[level]}
+      class="flex fill-babyBlue-300"
+    >
       {#each [1, 2, 3, 4, 5] as n}
         {#if level < n}
           <Star color="inherit" weight="light" />
