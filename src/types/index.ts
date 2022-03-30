@@ -1,4 +1,4 @@
-type Tag =
+export type Tag =
   | 'frontend'
   | 'backend'
   | 'devops/sre'
@@ -17,17 +17,17 @@ enum Level {
 
 type Skill = {
   label: string
-  level?: Level 
+  level?: Level
   tags?: Tag[]
 }
 
 export type UnstructuredSection = {
-  heading: string,
-  text: string,
+  heading: string
+  text: string
 }
 
 export type SkillGroup = {
-  heading: string 
+  heading: string
   items: Skill[]
 }
 

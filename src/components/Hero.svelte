@@ -5,7 +5,9 @@
   <div
     class="flex h-full items-center bg-gradient-to-b from-transparent via-babyBlue-300 to-black-rich pl-8"
   >
-    <h1 class="text-richBlack text-hero font-display font-bold text-black-rich">
+    <h1
+      class="text-richBlack text-hero font-display font-bold text-black-rich"
+    >
       {@html `Lebenslauf Konstantin Kovar`}
     </h1>
   </div>
