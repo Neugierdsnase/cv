@@ -18,17 +18,21 @@ export class CvSection implements ICvSection {
   }
 
   filterItems = (filterList: Tag[]) => {
-    this.items = [...this.unfilteredItems].filter(
-      ({ tags }) =>
+    if (!filterList || !filterList.length) {
+      this.items = this.unfilteredItems
+    } else {
+      this.items = [...this.unfilteredItems].filter(
+        ({ tags }) =>
         // returns boolean[] whether or not a filter has been found
-        (filterList.map((filter) =>
+        Boolean((filterList.map((filter) =>
           Boolean(tags.find((value) => filter === value)),
-        // checks if at least one filter was found
-        ).filter(Boolean).length),
-    )
+          // checks if at least one filter was found
+        )).filter(Boolean).length),
+      )
+    }
   }
 
-  hide = (tagToHide: Tag) => {}
+  hide = (tagToHide: Tag) => { }
 
   showOnly: (tagToShow: Tag) => {}
 }

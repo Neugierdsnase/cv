@@ -5,6 +5,7 @@
   import ListItem from './ListItem.svelte'
   import CvItemTag from './CvItemTag.svelte'
   import { CaretDown } from 'phosphor-svelte'
+
   export let cvItem: CvItemType
 
   let { label, time, tagLine, list, tags } = cvItem
