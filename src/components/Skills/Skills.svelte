@@ -1,15 +1,19 @@
 <script lang="ts">
-  import { SkillGroup } from '../../types'
+  import { CvSection } from '../../data'
 
-  export let skills: SkillGroup
-  const { heading, items } = skills
+  export let skills: CvSection[]
+  const { heading, items } = skills[0]
 </script>
 
-<section>
-  <h2>{heading}</h2>
-  <ul>
-    {#each items as { label, level, tags }}
-      <li>{label}</li>
-    {/each}
-  </ul>
-</section>
+<template>
+  {#if items && items.length}
+    <section>
+      <h2>{heading}</h2>
+      <ul>
+        {#each items as { label, level, tags }}
+          <li>{label}</li>
+        {/each}
+      </ul>
+    </section>
+  {/if}
+</template>

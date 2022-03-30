@@ -15,20 +15,9 @@ enum Level {
   'expert',
 }
 
-type Skill = {
-  label: string
-  level?: Level
-  tags?: Tag[]
-}
-
 export type UnstructuredSection = {
-  heading: string
+  label: string
   text: string
-}
-
-export type SkillGroup = {
-  heading: string
-  items: Skill[]
 }
 
 export type ListItemType = {
@@ -37,14 +26,18 @@ export type ListItemType = {
 }
 
 export type CvItemType = {
-  heading: string
-  time: string
+  label: string
+  time?: string
   tagLine?: string
   list?: ListItemType[]
   tags?: Tag[]
+  level?: Level
 }
 
-export type CvItemsType = {
+export interface ICvSection {
   heading: string
   items: CvItemType[]
+  filterItems: (filterList: Tag[]) => void
+  hide: (tagToHide: Tag) => void
+  showOnly: (tagToShow: Tag) => void
 }
