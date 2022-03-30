@@ -12,7 +12,9 @@
   let listOpen = false
 </script>
 
-<article class="border-t-4 border-babyBlue-300 px-4 pb-8 lg:w-2/3 lg:pt-8">
+<article
+  class="border-t-4 border-babyBlue-300 px-4 pb-8 lg:mx-auto lg:w-2/3 lg:pt-8"
+>
   <div class="flex flex-col lg:flex-row">
     {#if tags}
       <ul

@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import {
   CvItemType,
   ICvSection,
@@ -22,12 +23,7 @@ export class CvSection implements ICvSection {
       this.items = this.unfilteredItems
     } else {
       this.items = [...this.unfilteredItems].filter(
-        ({ tags }) =>
-        // returns boolean[] whether or not a filter has been found
-        Boolean((filterList.map((filter) =>
-          Boolean(tags.find((value) => filter === value)),
-          // checks if at least one filter was found
-        )).filter(Boolean).length),
+        ({ tags }) => Boolean(_.intersection(tags, filterList).length)
       )
     }
   }
@@ -222,7 +218,7 @@ const skills: CvSection[] = [
     { label: 'socketIO', level: 2, tags: ['backend'] },
     { label: 'ThreeJS', level: 1, tags: ['frontend'] },
   ]),
-  new CvSection('Other Things (kind of) I know', [
+  new CvSection('Weiter Skills', [
     { label: 'Python', level: 3, tags: ['backend'] },
     { label: 'Flask, SQAlchemy + Ecosystem', level: 2, tags: ['backend'] },
     { label: 'Kotlin', level: 2, tags: ['backend'] },
@@ -250,8 +246,11 @@ const skills: CvSection[] = [
     { label: 'Confluence', level: 3, tags: ['other'] },
   ]),
   new CvSection('persönliche Roadmap', [
-    { label: 'Webassembly mit Rust', tags: ['frontend'] },
+    { label: 'Rust', tags: ['backend'] },
+    { label: 'Rust for WebAssembly', tags: ['frontend'] },
     { label: 'Web3', tags: ['frontend'] },
+    { label: 'yew', tags: ['frontend'] },
+    { label: 'Russisch', tags: ['non&#8209;tech'] },
   ]),
   new CvSection('Sprachen', [
     { label: 'Deutsch <i>(Muttersprache)</i>', tags: ['non&#8209;tech'] },

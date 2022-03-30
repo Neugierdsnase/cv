@@ -1,19 +1,14 @@
 <script lang="ts">
   import { CvSection } from '../../data'
+  import Skill from './Skill.svelte'
 
   export let skills: CvSection[]
-  const { heading, items } = skills[0]
 </script>
 
-<template>
-  {#if items && items.length}
-    <section>
-      <h2>{heading}</h2>
-      <ul>
-        {#each items as { label, level, tags }}
-          <li>{label}</li>
-        {/each}
-      </ul>
-    </section>
+<div class="mx-auto flex flex-wrap gap-4 lg:w-2/3">
+  {#if skills && skills.length}
+    {#each skills as skill}
+      <Skill {skill} />
+    {/each}
   {/if}
-</template>
+</div>
