@@ -1,6 +1,10 @@
 <script lang="ts">
   import clsx from 'clsx'
-  import { cvEduItems, cvJobItems } from '../../stores/data'
+  import {
+    cvEduItems,
+    cvJobItems,
+    skills,
+  } from '../../stores/data'
   import { activeFilters } from '../../stores/filters'
   import { CvItemType, Tag } from '../../types'
   import _ from 'lodash'
@@ -18,35 +22,36 @@
     if (!filters.length) {
       return items
     }
-    return items.filter(({ tags }) =>
-      Boolean(_.intersection(tags, filters).length),
-    )
+    const newItems = items.filter(({ tags }) => {
+      const inter = _.intersection(tags, filters)
+      return Boolean(inter.length)
+    })
+    return newItems
   }
 
   const filterData = (filters: Tag[]) => {
-    cvJobItems.update((s) => {
-      s.items = compareFiltersToItems(
+    cvJobItems.set({
+      ...data.cvJobItems,
+      items: compareFiltersToItems(
         data.cvJobItems.items,
         filters,
-      )
-
-      return s
+      ),
     })
 
-    cvEduItems.update((s) => {
-      s.items = compareFiltersToItems(
+    cvEduItems.set({
+      ...data.cvEduItems,
+      items: compareFiltersToItems(
         data.cvEduItems.items,
         filters,
-      )
-
-      return s
+      ),
     })
 
-    // skills.update((s) => {
-    //   s.filterItems(filters)
-
-    //   return s
-    // })
+    skills.set(
+      data.skills.map((skill) => ({
+        ...skill,
+        items: compareFiltersToItems(skill.items, filters),
+      })),
+    )
   }
 
   const toggleFilter = (tag: Tag, isActive: boolean) => {

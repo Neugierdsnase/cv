@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { CvSection } from '../../data'
+  import { CvSectionType } from '../../types'
+
   import CvItem from './CvItem.svelte'
 
-  export let cvItems: CvSection
+  export let cvItems: CvSectionType
   $: heading = cvItems.heading
   $: items = cvItems.items
 </script>
@@ -18,7 +19,7 @@
         {heading}
       </h2>
     </div>
-    {#each items as cvItem}
+    {#each items as cvItem (cvItem)}
       <CvItem {cvItem} />
     {/each}
   {/if}
