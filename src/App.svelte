@@ -6,5 +6,5 @@
 </script>
 
 <Hero />
-<Main />
 <OptionsBar />
+<Main />

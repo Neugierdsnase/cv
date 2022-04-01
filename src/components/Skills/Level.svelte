@@ -13,11 +13,10 @@
       class="flex fill-babyBlue-300"
     >
       {#each [1, 2, 3, 4, 5] as n}
-        {#if level < n}
-          <Star color="inherit" weight="light" />
-        {:else}
-          <Star color="inherit" weight="fill" />
-        {/if}
+        <Star
+          color="inherit"
+          weight={level < n ? 'light' : 'fill'}
+        />
       {/each}
     </div>
   {/if}

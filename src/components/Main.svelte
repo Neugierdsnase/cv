@@ -2,16 +2,15 @@
   import Skills from './Skills/Skills.svelte'
   import CvItems from './CvItems/CvItems.svelte'
   import {
-    cvEduItems,
-    cvJobItems,
-    misc,
-    skills,
+    cvEduItemsState,
+    cvJobItemsState,
+    miscState,
+    skillsState,
   } from '../stores/data'
-  import OptionsBar from './OptionsBar/OptionsBar.svelte'
 </script>
 
 <main class="my-8 px-4">
-  <CvItems cvItems={$cvJobItems} />
-  <CvItems cvItems={$cvEduItems} />
-  <Skills skills={$skills} />
+  <CvItems cvItems={$cvJobItemsState} />
+  <CvItems cvItems={$cvEduItemsState} />
+  <Skills skills={$skillsState} />
 </main>

@@ -2,6 +2,8 @@
   import { TagType } from '../../types'
   import Tag from '../Tag.svelte'
 
+  // export let show = false
+
   const allTags: TagType[] = [
     'frontend',
     'backend',

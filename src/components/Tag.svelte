@@ -1,11 +1,11 @@
 <script lang="ts">
   import clsx from 'clsx'
   import {
-    cvEduItems,
-    cvJobItems,
-    skills,
+    cvEduItemsState,
+    cvJobItemsState,
+    skillsState,
   } from '../stores/data'
-  import { activeFilters } from '../stores/filters'
+  import { activeFiltersState } from '../stores/filters'
   import { CvItemType, TagType } from '../types'
   import _ from 'lodash'
   import data from '../data'
@@ -13,7 +13,7 @@
 
   export let tag: TagType
   $: isActive = Boolean(
-    $activeFilters.find((f) => f === tag),
+    $activeFiltersState.find((f) => f === tag),
   )
 
   const SIZES = {
@@ -36,7 +36,7 @@
   }
 
   const filterData = (filters: TagType[]) => {
-    cvJobItems.set({
+    cvJobItemsState.set({
       ...data.cvJobItems,
       items: compareFiltersToItems(
         data.cvJobItems.items,
@@ -44,7 +44,7 @@
       ),
     })
 
-    cvEduItems.set({
+    cvEduItemsState.set({
       ...data.cvEduItems,
       items: compareFiltersToItems(
         data.cvEduItems.items,
@@ -52,7 +52,7 @@
       ),
     })
 
-    skills.set(
+    skillsState.set(
       data.skills.map((skill) => ({
         ...skill,
         items: compareFiltersToItems(skill.items, filters),
@@ -64,14 +64,14 @@
     tag: TagType,
     isActive: boolean,
   ) => {
-    activeFilters.update((filters) => {
+    activeFiltersState.update((filters) => {
       if (isActive) {
         // return all filters except for this one
         return filters.filter((f) => f !== tag)
       }
       return [tag, ...filters]
     })
-    filterData($activeFilters)
+    filterData($activeFiltersState)
   }
 </script>
 

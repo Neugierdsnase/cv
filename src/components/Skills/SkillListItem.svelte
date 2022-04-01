@@ -1,14 +1,9 @@
 <script lang="ts">
   import { CvItemType } from '../../types'
-  import { activeFilters } from '../../stores/filters'
-  import Level from './Level.svelte'
   import Tag from '../Tag.svelte'
+  import Level from './Level.svelte'
   export let item: CvItemType
   const { label, level, tags } = item
-
-  $: isActive = Boolean(
-    $activeFilters.find((f) => f === label),
-  )
 </script>
 
 <dt>{@html label}</dt>

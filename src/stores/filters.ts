@@ -1,4 +1,5 @@
 import { writable } from 'svelte/store'
-import { TagType } from '../types'
+import { Level, TagType } from '../types'
 
-export const activeFilters = writable<TagType[]>([])
+export const activeFiltersState = writable<TagType[]>([])
+export const skillLevelFilterState = writable<Level>(1)
