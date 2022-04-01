@@ -7,6 +7,7 @@
     misc,
     skills,
   } from '../stores/data'
+  import OptionsBar from './OptionsBar/OptionsBar.svelte'
 </script>
 
 <main class="my-8 px-4">

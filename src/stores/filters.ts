@@ -1,4 +1,4 @@
 import { writable } from 'svelte/store'
-import { Tag } from '../types'
+import { TagType } from '../types'
 
-export const activeFilters = writable<Tag[]>([])
+export const activeFilters = writable<TagType[]>([])

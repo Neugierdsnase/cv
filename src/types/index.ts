@@ -1,4 +1,4 @@
-export type Tag =
+export type TagType =
   | 'frontend'
   | 'backend'
   | 'devops/sre'
@@ -18,12 +18,12 @@ export enum Level {
 export type UnstructuredSection = {
   label: string
   text: string
-  tags?: Tag[]
+  tags?: TagType[]
 }
 
 export type ListItemType = {
   label: string
-  tags?: Tag[]
+  tags?: TagType[]
 }
 
 export type CvItemType = {
@@ -31,7 +31,7 @@ export type CvItemType = {
   time?: string
   tagLine?: string
   list?: ListItemType[]
-  tags?: Tag[]
+  tags?: TagType[]
   level?: Level
 }
 

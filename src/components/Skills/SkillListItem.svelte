@@ -1,8 +1,8 @@
 <script lang="ts">
-  import clsx from 'clsx'
   import { CvItemType } from '../../types'
   import { activeFilters } from '../../stores/filters'
   import Level from './Level.svelte'
+  import Tag from '../Tag.svelte'
   export let item: CvItemType
   const { label, level, tags } = item
 
@@ -17,18 +17,8 @@
     <Level {level} />
     <ul class="flex flex-row-reverse">
       {#each tags as tag}
-        <li
-          class={clsx(
-            'ml-4',
-            'bg-babyBlue-300',
-            'px-2',
-            'h-6',
-            isActive && 'bg-babyBlue-400',
-          )}
-        >
-          <span class="text-xs text-black-rich">
-            {@html tag}
-          </span>
+        <li class="ml-4">
+          <Tag size="s" {tag} />
         </li>
       {/each}
     </ul>
