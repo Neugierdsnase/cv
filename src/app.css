@@ -22,6 +22,11 @@
     font-size: clamp(2.4rem, 7vw, 3.6rem);
   }
 
+  .hero-clip-path {
+    @apply bg-babyBlue-300 text-black-rich;
+    clip-path: polygon(100% 0, 100% 100%, 50% 60%, 0 100%, 0 0);
+  }
+
   .stripes {
     @apply bg-transparent;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2361bbe5' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
