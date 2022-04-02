@@ -8,7 +8,6 @@
 
   const setSkillsFilter = (n: Level) => {
     skillLevelFilterState.set(n)
-    console.log('yup')
     skillsState.set(
       data.skills.map((skill) => ({
         ...skill,
@@ -27,6 +26,7 @@
   {#each skillLevels as n}
     <button on:click={() => setSkillsFilter(n)}>
       <Star
+        size="48px"
         color="inherit"
         weight={$skillLevelFilterState < n
           ? 'light'

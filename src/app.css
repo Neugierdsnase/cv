@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply w-screen overflow-x-hidden bg-black-rich text-babyBlue-300;
+    @apply w-screen overflow-x-hidden bg-black-rich text-babyBlue-300 print:bg-white print:text-black-rich;
     max-width: 100vw;
   }
 }
