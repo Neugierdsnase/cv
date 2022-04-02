@@ -1,6 +1,6 @@
-import { TagType } from "./types";
+import { TagType } from './types'
 
-export const allTags: TagType[] = [
+export const ALL_TAGS: TagType[] = [
   'frontend',
   'backend',
   'devops/sre',
@@ -9,3 +9,5 @@ export const allTags: TagType[] = [
   'other',
   'non&#8209;tech',
 ]
+
+export const HIDE_NON_TECH_INITIALLY = true

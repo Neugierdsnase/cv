@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NonTechFilter from './Buttons/NonTechFilter.svelte'
   import { clickOutside } from './../utility'
   import clsx from 'clsx'
   import { showSidebar } from '../stores/ui'
@@ -19,10 +20,15 @@
     'flex',
     'flex-col',
     'p-8',
-    'bg-red-500',
+    'bg-black-dark',
+    'transition-transform',
+    'rounded-l-md',
     !$showSidebar && 'translate-x-80',
   )}
 >
-  <TagsFilter />
-  <SkilllevelFilter />
+  <div class="flex h-2/3 flex-col justify-between">
+    <TagsFilter />
+    <SkilllevelFilter />
+    <NonTechFilter />
+  </div>
 </div>
