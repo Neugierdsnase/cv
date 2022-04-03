@@ -1136,8 +1136,8 @@ body {
 }
 
 @media print {
-  .print\:relative {
-    position: relative;
+  .print\:static {
+    position: static;
   }
 
   .print\:mb-16 {
@@ -1227,6 +1227,10 @@ body {
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:text-right {
+    text-align: right;
   }
 
   .md\:last\:mr-0:last-child {

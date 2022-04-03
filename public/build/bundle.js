@@ -20209,6 +20209,7 @@ var app = (function () {
                 label: 'willhaben',
                 time: { from: dayjs_min('05/2021', 'MM/YYYY') },
                 list: [
+                    { label: 'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert' },
                     { label: 'meistbesuchte österreichische Website' },
                     {
                         label: 'mehrmonatige Erfahrungen in zwei unterschiedlichen Tribes gesammelt'
@@ -20349,7 +20350,7 @@ var app = (function () {
                 tags: ['non&#8209;tech']
             },
             {
-                label: 'Magistratsabteilung 35',
+                label: 'MA 35',
                 tagLine: 'Einwanderungsverfahren',
                 time: { from: dayjs_min('22.12.2012', 'DD.MM.YYYY'), to: dayjs_min('30.04.2015', 'DD.MM.YYYY') },
                 list: [
@@ -22682,7 +22683,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = `${/*from*/ ctx[1].format(DATE_FORMAT)}`;
-    			add_location(span, file$9, 11, 4, 354);
+    			add_location(span, file$9, 11, 4, 355);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22712,7 +22713,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = `${`seit `}`;
-    			add_location(span, file$9, 13, 11, 413);
+    			add_location(span, file$9, 13, 11, 414);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22741,7 +22742,7 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			span.textContent = `${` - ${/*to*/ ctx[0].format(DATE_FORMAT)}`}`;
-    			add_location(span, file$9, 15, 10, 493);
+    			add_location(span, file$9, 15, 10, 494);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -22785,8 +22786,8 @@ var app = (function () {
     			span.textContent = `${/*from*/ ctx[1].format(DATE_FORMAT)}`;
     			t3 = space();
     			if (if_block2) if_block2.c();
-    			add_location(span, file$9, 14, 2, 443);
-    			attr_dev(div, "class", "font-cover font-2xl absolute top-4 right-4 w-1/4 rotate-90 text-right font-bold opacity-60 print:relative print:rotate-0 md:rotate-0");
+    			add_location(span, file$9, 14, 2, 444);
+    			attr_dev(div, "class", "font-cover absolute top-4 right-4 w-1/4 rotate-90 text-2xl font-bold opacity-60 print:static print:rotate-0 md:rotate-0 md:text-right");
     			add_location(div, file$9, 7, 0, 169);
     		},
     		l: function claim(nodes) {

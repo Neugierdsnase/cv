@@ -191,7 +191,7 @@ const cvJobItems: CvSectionType = {
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Magistratsabteilung 35',
+      label: 'MA 35',
       tagLine: 'Einwanderungsverfahren',
       time: {from: dayjs('22.12.2012', 'DD.MM.YYYY'), to: dayjs('30.04.2015', 'DD.MM.YYYY')},
       list: [
