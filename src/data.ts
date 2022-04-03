@@ -44,7 +44,7 @@ const cvJobItems: CvSectionType = {
       tags: [
         'frontend',
         'backend',
-        'tech health/monitoring',
+        'tech&#8239;health',
         'other',
       ],
     },
@@ -88,7 +88,7 @@ const cvJobItems: CvSectionType = {
       tags: [
         'frontend',
         'backend',
-        'tech health/monitoring',
+        'tech&#8239;health',
         'other',
       ],
     },
@@ -116,7 +116,7 @@ const cvJobItems: CvSectionType = {
       tags: [
         'frontend',
         'consulting',
-        'tech health/monitoring',
+        'tech&#8239;health',
         'other',
       ],
     },
@@ -382,32 +382,32 @@ const skills: SkillSectionType = {
         {
           label: 'CypressJS',
           level: 3,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'SonarQube',
           level: 2,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'Grafana',
           level: 2,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'Prometheus',
           level: 1,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'Sentry',
           level: 2,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'Lighthouse',
           level: 3,
-          tags: ['tech health/monitoring'],
+          tags: ['tech&#8239;health'],
         },
         {
           label: 'Storybook',

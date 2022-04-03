@@ -2,7 +2,7 @@ export type TagType =
   | 'frontend'
   | 'backend'
   | 'devops/sre'
-  | 'tech health/monitoring'
+  | 'tech&#8239;health' // non-breaking narrow whitespace
   | 'consulting'
   | 'other'
   | 'non&#8209;tech' // non-breaking hyphen

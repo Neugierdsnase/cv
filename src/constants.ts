@@ -4,7 +4,7 @@ export const ALL_TAGS: TagType[] = [
   'frontend',
   'backend',
   'devops/sre',
-  'tech health/monitoring',
+  'tech&#8239;health',
   'consulting',
   'other',
   'non&#8209;tech',
