@@ -14,6 +14,7 @@
 
 <Hero />
 <div
+  class="px-8 md:px-12 lg:px-32"
   style={y < SCROLL_OFFSET
     ? `transform: translateY(${y}px);`
     : `transform: translateY(${SCROLL_OFFSET}px);`}

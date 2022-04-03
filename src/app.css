@@ -4,21 +4,27 @@
 
 @layer base {
   body {
-    @apply w-screen overflow-x-hidden bg-babyBlue-400 text-babyBlue-300 print:bg-white print:text-black-rich;
+    @apply w-screen overflow-x-hidden bg-babyBlue-400 text-babyBlue-200 print:bg-white print:text-black-rich;
     max-width: 100vw;
   }
 }
 
 @layer components {
-  .h-screen-2\/3 {
-    height: 66vh;
-  }
-
-  .text-hero {
+  .text-h1 {
     font-size: clamp(2.8rem, 9vw, 5rem);
   }
 
-  .text-cover {
+  .text-h2 {
+    @apply relative mr-4 pr-4;
+    font-size: clamp(2.8rem, 9vw, 5rem);
+  }
+
+  .text-h2::after {
+    content: '';
+    @apply absolute right-0 h-1/4 w-1/5 border-t-8 border-r-8 border-babyBlue-400;
+  }
+
+  .text-h3 {
     font-size: clamp(2.4rem, 7vw, 3.6rem);
   }
 

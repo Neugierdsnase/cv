@@ -30,7 +30,7 @@
     {/if}
 
     <div class="relative flex w-full flex-col">
-      <h3 class="text-cover w-2/3 font-display font-bold">
+      <h3 class="text-h3 w-2/3 font-display font-bold">
         {@html label}
       </h3>
       <p

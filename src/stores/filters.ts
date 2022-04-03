@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { writable } from 'svelte/store'
 import { HIDE_NON_TECH_INITIALLY } from '../constants'
 import data from '../data'
-import { CvItemType, Level, TagType } from '../types'
+import { CvItemType, LevelType, TagType } from '../types'
 import { filterNonTech } from '../utility'
 import {
   cvJobItemsState,
@@ -11,7 +11,7 @@ import {
 } from './data'
 
 export const activeFiltersState = writable<TagType[]>([])
-export const skillLevelFilterState = writable<Level>(1)
+export const skillLevelFilterState = writable<LevelType>(1)
 export const hideNonTechState = writable(
   HIDE_NON_TECH_INITIALLY,
 )
@@ -50,13 +50,14 @@ export const filterData = (
     ),
   })
 
-  skillsState.set(
-    data.skills.map((skill) => ({
+  skillsState.set({
+    ...data.skills,
+    items: data.skills.items.map((skill) => ({
       ...skill,
       items: filterNonTech(
         hideNonTechState,
         compareFiltersToItems(skill.items, filters),
       ),
     })),
-  )
+  })
 }

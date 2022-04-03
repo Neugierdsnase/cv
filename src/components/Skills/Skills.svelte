@@ -1,16 +1,26 @@
 <script lang="ts">
-  import { CvSectionType } from '../../types'
+  import {
+    CvSectionType,
+    SkillSectionType,
+  } from '../../types'
+  import Legend from './Legend.svelte'
 
   import Skill from './Skill.svelte'
 
-  export let skills: CvSectionType[]
-  $: rSkills = skills
+  export let skills: SkillSectionType
+  $: items = skills.items
 </script>
 
-<div class="mx-auto flex flex-wrap gap-4 lg:w-2/3">
-  {#if skills && skills.length}
-    {#each rSkills as skill (skill)}
+{#if items && items.length}
+  <h2
+    class="text-h2 text-right font-display font-bold text-babyBlue-400"
+  >
+    {skills.heading}
+  </h2>
+  <Legend />
+  <div class="mx-auto flex flex-wrap gap-4 lg:w-2/3">
+    {#each items as skill (skill)}
       <Skill {skill} />
     {/each}
-  {/if}
-</div>
+  </div>
+{/if}

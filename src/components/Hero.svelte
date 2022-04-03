@@ -6,14 +6,14 @@
 
 <section
   id="hero"
-  class="h-screen-2/3 fixed top-0 z-30 w-full"
+  class="fixed top-0 z-30 h-[80vh] w-full"
   style={`transform: translateY(-${y}px);`}
 >
   <div
     class="hero-clip-path flex h-full w-full items-center justify-center"
   >
     <div>
-      <h1 class="text-hero font-bold text-babyBlue-400">
+      <h1 class="text-h1 font-bold text-babyBlue-400">
         {@html `Konstantin Kovar`}
       </h1>
     </div>

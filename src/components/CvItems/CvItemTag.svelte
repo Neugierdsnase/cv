@@ -6,6 +6,6 @@
   export let tag: TagType
 </script>
 
-<li class="lg:mb-4">
+<li class="mr-4">
   <Tag size="m" {tag} />
 </li>

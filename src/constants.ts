@@ -11,4 +11,4 @@ export const ALL_TAGS: TagType[] = [
 ]
 
 export const HIDE_NON_TECH_INITIALLY = true
-export const SCROLL_OFFSET = 400
+export const SCROLL_OFFSET = 750

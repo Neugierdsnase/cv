@@ -1,5 +1,9 @@
 import _ from 'lodash'
-import { CvSectionType, UnstructuredSection } from './types'
+import {
+  CvSectionType,
+  SkillSectionType,
+  UnstructuredSection,
+} from './types'
 
 const cvJobItems: CvSectionType = {
   heading: 'Berufserfahrung',
@@ -159,218 +163,239 @@ const cvEduItems: CvSectionType = {
   ],
 }
 
-const skills: CvSectionType[] = [
-  {
-    heading: 'Markup',
-    items: [
-      { label: 'HTML', level: 5, tags: ['frontend'] },
-      {
-        label: 'XML/JSON',
-        level: 4,
-        tags: ['frontend', 'backend'],
-      },
-      {
-        label: 'JSX/TSX',
-        level: 4,
-        tags: ['frontend', 'backend'],
-      },
-      { label: 'Markdown', level: 4, tags: ['frontend'] },
-      { label: 'Pug', level: 4, tags: ['frontend'] },
-      {
-        label: 'Jinja2',
-        level: 3,
-        tags: ['frontend', 'devops/sre'],
-      },
-      { label: 'Handlebars', level: 2, tags: ['frontend'] },
-    ],
-  },
-  {
-    heading: 'Styles',
-    items: [
-      { label: 'CSS', level: 4, tags: ['frontend'] },
-      {
-        label: 'Sass & SCSS',
-        level: 4,
-        tags: ['frontend'],
-      },
-      {
-        label: 'styled-components & emotionJS)',
-        level: 5,
-        tags: ['frontend'],
-      },
-      {
-        label: 'Tailwind CSS',
-        level: 3,
-        tags: ['frontend'],
-      },
-      {
-        label: 'Material UI',
-        level: 4,
-        tags: ['frontend'],
-      },
-      { label: 'Bootstrap', level: 2, tags: ['frontend'] },
-    ],
-  },
-  {
-    heading: 'JavaScript',
-    items: [
-      {
-        label: 'VanillaJS',
-        level: 4,
-        tags: ['frontend', 'backend'],
-      },
-      { label: 'jQuery', level: 2, tags: ['frontend'] },
-      { label: 'ReactJS', level: 5, tags: ['frontend'] },
-      { label: 'NodeJS', level: 3, tags: ['backend'] },
-      { label: 'ExpressJS', level: 2, tags: ['backend'] },
-      { label: 'NextJS', level: 3, tags: ['frontend'] },
-      { label: 'NestJS', level: 3, tags: ['backend'] },
-      { label: 'Svelte', level: 3, tags: ['frontend'] },
-      { label: 'D3.js', level: 1, tags: ['frontend'] },
-      { label: 'socketIO', level: 2, tags: ['backend'] },
-      { label: 'ThreeJS', level: 1, tags: ['frontend'] },
-    ],
-  },
-  {
-    heading: 'Weiter Skills',
-    items: [
-      { label: 'Python', level: 3, tags: ['backend'] },
-      {
-        label: 'Flask, SQAlchemy + Ecosystem',
-        level: 2,
-        tags: ['backend'],
-      },
-      { label: 'Kotlin', level: 2, tags: ['backend'] },
-      {
-        label: 'PHP für WordPress',
-        level: 3,
-        tags: ['frontend', 'backend'],
-      },
-      {
-        label: 'Rust',
-        level: 1,
-        tags: ['frontend', 'backend'],
-      },
-      {
-        label: 'GraphQL',
-        level: 3,
-        tags: ['frontend', 'backend'],
-      },
-      { label: 'REST', level: 4, tags: ['backend'] },
-      { label: 'Heroku', level: 2, tags: ['devops/sre'] },
-      { label: 'Docker', level: 2, tags: ['devops/sre'] },
-      { label: 'SQL', level: 3, tags: ['backend'] },
-      { label: 'Jira', level: 3, tags: ['other'] },
-      { label: 'Gitlab', level: 3, tags: ['other'] },
-      { label: 'BitBucket', level: 2, tags: ['other'] },
-      {
-        label: 'CypressJS',
-        level: 3,
-        tags: ['tech health/monitoring'],
-      },
-      {
-        label: 'SonarQube',
-        level: 2,
-        tags: ['tech health/monitoring'],
-      },
-      {
-        label: 'Grafana',
-        level: 2,
-        tags: ['tech health/monitoring'],
-      },
-      {
-        label: 'Prometheus',
-        level: 1,
-        tags: ['tech health/monitoring'],
-      },
-      {
-        label: 'Sentry',
-        level: 2,
-        tags: ['tech health/monitoring'],
-      },
-      {
-        label: 'Lighthouse',
-        level: 3,
-        tags: ['tech health/monitoring'],
-      },
-      { label: 'Storybook', level: 3, tags: ['frontend'] },
-      {
-        label: 'Agile Workflow',
-        level: 3,
-        tags: ['other'],
-      },
-      { label: 'Scrum', level: 3, tags: ['other'] },
-      {
-        label: 'Object-oriented programming',
-        level: 3,
-        tags: ['other'],
-      },
-      {
-        label: 'Test-driven development',
-        level: 3,
-        tags: ['other'],
-      },
-      { label: 'Confluence', level: 3, tags: ['other'] },
-    ],
-  },
-  {
-    heading: 'persönliche Roadmap',
-    items: [
-      { label: 'Rust', tags: ['backend'] },
-      { label: 'Rust for WebAssembly', tags: ['frontend'] },
-      { label: 'Web3', tags: ['frontend'] },
-      { label: 'yew', tags: ['frontend'] },
-      { label: 'Russisch', tags: ['non&#8209;tech'] },
-    ],
-  },
-  {
-    heading: 'Sprachen',
-    items: [
-      {
-        label: 'Deutsch <i>(Muttersprache)</i>',
-        tags: ['non&#8209;tech'],
-      },
-      {
-        label:
-          'Englisch <i>(muttersprachliches Niveau)</i>',
-        tags: ['non&#8209;tech'],
-      },
-      {
-        label: 'Latein <i>(sehr hilfreich)</i>',
-        tags: ['non&#8209;tech'],
-      },
-      {
-        label:
-          'Altgriechisch <i>(noch viel hilfreicher)</i>',
-        tags: ['non&#8209;tech'],
-      },
-      {
-        label: 'Russisch <i>(A2)</i>',
-        tags: ['non&#8209;tech'],
-      },
-    ],
-  },
-  {
-    heading: 'schon wieder verlernte Skills',
-    items: [
-      {
-        label: 'Adobe After Effects',
-        tags: ['non&#8209;tech'],
-      },
-      {
-        label: 'Adobe Illustrator',
-        tags: ['non&#8209;tech'],
-      },
-      { label: 'Adobe InDesign', tags: ['non&#8209;tech'] },
-      {
-        label: 'Adobe Photoshop',
-        tags: ['non&#8209;tech'],
-      },
-      { label: 'Blender 3D', tags: ['non&#8209;tech'] },
-      { label: 'Godot', tags: ['non&#8209;tech'] },
-    ],
-  },
-]
+const skills: SkillSectionType = {
+  heading: 'Skills',
+  items: [
+    {
+      heading: 'Markup',
+      items: [
+        { label: 'HTML', level: 5, tags: ['frontend'] },
+        {
+          label: 'XML/JSON',
+          level: 4,
+          tags: ['frontend', 'backend'],
+        },
+        {
+          label: 'JSX/TSX',
+          level: 4,
+          tags: ['frontend', 'backend'],
+        },
+        { label: 'Markdown', level: 4, tags: ['frontend'] },
+        { label: 'Pug', level: 4, tags: ['frontend'] },
+        {
+          label: 'Jinja2',
+          level: 3,
+          tags: ['frontend', 'devops/sre'],
+        },
+        {
+          label: 'Handlebars',
+          level: 2,
+          tags: ['frontend'],
+        },
+      ],
+    },
+    {
+      heading: 'Styles',
+      items: [
+        { label: 'CSS', level: 4, tags: ['frontend'] },
+        {
+          label: 'Sass & SCSS',
+          level: 4,
+          tags: ['frontend'],
+        },
+        {
+          label: 'styled-components & emotionJS)',
+          level: 5,
+          tags: ['frontend'],
+        },
+        {
+          label: 'Tailwind CSS',
+          level: 3,
+          tags: ['frontend'],
+        },
+        {
+          label: 'Material UI',
+          level: 4,
+          tags: ['frontend'],
+        },
+        {
+          label: 'Bootstrap',
+          level: 2,
+          tags: ['frontend'],
+        },
+      ],
+    },
+    {
+      heading: 'JavaScript',
+      items: [
+        {
+          label: 'VanillaJS',
+          level: 4,
+          tags: ['frontend', 'backend'],
+        },
+        { label: 'jQuery', level: 2, tags: ['frontend'] },
+        { label: 'ReactJS', level: 5, tags: ['frontend'] },
+        { label: 'NodeJS', level: 3, tags: ['backend'] },
+        { label: 'ExpressJS', level: 2, tags: ['backend'] },
+        { label: 'NextJS', level: 3, tags: ['frontend'] },
+        { label: 'NestJS', level: 3, tags: ['backend'] },
+        { label: 'Svelte', level: 3, tags: ['frontend'] },
+        { label: 'D3.js', level: 1, tags: ['frontend'] },
+        { label: 'socketIO', level: 2, tags: ['backend'] },
+        { label: 'ThreeJS', level: 1, tags: ['frontend'] },
+      ],
+    },
+    {
+      heading: 'Weiter Skills',
+      items: [
+        { label: 'Python', level: 3, tags: ['backend'] },
+        {
+          label: 'Flask, SQAlchemy + Ecosystem',
+          level: 2,
+          tags: ['backend'],
+        },
+        { label: 'Kotlin', level: 2, tags: ['backend'] },
+        {
+          label: 'PHP für WordPress',
+          level: 3,
+          tags: ['frontend', 'backend'],
+        },
+        {
+          label: 'Rust',
+          level: 1,
+          tags: ['frontend', 'backend'],
+        },
+        {
+          label: 'GraphQL',
+          level: 3,
+          tags: ['frontend', 'backend'],
+        },
+        { label: 'REST', level: 4, tags: ['backend'] },
+        { label: 'Heroku', level: 2, tags: ['devops/sre'] },
+        { label: 'Docker', level: 2, tags: ['devops/sre'] },
+        { label: 'SQL', level: 3, tags: ['backend'] },
+        { label: 'Jira', level: 3, tags: ['other'] },
+        { label: 'Gitlab', level: 3, tags: ['other'] },
+        { label: 'BitBucket', level: 2, tags: ['other'] },
+        {
+          label: 'CypressJS',
+          level: 3,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'SonarQube',
+          level: 2,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'Grafana',
+          level: 2,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'Prometheus',
+          level: 1,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'Sentry',
+          level: 2,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'Lighthouse',
+          level: 3,
+          tags: ['tech health/monitoring'],
+        },
+        {
+          label: 'Storybook',
+          level: 3,
+          tags: ['frontend'],
+        },
+        {
+          label: 'Agile Workflow',
+          level: 3,
+          tags: ['other'],
+        },
+        { label: 'Scrum', level: 3, tags: ['other'] },
+        {
+          label: 'Object-oriented programming',
+          level: 3,
+          tags: ['other'],
+        },
+        {
+          label: 'Test-driven development',
+          level: 3,
+          tags: ['other'],
+        },
+        { label: 'Confluence', level: 3, tags: ['other'] },
+      ],
+    },
+    {
+      heading: 'persönliche Roadmap',
+      items: [
+        { label: 'Rust', tags: ['backend'] },
+        {
+          label: 'Rust for WebAssembly',
+          tags: ['frontend'],
+        },
+        { label: 'Web3', tags: ['frontend'] },
+        { label: 'yew', tags: ['frontend'] },
+        { label: 'Russisch', tags: ['non&#8209;tech'] },
+      ],
+    },
+    {
+      heading: 'Sprachen',
+      items: [
+        {
+          label: 'Deutsch <i>(Muttersprache)</i>',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label:
+            'Englisch <i>(muttersprachliches Niveau)</i>',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label: 'Latein <i>(sehr hilfreich)</i>',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label:
+            'Altgriechisch <i>(noch viel hilfreicher)</i>',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label: 'Russisch <i>(A2)</i>',
+          tags: ['non&#8209;tech'],
+        },
+      ],
+    },
+    {
+      heading: 'schon wieder verlernte Skills',
+      items: [
+        {
+          label: 'Adobe After Effects',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label: 'Adobe Illustrator',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label: 'Adobe InDesign',
+          tags: ['non&#8209;tech'],
+        },
+        {
+          label: 'Adobe Photoshop',
+          tags: ['non&#8209;tech'],
+        },
+        { label: 'Blender 3D', tags: ['non&#8209;tech'] },
+        { label: 'Godot', tags: ['non&#8209;tech'] },
+      ],
+    },
+  ],
+}
 
 const misc: UnstructuredSection = {
   label: 'Hobbies & Misc',

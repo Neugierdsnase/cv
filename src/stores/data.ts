@@ -17,13 +17,14 @@ export const cvEduItemsState = writable({
     data.cvEduItems.items,
   ),
 })
-export const skillsState = writable(
-  data.skills.map((skill) => ({
+export const skillsState = writable({
+  ...data.skills,
+  items: data.skills.items.map((skill) => ({
     ...skill,
     items: filterNonTech(
       HIDE_NON_TECH_INITIALLY,
       skill.items,
     ),
   })),
-)
+})
 export const miscState = writable(data.misc)

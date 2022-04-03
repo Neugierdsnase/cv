@@ -36,16 +36,22 @@
   on:click={() => toggleFilter(tag, isActive)}
   class={clsx(
     'cursor-pointer',
-    'mr-2',
     'bg-babyBlue-300',
     'py-1',
     SIZES[size],
-    'lg:mb-4',
     'select-none',
-    isActive && 'bg-babyBlue-400',
+    'ring-babyBlue-300',
+    isActive && 'bg-babyBlue-400 ring-4',
   )}
 >
-  <span class="text-xs font-bold text-black-rich">
+  <span
+    class={clsx(
+      'text-xs',
+      'font-bold',
+      'text-babyBlue-400',
+      isActive && 'text-babyBlue-300',
+    )}
+  >
     {@html tag}
   </span>
 </button>

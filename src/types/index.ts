@@ -7,7 +7,7 @@ export type TagType =
   | 'other'
   | 'non&#8209;tech' // non-breaking hyphen
 
-export enum Level {
+export enum LevelType {
   'been confronted',
   'used before',
   'familiar',
@@ -32,10 +32,15 @@ export type CvItemType = {
   tagLine?: string
   list?: ListItemType[]
   tags?: TagType[]
-  level?: Level
+  level?: LevelType
 }
 
 export type CvSectionType = {
   heading: string
   items: CvItemType[]
+}
+
+export type SkillSectionType = {
+  heading: string
+  items: CvSectionType[]
 }

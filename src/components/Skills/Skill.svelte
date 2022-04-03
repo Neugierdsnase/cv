@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { CvSection } from '../../data'
+  import { CvSectionType } from './../../types/index'
   import SkillList from './SkillList.svelte'
 
-  export let skill: CvSection
+  export let skill: CvSectionType
   const { heading, items } = skill
 </script>
 

@@ -7,7 +7,7 @@
 
 {#each items as item}
   <dl
-    class="flex items-center justify-between px-2 py-1 odd:bg-babyBlue-400 odd:bg-opacity-20"
+    class="flex items-center justify-between px-2 py-1 odd:bg-babyBlue-300 odd:bg-opacity-20"
   >
     <SkillListItem {item} />
   </dl>
