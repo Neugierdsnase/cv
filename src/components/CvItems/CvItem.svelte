@@ -74,7 +74,7 @@
 </article>
 
 <!-- Print version -->
-<div class="hidden print:block">
+<div class="hidden break-inside-avoid print:block">
   <h3 class="font-cover text-2xl">
     {@html label}
   </h3>
@@ -83,8 +83,9 @@
       {@html tagLine}
     </p>
   {/if}
+  <p>{time}</p>
   {#if list && list.length}
-    <ul class="mt-8 bg-cultured bg-opacity-10">
+    <ul class="my-4">
       {#each list as listItem, index}
         <ListItem {index} {listItem} show />
       {/each}

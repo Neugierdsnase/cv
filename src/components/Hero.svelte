@@ -31,18 +31,17 @@
 
 <!-- Print version -->
 <section class="mt-8 hidden text-center print:block">
-  <h1 class="text-2xl">Konstantin Kovar</h1>
-  <subtitle> Lebenslauf </subtitle>
-  <p class="text-sm text-slate-600">
+  <h1 class="text-5xl">Konstantin Kovar</h1>
+  <subtitle class="text-3xl"> Lebenslauf </subtitle>
+  <div class="text-xs text-gray-400" />
+  <p>
     Disclaimer: This document was generated from an
     intercative website and might not display the full
     content.
   </p>
   {#if $activeFiltersState.length}
-    <p class="text-sm text-slate-600">
-      The following filters have been activated:
-    </p>
-    <ul class="text-sm text-slate-600">
+    <p>The following filters have been activated:</p>
+    <ul>
       {#each $activeFiltersState as filter}
         <li>{filter}</li>
       {/each}

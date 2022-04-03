@@ -3,6 +3,7 @@
   import FilterButton from './components/Buttons/FilterButton.svelte'
   import PdfButton from './components/Buttons/PdfButton.svelte'
   import FilterSidebar from './components/FilterSidebar.svelte'
+  import Footer from './components/Footer.svelte'
   import Hero from './components/Hero.svelte'
   import Intro from './components/Intro.svelte'
   import Main from './components/Main.svelte'
@@ -15,13 +16,14 @@
 
 <Hero />
 <div
-  class="px-8 transition-transform print:mt-8 print:p-0 md:px-12 lg:px-32"
+  class="print-transform-reset px-8 transition-transform print:p-0 md:px-12 lg:px-32"
   style={y < SCROLL_OFFSET
     ? `transform: translateY(${y}px);`
     : `transform: translateY(${SCROLL_OFFSET}px);`}
 >
   <Intro text={data.introText} />
   <Main />
+  <Footer />
 </div>
 <FilterSidebar />
 <div

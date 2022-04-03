@@ -1,11 +1,4 @@
-import _ from 'lodash'
-import data from './data'
-import {
-  cvEduItemsState,
-  cvJobItemsState,
-  skillsState,
-} from './stores/data'
-import { CvItemType, TagType } from './types'
+import { CvItemType } from './types'
 
 export const filterNonTech = (
   enforce: boolean,

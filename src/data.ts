@@ -41,6 +41,12 @@ const cvJobItems: CvSectionType = {
         },
         { label: 'gelebte "technical Excellence"' },
       ],
+      tags: [
+        'frontend',
+        'backend',
+        'tech health/monitoring',
+        'other',
+      ],
     },
     {
       label: 'Coding School & Academy Wörthersee',
@@ -58,8 +64,12 @@ const cvJobItems: CvSectionType = {
           label:
             'diverse Projekt- und Abschlussarbeiten benotet',
         },
-        { label: 'Abschlussprüfungen abgenommen' },
+        {
+          label:
+            'Abschlussprüfungen als Prüfer vor der FH Kärnten abgenommen',
+        },
       ],
+      tags: ['frontend', 'consulting', 'other'],
     },
     {
       label: 'Web&Söhne',
@@ -74,6 +84,12 @@ const cvJobItems: CvSectionType = {
           label:
             'diverse kleine Projekte mit Bestandskunden, oft mit Legacy-Code',
         },
+      ],
+      tags: [
+        'frontend',
+        'backend',
+        'tech health/monitoring',
+        'other',
       ],
     },
     {
@@ -97,7 +113,12 @@ const cvJobItems: CvSectionType = {
             'Porsche Wien Mitte (WordPress-Development & Consulting)',
         },
       ],
-      tags: ['frontend', 'consulting', 'other'],
+      tags: [
+        'frontend',
+        'consulting',
+        'tech health/monitoring',
+        'other',
+      ],
     },
     {
       label: 'der brutkasten',
@@ -468,15 +489,9 @@ const skills: SkillSectionType = {
   ],
 }
 
-const misc: UnstructuredSection = {
-  label: 'Hobbies & Misc',
-  text: '(relativ) früher Bitcoininvestor; bei den Vienna Vikings (American Football) gespielt; 40 kg in 7  Monaten abgenommen; Landesmeister in Karate (U14); Videospiele; Crossfit; K-Pop; digitaler Minimalist; mal mehr mal weniger vegan unterwegs;',
-}
-
 export default {
   introText,
   cvJobItems,
   cvEduItems,
   skills,
-  misc,
 }

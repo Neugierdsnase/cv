@@ -9,13 +9,11 @@
   $: items = cvItems.items
 </script>
 
-<template>
-  {#if items && items.length}
-    <SectionHeading>
-      {@html heading}
-    </SectionHeading>
-    {#each items as cvItem (cvItem)}
-      <CvItem {cvItem} />
-    {/each}
-  {/if}
-</template>
+{#if items && items.length}
+  <SectionHeading>
+    {@html heading}
+  </SectionHeading>
+  {#each items as cvItem (cvItem)}
+    <CvItem {cvItem} />
+  {/each}
+{/if}

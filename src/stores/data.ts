@@ -27,4 +27,3 @@ export const skillsState = writable({
     ),
   })),
 })
-export const miscState = writable(data.misc)

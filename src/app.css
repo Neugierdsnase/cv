@@ -56,6 +56,12 @@
 }
 
 @layer utilities {
+  @media print {
+    .print-transform-reset {
+      transform: translate(0, 0) !important;
+    }
+  }
+
   .custom-delay-0 {
     transition-delay: 0ms;
   }

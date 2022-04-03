@@ -8,7 +8,7 @@
 
 <li
   class={clsx(
-    `flex items-center border-t-0 border-babyBlue-300 px-2 custom-delay-${index} h-0 overflow-hidden transition-all`,
+    `flex items-center border-t-0 border-babyBlue-300 px-2 custom-delay-${index} h-0 overflow-hidden transition-all print:h-6 print:border-0 print:border-slate-500 print:bg-transparent`,
     show && 'h-12 border-t-2',
   )}
 >

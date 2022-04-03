@@ -35,11 +35,11 @@
         'cursor-pointer',
         'appearance-none',
         'rounded-full',
-        'bg-white',
         'left-0',
-        'transition-transform',
-        $hideNonTechState && 'translate-x-4',
-        'bg-babyBlue-400',
+        'transition-all',
+        $hideNonTechState
+          ? 'translate-x-4 bg-babyBlue-400'
+          : 'bg-white',
       )}
     />
     <label
@@ -49,10 +49,10 @@
         'cursor-pointer',
         'overflow-hidden',
         'rounded-full',
-        'bg-gray-300',
-        $hideNonTechState && 'bg-babyBlue-200',
-        'focus-within:outline-2',
-        'outline-babyBlue-400',
+        'transition-all',
+        $hideNonTechState
+          ? 'bg-babyBlue-200'
+          : 'bg-gray-300',
       )}
       for="hideNonTechState"
     />
