@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SectionHeading from './../SectionHeading.svelte'
   import { CvSectionType } from '../../types'
 
   import CvItem from './CvItem.svelte'
@@ -10,15 +11,9 @@
 
 <template>
   {#if items && items.length}
-    <div
-      class="mt-20 mb-12 flex justify-end bg-babyBlue-300 p-8"
-    >
-      <h2
-        class="text-h2 text-right font-display font-bold text-babyBlue-400"
-      >
-        {heading}
-      </h2>
-    </div>
+    <SectionHeading>
+      {@html heading}
+    </SectionHeading>
     {#each items as cvItem (cvItem)}
       <CvItem {cvItem} />
     {/each}

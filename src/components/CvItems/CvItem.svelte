@@ -13,12 +13,12 @@
 </script>
 
 <article
-  class="border-t-4 border-babyBlue-300 px-4 pb-8 lg:mx-auto lg:w-2/3 lg:pt-8"
+  class="border-t-4 border-babyBlue-300 px-4 pb-8 print:hidden lg:mx-auto lg:w-2/3 lg:pt-8"
 >
   <div class="flex flex-col lg:flex-row">
     {#if tags}
       <ul
-        class="print:none flex h-10 flex-row items-stretch border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:border-r-4"
+        class="flex h-10 flex-row items-stretch border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:border-r-4"
       >
         <li
           class="stripes mr-2 w-24 print:hidden lg:hidden"
@@ -29,8 +29,10 @@
       </ul>
     {/if}
 
-    <div class="relative flex w-full flex-col">
-      <h3 class="text-h3 w-2/3 font-display font-bold">
+    <div class="relative mt-4 flex w-full flex-col">
+      <h3
+        class="text-h3 w-2/3 font-display font-bold leading-none"
+      >
         {@html label}
       </h3>
       <p
@@ -39,9 +41,9 @@
         {time}
       </p>
       {#if Boolean(tagLine)}
-        <subtitle class="font-cover  w-2/3">
+        <p class="font-cover  w-2/3">
           {@html tagLine}
-        </subtitle>
+        </p>
       {/if}
     </div>
   </div>
@@ -70,3 +72,22 @@
     </ul>
   {/if}
 </article>
+
+<!-- Print version -->
+<div class="hidden print:block">
+  <h3 class="font-cover text-2xl">
+    {@html label}
+  </h3>
+  {#if Boolean(tagLine)}
+    <p class="font-cover  w-2/3">
+      {@html tagLine}
+    </p>
+  {/if}
+  {#if list && list.length}
+    <ul class="mt-8 bg-cultured bg-opacity-10">
+      {#each list as listItem, index}
+        <ListItem {index} {listItem} show />
+      {/each}
+    </ul>
+  {/if}
+</div>

@@ -8,25 +8,26 @@
 
   const setSkillsFilter = (n: LevelType) => {
     skillLevelFilterState.set(n)
-    skillsState.set(
-      data.skills.items.map((skill) => ({
+    skillsState.set({
+      ...data.skills,
+      items: data.skills.items.map((skill) => ({
         ...skill,
         items: skill.items.filter(
           ({ level }) => level >= n || !level,
         ),
       })),
-    )
+    })
   }
 </script>
 
+<p>
+  nur Skills mit folgender Selbsteinschätzung (und höher)
+  anzeigen
+</p>
 <div
   title={LevelType[$skillLevelFilterState]}
   class="flex fill-babyBlue-300"
 >
-  <p>
-    nur Skills mit folgender Selbsteinschätzung (und höher)
-    anzeigen
-  </p>
   {#each skillLevels as n}
     <button on:click={() => setSkillsFilter(n)}>
       <Star

@@ -11,17 +11,23 @@
 
 @layer components {
   .text-h1 {
-    font-size: clamp(2.8rem, 9vw, 5rem);
+    font-size: clamp(2.3rem, 9vw, 5rem);
   }
 
   .text-h2 {
     @apply relative mr-4 pr-4;
-    font-size: clamp(2.8rem, 9vw, 5rem);
+    font-size: clamp(1.8rem, 8vw, 5rem);
   }
 
   .text-h2::after {
     content: '';
     @apply absolute right-0 h-1/4 w-1/5 border-t-8 border-r-8 border-babyBlue-400;
+  }
+
+  @media print {
+    .text-h2::after {
+      display: none;
+    }
   }
 
   .text-h3 {
@@ -31,13 +37,13 @@
   .hero-clip-path {
     @apply bg-babyBlue-300 text-black-rich;
     clip-path: polygon(
-      0% 100%,
+      0% 90%,
       15% 80%,
       30% 100%,
       50% 80%,
       70% 100%,
       85% 80%,
-      100% 100%,
+      100% 90%,
       100% 0%,
       0% 0%
     );

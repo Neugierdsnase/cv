@@ -7,6 +7,7 @@
   import Intro from './components/Intro.svelte'
   import Main from './components/Main.svelte'
   import { SCROLL_OFFSET } from './constants'
+  import data from './data'
   let y: number
 </script>
 
@@ -14,17 +15,17 @@
 
 <Hero />
 <div
-  class="px-8 md:px-12 lg:px-32"
+  class="px-8 transition-transform print:mt-8 print:p-0 md:px-12 lg:px-32"
   style={y < SCROLL_OFFSET
     ? `transform: translateY(${y}px);`
     : `transform: translateY(${SCROLL_OFFSET}px);`}
 >
-  <Intro />
+  <Intro text={data.introText} />
   <Main />
 </div>
 <FilterSidebar />
 <div
-  class="fixed right-16 bottom-0 z-50 flex h-1/3 flex-col justify-around align-middle print:hidden"
+  class="fixed right-12 bottom-0 z-20 flex h-1/4 flex-col justify-around align-middle print:hidden"
 >
   <FilterButton />
   <PdfButton />

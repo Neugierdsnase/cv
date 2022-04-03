@@ -5,13 +5,89 @@ import {
   UnstructuredSection,
 } from './types'
 
+const introText: string = `
+<p>
+Hallo, ich bin der Konstantin. Webentwickler, hauptsächlich Frontend.
+</p>
+<p>
+Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln.
+</p>
+<p>
+Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.
+</p>
+<p>Wenn Du zu dem Schluss kommen solltest, dass wir uns kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.</p>
+`
+
 const cvJobItems: CvSectionType = {
   heading: 'Berufserfahrung',
   items: [
     {
+      label: 'willhaben',
+      time: 'seit 05/2021',
+      list: [
+        { label: 'meistbesuchte österreichische Website' },
+        {
+          label:
+            'mehrmonatige Erfahrungen in zwei unterschiedlichen Tribes gesammelt',
+        },
+        {
+          label:
+            'Wissen vertieft, aber auch verbreitert, teaminterne T-shaped Expertise',
+        },
+        { label: 'kompletter agiler Workflow' },
+        {
+          label:
+            'diverse interne disziplinübergreifende Weiterbilungen',
+        },
+        { label: 'gelebte "technical Excellence"' },
+      ],
+    },
+    {
+      label: 'Coding School & Academy Wörthersee',
+      time: 'seit 05/2021',
+      list: [
+        {
+          label:
+            'zweimal den berufbegleitenden Crashkurs Webdevelopment vorbereitet und unterrichtet',
+        },
+        {
+          label:
+            'zweimal den HTML & CSS Basics Kurs für den Vollzeitstudiengang unterrichtet',
+        },
+        {
+          label:
+            'diverse Projekt- und Abschlussarbeiten benotet',
+        },
+        { label: 'Abschlussprüfungen abgenommen' },
+      ],
+    },
+    {
+      label: 'Web&Söhne',
+      time: 'seit 21.1.2020',
+      list: [
+        {
+          label:
+            'Greenfield-Project mit UNIQA aufgesetzt und begonnen',
+        },
+        { label: 'Entwickeln interner Tools' },
+        {
+          label:
+            'diverse kleine Projekte mit Bestandskunden, oft mit Legacy-Code',
+        },
+      ],
+    },
+    {
       label: 'Projektarbeiten und Freelancing',
       time: 'seit Ende 2018',
       list: [
+        {
+          label:
+            'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User',
+        },
+        {
+          label:
+            'für Ada - Power Woman (Technical Consulting)',
+        },
         {
           label:
             'für sgreening (Webdevelopment & Consulting)',
@@ -76,7 +152,7 @@ const cvJobItems: CvSectionType = {
     {
       label: 'Bezirksämter 16 & 17 <span></span>',
       tagLine: 'Verwaltungstrafen und Gewerberecht',
-      time: 'seit 1.5.2015',
+      time: '1.5.2015 - 31.12.2020',
       list: [
         { label: 'gewissenhaftes juristisches Arbeiten' },
         {
@@ -178,7 +254,7 @@ const skills: SkillSectionType = {
         {
           label: 'JSX/TSX',
           level: 4,
-          tags: ['frontend', 'backend'],
+          tags: ['frontend'],
         },
         { label: 'Markdown', level: 4, tags: ['frontend'] },
         { label: 'Pug', level: 4, tags: ['frontend'] },
@@ -233,6 +309,11 @@ const skills: SkillSectionType = {
           level: 4,
           tags: ['frontend', 'backend'],
         },
+        {
+          label: 'TypeScript',
+          level: 4,
+          tags: ['frontend', 'backend'],
+        },
         { label: 'jQuery', level: 2, tags: ['frontend'] },
         { label: 'ReactJS', level: 5, tags: ['frontend'] },
         { label: 'NodeJS', level: 3, tags: ['backend'] },
@@ -246,7 +327,7 @@ const skills: SkillSectionType = {
       ],
     },
     {
-      heading: 'Weiter Skills',
+      heading: 'Weitere Skills',
       items: [
         { label: 'Python', level: 3, tags: ['backend'] },
         {
@@ -318,16 +399,6 @@ const skills: SkillSectionType = {
           tags: ['other'],
         },
         { label: 'Scrum', level: 3, tags: ['other'] },
-        {
-          label: 'Object-oriented programming',
-          level: 3,
-          tags: ['other'],
-        },
-        {
-          label: 'Test-driven development',
-          level: 3,
-          tags: ['other'],
-        },
         { label: 'Confluence', level: 3, tags: ['other'] },
       ],
     },
@@ -403,6 +474,7 @@ const misc: UnstructuredSection = {
 }
 
 export default {
+  introText,
   cvJobItems,
   cvEduItems,
   skills,

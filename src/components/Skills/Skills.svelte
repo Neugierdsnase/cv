@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SectionHeading from './../SectionHeading.svelte'
   import {
     CvSectionType,
     SkillSectionType,
@@ -12,11 +13,9 @@
 </script>
 
 {#if items && items.length}
-  <h2
-    class="text-h2 text-right font-display font-bold text-babyBlue-400"
-  >
-    {skills.heading}
-  </h2>
+  <SectionHeading>
+    {@html skills.heading}
+  </SectionHeading>
   <Legend />
   <div class="mx-auto flex flex-wrap gap-4 lg:w-2/3">
     {#each items as skill (skill)}
