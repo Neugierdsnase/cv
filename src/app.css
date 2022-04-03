@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply w-screen overflow-x-hidden bg-black-rich text-babyBlue-300 print:bg-white print:text-black-rich;
+    @apply w-screen overflow-x-hidden bg-babyBlue-400 text-babyBlue-300 print:bg-white print:text-black-rich;
     max-width: 100vw;
   }
 }
@@ -24,7 +24,17 @@
 
   .hero-clip-path {
     @apply bg-babyBlue-300 text-black-rich;
-    clip-path: polygon(100% 0, 100% 100%, 50% 60%, 0 100%, 0 0);
+    clip-path: polygon(
+      0% 100%,
+      15% 80%,
+      30% 100%,
+      50% 80%,
+      70% 100%,
+      85% 80%,
+      100% 100%,
+      100% 0%,
+      0% 0%
+    );
   }
 
   .stripes {

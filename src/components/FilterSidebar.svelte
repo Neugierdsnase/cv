@@ -15,6 +15,7 @@
     'bottom-0',
     'top-0',
     'w-80',
+    'h-screen',
     'right-0',
     'z-40',
     'flex',

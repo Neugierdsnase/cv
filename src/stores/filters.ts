@@ -4,7 +4,11 @@ import { HIDE_NON_TECH_INITIALLY } from '../constants'
 import data from '../data'
 import { CvItemType, Level, TagType } from '../types'
 import { filterNonTech } from '../utility'
-import { cvJobItemsState, cvEduItemsState, skillsState } from './data'
+import {
+  cvJobItemsState,
+  cvEduItemsState,
+  skillsState,
+} from './data'
 
 export const activeFiltersState = writable<TagType[]>([])
 export const skillLevelFilterState = writable<Level>(1)
