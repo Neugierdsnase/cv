@@ -5,6 +5,7 @@
   import ListItem from './ListItem.svelte'
   import CvItemTag from './CvItemTag.svelte'
   import { CaretDown } from 'phosphor-svelte'
+  import Time from './Time.svelte'
 
   export let cvItem: CvItemType
 
@@ -35,11 +36,7 @@
       >
         {@html label}
       </h3>
-      <p
-        class="font-cover font-2xl absolute top-4 right-4 w-1/4 rotate-90 text-right font-bold opacity-60 print:relative print:rotate-0 md:rotate-0"
-      >
-        {time}
-      </p>
+      <Time {time} />
       {#if Boolean(tagLine)}
         <p class="font-cover  w-2/3">
           {@html tagLine}
@@ -83,7 +80,7 @@
       {@html tagLine}
     </p>
   {/if}
-  <p>{time}</p>
+  <Time {time} />
   {#if list && list.length}
     <ul class="my-4">
       {#each list as listItem, index}

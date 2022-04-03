@@ -1,3 +1,5 @@
+import { Dayjs } from "dayjs"
+
 export type TagType =
   | 'frontend'
   | 'backend'
@@ -15,20 +17,19 @@ export enum LevelType {
   'expert',
 }
 
-export type UnstructuredSection = {
-  label: string
-  text: string
-  tags?: TagType[]
-}
-
 export type ListItemType = {
   label: string
   tags?: TagType[]
 }
 
+export type TimeType = {
+  from: Dayjs
+  to?: Dayjs
+}
+
 export type CvItemType = {
   label: string
-  time?: string
+  time?: TimeType
   tagLine?: string
   list?: ListItemType[]
   tags?: TagType[]
