@@ -1,9 +1,6 @@
 import dayjs from 'dayjs'
 import _ from 'lodash'
-import {
-  CvSectionType,
-  SkillSectionType,
-} from './types'
+import { CvSectionType, SkillSectionType } from './types'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(customParseFormat)
 
@@ -25,9 +22,12 @@ const cvJobItems: CvSectionType = {
   items: [
     {
       label: 'willhaben',
-      time: {from: dayjs('05/2021', 'MM/YYYY')},
+      time: { from: dayjs('05/2021', 'MM/YYYY') },
       list: [
-        { label: 'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert' },
+        {
+          label:
+            'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert',
+        },
         { label: 'meistbesuchte österreichische Website' },
         {
           label:
@@ -53,7 +53,7 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: 'Coding School & Academy Wörthersee',
-      time: {from: dayjs('05/2021', 'MM/YYYY')},
+      time: { from: dayjs('05/2021', 'MM/YYYY') },
       list: [
         {
           label:
@@ -76,7 +76,7 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: 'Web&Söhne',
-      time: {from: dayjs('21.01.2020', 'DD.MM.YYYY')},
+      time: { from: dayjs('21.01.2020', 'DD.MM.YYYY') },
       list: [
         {
           label:
@@ -97,7 +97,7 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: 'Projektarbeiten und Freelancing',
-      time: {from: dayjs('11/2018', 'MM/YYYY')},
+      time: { from: dayjs('11/2018', 'MM/YYYY') },
       list: [
         {
           label:
@@ -126,7 +126,10 @@ const cvJobItems: CvSectionType = {
     {
       label: 'der brutkasten',
       tagLine: 'WordPress & Frontend Developer',
-      time: {from: dayjs('01.04.2018', 'DD.MM.YYYY'), to: dayjs('30.11.2018', 'DD.MM.YYYY')},
+      time: {
+        from: dayjs('01.04.2018', 'DD.MM.YYYY'),
+        to: dayjs('30.11.2018', 'DD.MM.YYYY'),
+      },
       list: [
         {
           label:
@@ -143,7 +146,10 @@ const cvJobItems: CvSectionType = {
     {
       label: 'Projektarbeiten',
       tagLine: '',
-      time: {from: dayjs('01/2008', 'MM/YYYY'), to: dayjs('12/2018', 'MM/YYYY')},
+      time: {
+        from: dayjs('01/2008', 'MM/YYYY'),
+        to: dayjs('12/2018', 'MM/YYYY'),
+      },
       list: [
         {
           label:
@@ -176,7 +182,10 @@ const cvJobItems: CvSectionType = {
     {
       label: 'Bezirksämter 16 & 17',
       tagLine: 'Verwaltungstrafen und Gewerberecht',
-      time: {from: dayjs('01.05.2015', 'DD.MM.YYYY'), to: dayjs('31.12.2020', 'DD.MM.YYYY')},
+      time: {
+        from: dayjs('01.05.2015', 'DD.MM.YYYY'),
+        to: dayjs('31.12.2020', 'DD.MM.YYYY'),
+      },
       list: [
         { label: 'gewissenhaftes juristisches Arbeiten' },
         {
@@ -193,7 +202,10 @@ const cvJobItems: CvSectionType = {
     {
       label: 'MA 35',
       tagLine: 'Einwanderungsverfahren',
-      time: {from: dayjs('22.12.2012', 'DD.MM.YYYY'), to: dayjs('30.04.2015', 'DD.MM.YYYY')},
+      time: {
+        from: dayjs('22.12.2012', 'DD.MM.YYYY'),
+        to: dayjs('30.04.2015', 'DD.MM.YYYY'),
+      },
       list: [
         {
           label:
@@ -206,7 +218,10 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: 'diverse Praktika',
-      time: {from: dayjs('06/2008', 'MM/YYYY'), to: dayjs('12/2012', 'MM/YYYY')},
+      time: {
+        from: dayjs('06/2008', 'MM/YYYY'),
+        to: dayjs('12/2012', 'MM/YYYY'),
+      },
       list: [
         { label: 'Vetoquinol' },
         { label: 'Hausverwaltung Rosenberger' },
@@ -223,21 +238,30 @@ const cvEduItems: CvSectionType = {
   items: [
     {
       label: 'FH der WKW',
-      time: {from: dayjs('09/2015', 'MM/YYYY'), to: dayjs('10/2018', 'MM/YYYY')},
+      time: {
+        from: dayjs('09/2015', 'MM/YYYY'),
+        to: dayjs('10/2018', 'MM/YYYY'),
+      },
       tagLine:
         'Studium “Contentproduktion & digitales Medienmanagement”, Abschlussmit Auszeichnung',
       tags: ['non&#8209;tech'],
     },
     {
       label: 'Magistrat Wien',
-      time: {from: dayjs('12/2014', 'MM/YYYY'), to: dayjs('12/2014', 'MM/YYYY')},
+      time: {
+        from: dayjs('12/2014', 'MM/YYYY'),
+        to: dayjs('12/2014', 'MM/YYYY'),
+      },
       tagLine:
         'Dienstprüfungskurs und Dienstprüfung <i>(hauptsächlich öffentliches Recht.)</i>',
       tags: ['non&#8209;tech'],
     },
     {
       label: 'Universität Wien',
-      time: {from: dayjs('09/2010', 'MM/YYYY'), to: dayjs('06/2011', 'MM/YYYY')},
+      time: {
+        from: dayjs('09/2010', 'MM/YYYY'),
+        to: dayjs('06/2011', 'MM/YYYY'),
+      },
 
       tagLine:
         'Katholische Theologie und Latein - Lehramtsstudium',
@@ -245,19 +269,28 @@ const cvEduItems: CvSectionType = {
     },
     {
       label: 'Wirtschaftsuniversität Wien',
-      time: {from: dayjs('09/2009', 'MM/YYYY'), to: dayjs('06/2010', 'MM/YYYY')},
+      time: {
+        from: dayjs('09/2009', 'MM/YYYY'),
+        to: dayjs('06/2010', 'MM/YYYY'),
+      },
       tagLine: 'Studium der Betriebswirtschaftslehre',
       tags: ['non&#8209;tech'],
     },
     {
       label: 'Universität Wien',
-      time: {from: dayjs('09/2008', 'MM/YYYY'), to: dayjs('06/2009', 'MM/YYYY')},
+      time: {
+        from: dayjs('09/2008', 'MM/YYYY'),
+        to: dayjs('06/2009', 'MM/YYYY'),
+      },
       tagLine: 'Studium der kath. Fachtheologie',
       tags: ['non&#8209;tech'],
     },
     {
       label: 'Bundesgymnasium Wien XIX',
-      time: {from: dayjs('09/2000', 'MM/YYYY'), to: dayjs('06/2008', 'MM/YYYY')},
+      time: {
+        from: dayjs('09/2000', 'MM/YYYY'),
+        to: dayjs('06/2008', 'MM/YYYY'),
+      },
       tagLine: 'AHS Matura (humanistischer Zweig)',
       tags: ['non&#8209;tech'],
     },
@@ -305,7 +338,7 @@ const skills: SkillSectionType = {
           tags: ['frontend'],
         },
         {
-          label: 'styled-components & emotionJS)',
+          label: 'styled-components & emotionJS',
           level: 5,
           tags: ['frontend'],
         },

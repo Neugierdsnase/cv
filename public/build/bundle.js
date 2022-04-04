@@ -20209,7 +20209,9 @@ var app = (function () {
                 label: 'willhaben',
                 time: { from: dayjs_min('05/2021', 'MM/YYYY') },
                 list: [
-                    { label: 'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert' },
+                    {
+                        label: 'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert'
+                    },
                     { label: 'meistbesuchte österreichische Website' },
                     {
                         label: 'mehrmonatige Erfahrungen in zwei unterschiedlichen Tribes gesammelt'
@@ -20295,7 +20297,10 @@ var app = (function () {
             {
                 label: 'der brutkasten',
                 tagLine: 'WordPress & Frontend Developer',
-                time: { from: dayjs_min('01.04.2018', 'DD.MM.YYYY'), to: dayjs_min('30.11.2018', 'DD.MM.YYYY') },
+                time: {
+                    from: dayjs_min('01.04.2018', 'DD.MM.YYYY'),
+                    to: dayjs_min('30.11.2018', 'DD.MM.YYYY')
+                },
                 list: [
                     {
                         label: 'WordPress Theme-Programmierung mit altem Legacy Code'
@@ -20310,7 +20315,10 @@ var app = (function () {
             {
                 label: 'Projektarbeiten',
                 tagLine: '',
-                time: { from: dayjs_min('01/2008', 'MM/YYYY'), to: dayjs_min('12/2018', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('01/2008', 'MM/YYYY'),
+                    to: dayjs_min('12/2018', 'MM/YYYY')
+                },
                 list: [
                     {
                         label: 'Logo- und Corporatedesign für <a href="https://sgreening.io/">sgreening</a>'
@@ -20337,7 +20345,10 @@ var app = (function () {
             {
                 label: 'Bezirksämter 16 & 17',
                 tagLine: 'Verwaltungstrafen und Gewerberecht',
-                time: { from: dayjs_min('01.05.2015', 'DD.MM.YYYY'), to: dayjs_min('31.12.2020', 'DD.MM.YYYY') },
+                time: {
+                    from: dayjs_min('01.05.2015', 'DD.MM.YYYY'),
+                    to: dayjs_min('31.12.2020', 'DD.MM.YYYY')
+                },
                 list: [
                     { label: 'gewissenhaftes juristisches Arbeiten' },
                     {
@@ -20352,7 +20363,10 @@ var app = (function () {
             {
                 label: 'MA 35',
                 tagLine: 'Einwanderungsverfahren',
-                time: { from: dayjs_min('22.12.2012', 'DD.MM.YYYY'), to: dayjs_min('30.04.2015', 'DD.MM.YYYY') },
+                time: {
+                    from: dayjs_min('22.12.2012', 'DD.MM.YYYY'),
+                    to: dayjs_min('30.04.2015', 'DD.MM.YYYY')
+                },
                 list: [
                     {
                         label: 'brisante politische und rechtliche Materie'
@@ -20364,7 +20378,10 @@ var app = (function () {
             },
             {
                 label: 'diverse Praktika',
-                time: { from: dayjs_min('06/2008', 'MM/YYYY'), to: dayjs_min('12/2012', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('06/2008', 'MM/YYYY'),
+                    to: dayjs_min('12/2012', 'MM/YYYY')
+                },
                 list: [
                     { label: 'Vetoquinol' },
                     { label: 'Hausverwaltung Rosenberger' },
@@ -20380,37 +20397,55 @@ var app = (function () {
         items: [
             {
                 label: 'FH der WKW',
-                time: { from: dayjs_min('09/2015', 'MM/YYYY'), to: dayjs_min('10/2018', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('09/2015', 'MM/YYYY'),
+                    to: dayjs_min('10/2018', 'MM/YYYY')
+                },
                 tagLine: 'Studium “Contentproduktion & digitales Medienmanagement”, Abschlussmit Auszeichnung',
                 tags: ['non&#8209;tech']
             },
             {
                 label: 'Magistrat Wien',
-                time: { from: dayjs_min('12/2014', 'MM/YYYY'), to: dayjs_min('12/2014', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('12/2014', 'MM/YYYY'),
+                    to: dayjs_min('12/2014', 'MM/YYYY')
+                },
                 tagLine: 'Dienstprüfungskurs und Dienstprüfung <i>(hauptsächlich öffentliches Recht.)</i>',
                 tags: ['non&#8209;tech']
             },
             {
                 label: 'Universität Wien',
-                time: { from: dayjs_min('09/2010', 'MM/YYYY'), to: dayjs_min('06/2011', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('09/2010', 'MM/YYYY'),
+                    to: dayjs_min('06/2011', 'MM/YYYY')
+                },
                 tagLine: 'Katholische Theologie und Latein - Lehramtsstudium',
                 tags: ['non&#8209;tech']
             },
             {
                 label: 'Wirtschaftsuniversität Wien',
-                time: { from: dayjs_min('09/2009', 'MM/YYYY'), to: dayjs_min('06/2010', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('09/2009', 'MM/YYYY'),
+                    to: dayjs_min('06/2010', 'MM/YYYY')
+                },
                 tagLine: 'Studium der Betriebswirtschaftslehre',
                 tags: ['non&#8209;tech']
             },
             {
                 label: 'Universität Wien',
-                time: { from: dayjs_min('09/2008', 'MM/YYYY'), to: dayjs_min('06/2009', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('09/2008', 'MM/YYYY'),
+                    to: dayjs_min('06/2009', 'MM/YYYY')
+                },
                 tagLine: 'Studium der kath. Fachtheologie',
                 tags: ['non&#8209;tech']
             },
             {
                 label: 'Bundesgymnasium Wien XIX',
-                time: { from: dayjs_min('09/2000', 'MM/YYYY'), to: dayjs_min('06/2008', 'MM/YYYY') },
+                time: {
+                    from: dayjs_min('09/2000', 'MM/YYYY'),
+                    to: dayjs_min('06/2008', 'MM/YYYY')
+                },
                 tagLine: 'AHS Matura (humanistischer Zweig)',
                 tags: ['non&#8209;tech']
             },
@@ -20457,7 +20492,7 @@ var app = (function () {
                         tags: ['frontend']
                     },
                     {
-                        label: 'styled-components & emotionJS)',
+                        label: 'styled-components & emotionJS',
                         level: 5,
                         tags: ['frontend']
                     },
@@ -24582,7 +24617,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (9:0) {#if tags && tags.length}
+    // (11:0) {#if tags && tags.length}
     function create_if_block$2(ctx) {
     	let dd;
     	let level_1;
@@ -24619,9 +24654,9 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "flex flex-row-reverse print:hidden");
-    			add_location(ul, file$5, 11, 4, 282);
-    			attr_dev(dd, "class", "flex items-center");
-    			add_location(dd, file$5, 9, 2, 225);
+    			add_location(ul, file$5, 13, 4, 344);
+    			attr_dev(dd, "class", "ml-4 flex max-w-full items-center");
+    			add_location(dd, file$5, 11, 2, 271);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, dd, anchor);
@@ -24695,14 +24730,14 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(9:0) {#if tags && tags.length}",
+    		source: "(11:0) {#if tags && tags.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (13:6) {#each tags as tag}
+    // (15:6) {#each tags as tag}
     function create_each_block$2(ctx) {
     	let li;
     	let tag;
@@ -24720,7 +24755,7 @@ var app = (function () {
     			create_component(tag.$$.fragment);
     			t = space();
     			attr_dev(li, "class", "ml-4");
-    			add_location(li, file$5, 13, 8, 364);
+    			add_location(li, file$5, 15, 8, 426);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -24748,7 +24783,7 @@ var app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(13:6) {#each tags as tag}",
+    		source: "(15:6) {#each tags as tag}",
     		ctx
     	});
 
@@ -24768,6 +24803,7 @@ var app = (function () {
     			t = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
+    			attr_dev(dt, "class", "shrink text-ellipsis line-clamp-1");
     			add_location(dt, file$5, 7, 0, 174);
     		},
     		l: function claim(nodes) {

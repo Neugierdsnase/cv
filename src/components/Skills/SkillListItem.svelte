@@ -6,9 +6,11 @@
   const { label, level, tags } = item
 </script>
 
-<dt>{@html label}</dt>
+<dt class="shrink text-ellipsis line-clamp-1">
+  {@html label}
+</dt>
 {#if tags && tags.length}
-  <dd class="flex items-center">
+  <dd class="ml-4 flex max-w-full items-center">
     <Level {level} />
     <ul class="flex flex-row-reverse print:hidden">
       {#each tags as tag}
