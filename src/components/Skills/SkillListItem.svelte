@@ -1,5 +1,8 @@
 <script lang="ts">
+  import { contentLangState } from '../../stores/ui'
+
   import { CvItemType } from '../../types'
+  import { getIntlContent } from '../../utility'
   import Tag from '../Tag.svelte'
   import Level from './Level.svelte'
   export let item: CvItemType
@@ -7,7 +10,7 @@
 </script>
 
 <dt class="shrink text-ellipsis line-clamp-1">
-  {@html label}
+  {@html getIntlContent(label, $contentLangState)}
 </dt>
 {#if tags && tags.length}
   <dd class="ml-4 flex max-w-full items-center">

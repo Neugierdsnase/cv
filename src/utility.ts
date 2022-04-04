@@ -1,4 +1,10 @@
-import { CvItemType } from './types'
+import { contentLangState } from './stores/ui'
+import {
+  CvItemType,
+  IntlContentType,
+  isSingleLanguageContentTypeGuard,
+  LanguageType,
+} from './types'
 
 export const filterNonTech = (
   enforce: boolean,
@@ -12,6 +18,7 @@ export const filterNonTech = (
   )
 }
 
+// handle clicks outside of DOM node
 export const clickOutside = (node) => {
   const handleClick = (event) => {
     if (
@@ -36,4 +43,15 @@ export const clickOutside = (node) => {
       )
     },
   }
+}
+
+export const getIntlContent = <T>(
+  intlContent: IntlContentType<T>,
+  contentLangState: LanguageType,
+): T => {
+  if (isSingleLanguageContentTypeGuard(intlContent)) {
+    return intlContent.intl
+  }
+
+  return intlContent[contentLangState]
 }

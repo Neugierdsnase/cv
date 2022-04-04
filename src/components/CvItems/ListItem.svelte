@@ -1,6 +1,8 @@
 <script lang="ts">
   import clsx from 'clsx'
+  import { contentLangState } from '../../stores/ui'
   import { ListItemType } from '../../types'
+  import { getIntlContent } from '../../utility'
   export let listItem: ListItemType
   export let index: number
   export let show: boolean
@@ -12,5 +14,10 @@
     show && 'h-12 border-t-2',
   )}
 >
-  <p class="text-sm">{@html listItem.label}</p>
+  <p class="text-sm">
+    {@html getIntlContent(
+      listItem.label,
+      $contentLangState,
+    )}
+  </p>
 </li>

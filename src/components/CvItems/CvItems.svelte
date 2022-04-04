@@ -3,6 +3,8 @@
   import { CvSectionType } from '../../types'
 
   import CvItem from './CvItem.svelte'
+  import { getIntlContent } from '../../utility'
+  import { contentLangState } from '../../stores/ui'
 
   export let cvItems: CvSectionType
   $: heading = cvItems.heading
@@ -11,7 +13,7 @@
 
 {#if items && items.length}
   <SectionHeading>
-    {@html heading}
+    {@html getIntlContent(heading, $contentLangState)}
   </SectionHeading>
   {#each items as cvItem (cvItem)}
     <CvItem {cvItem} />

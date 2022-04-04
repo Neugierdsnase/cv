@@ -18,13 +18,22 @@ export enum LevelType {
 }
 
 export type LanguageType = 'en' | 'de'
-
-export type IntlContent<T> = {
+type MultiLanguageContent<T> = {
   [key in LanguageType]: T
-} | {['intl']: T}
+}
+type SingleLanguageContent<T> = { ['intl']: T }
+
+export type IntlContentType<T> =
+  | MultiLanguageContent<T>
+  | SingleLanguageContent<T>
+
+export const isSingleLanguageContentTypeGuard = <T>(
+  content: IntlContentType<T>,
+): content is SingleLanguageContent<T> =>
+  (content as SingleLanguageContent<T>).intl !== undefined
 
 export type ListItemType = {
-  label: IntlContent<string>
+  label: IntlContentType<string>
   tags?: TagType[]
 }
 
@@ -34,20 +43,20 @@ export type TimeType = {
 }
 
 export type CvItemType = {
-  label: IntlContent<string>
+  label: IntlContentType<string>
   time?: TimeType
-  tagLine?: IntlContent<string>
+  tagLine?: IntlContentType<string>
   list?: ListItemType[]
   tags?: TagType[]
   level?: LevelType
 }
 
 export type CvSectionType = {
-  heading: IntlContent<string>
+  heading: IntlContentType<string>
   items: CvItemType[]
 }
 
 export type SkillSectionType = {
-  heading: IntlContent<string>
+  heading: IntlContentType<string>
   items: CvSectionType[]
 }

@@ -2,6 +2,7 @@
   import './app.css'
   import FilterButton from './components/Buttons/FilterButton.svelte'
   import PdfButton from './components/Buttons/PdfButton.svelte'
+  import TranslateButton from './components/Buttons/TranslateButton.svelte'
   import FilterSidebar from './components/FilterSidebar.svelte'
   import Footer from './components/Footer.svelte'
   import Hero from './components/Hero.svelte'
@@ -30,5 +31,6 @@
   class="fixed right-12 bottom-0 z-20 flex h-1/4 flex-col justify-around align-middle print:hidden"
 >
   <FilterButton />
+  <TranslateButton />
   <PdfButton />
 </div>

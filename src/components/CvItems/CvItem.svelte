@@ -6,6 +6,8 @@
   import CvItemTag from './CvItemTag.svelte'
   import { CaretDown } from 'phosphor-svelte'
   import Time from './Time.svelte'
+  import { getIntlContent } from '../../utility'
+  import { contentLangState } from '../../stores/ui'
 
   export let cvItem: CvItemType
 
@@ -34,12 +36,12 @@
       <h3
         class="text-h3 w-2/3 font-display font-bold leading-none"
       >
-        {@html label}
+        {@html getIntlContent(label, $contentLangState)}
       </h3>
       <Time {time} />
       {#if Boolean(tagLine)}
         <p class="font-cover  w-2/3">
-          {@html tagLine}
+          {@html getIntlContent(tagLine, $contentLangState)}
         </p>
       {/if}
     </div>
@@ -73,11 +75,11 @@
 <!-- Print version -->
 <div class="hidden break-inside-avoid print:block">
   <h3 class="font-cover text-2xl">
-    {@html label}
+    {@html getIntlContent(label, $contentLangState)}
   </h3>
   {#if Boolean(tagLine)}
     <p class="font-cover  w-2/3">
-      {@html tagLine}
+      {@html getIntlContent(tagLine, $contentLangState)}
     </p>
   {/if}
   <Time {time} />
