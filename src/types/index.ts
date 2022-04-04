@@ -17,8 +17,14 @@ export enum LevelType {
   'expert',
 }
 
+export type LanguageType = 'en' | 'de'
+
+export type IntlContent<T> = {
+  [key in LanguageType]: T
+} | {['intl']: T}
+
 export type ListItemType = {
-  label: string
+  label: IntlContent<string>
   tags?: TagType[]
 }
 
@@ -28,20 +34,20 @@ export type TimeType = {
 }
 
 export type CvItemType = {
-  label: string
+  label: IntlContent<string>
   time?: TimeType
-  tagLine?: string
+  tagLine?: IntlContent<string>
   list?: ListItemType[]
   tags?: TagType[]
   level?: LevelType
 }
 
 export type CvSectionType = {
-  heading: string
+  heading: IntlContent<string>
   items: CvItemType[]
 }
 
 export type SkillSectionType = {
-  heading: string
+  heading: IntlContent<string>
   items: CvSectionType[]
 }

@@ -1,10 +1,10 @@
 import dayjs from 'dayjs'
 import _ from 'lodash'
-import { CvSectionType, SkillSectionType } from './types'
+import { CvSectionType, IntlContent, SkillSectionType } from './types'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(customParseFormat)
 
-const introText: string = `
+const introText: IntlContent<string> = {de: `
 <p>
 Hallo, ich bin der Konstantin. Webentwickler, hauptsächlich Frontend.
 </p>
@@ -15,34 +15,34 @@ Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit Rea
 Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.
 </p>
 <p>Wenn Du zu dem Schluss kommen solltest, dass wir uns kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.</p>
-`
+`, en: ``}
 
 const cvJobItems: CvSectionType = {
-  heading: 'Berufserfahrung',
+  heading: {de: 'Berufserfahrung', en: 'Work Experience'},
   items: [
     {
-      label: 'willhaben',
+      label: {intl: 'willhaben'},
       time: { from: dayjs('05/2021', 'MM/YYYY') },
       list: [
         {
           label:
-            'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert',
+            {de: 'als externer Entwickler, aber zu 100% in das Unternehmen eingegliedert', en: 'TODO'},
         },
-        { label: 'meistbesuchte österreichische Website' },
+        { label: {en: "TODO", de: 'meistbesuchte österreichische Website'} },
         {
           label:
-            'mehrmonatige Erfahrungen in zwei unterschiedlichen Tribes gesammelt',
+            {en: "TODO", de: 'mehrmonatige Erfahrungen in zwei unterschiedlichen Tribes gesammelt'},
         },
         {
           label:
-            'Wissen vertieft, aber auch verbreitert, teaminterne T-shaped Expertise',
+            {en: "TODO", de: 'Wissen vertieft, aber auch verbreitert, teaminterne T-shaped Expertise'},
         },
-        { label: 'kompletter agiler Workflow' },
+        { label: {en: "TODO", de: 'kompletter agiler Workflow'} },
         {
           label:
-            'diverse interne disziplinübergreifende Weiterbilungen',
+            {en: "TODO", de: 'diverse interne disziplinübergreifende Weiterbilungen'},
         },
-        { label: 'gelebte "technical Excellence"' },
+        { label: {en: "TODO", de: 'gelebte "technical Excellence"'} },
       ],
       tags: [
         'frontend',
@@ -52,40 +52,40 @@ const cvJobItems: CvSectionType = {
       ],
     },
     {
-      label: 'Coding School & Academy Wörthersee',
+      label: {de: 'Coding School & Academy Wörthersee', en: 'TODO'},
       time: { from: dayjs('05/2021', 'MM/YYYY') },
       list: [
         {
           label:
-            'zweimal den berufbegleitenden Crashkurs Webdevelopment vorbereitet und unterrichtet',
+            {en: "TODO", de: 'zweimal den berufbegleitenden Crashkurs Webdevelopment vorbereitet und unterrichtet'},
         },
         {
           label:
-            'zweimal den HTML & CSS Basics Kurs für den Vollzeitstudiengang unterrichtet',
+            {en: "TODO", de: 'zweimal den HTML & CSS Basics Kurs für den Vollzeitstudiengang unterrichtet'},
         },
         {
           label:
-            'diverse Projekt- und Abschlussarbeiten benotet',
+            {en: "TODO", de: 'diverse Projekt- und Abschlussarbeiten benotet'},
         },
         {
           label:
-            'Abschlussprüfungen als Prüfer vor der FH Kärnten abgenommen',
+            {en: "TODO", de: 'Abschlussprüfungen als Prüfer vor der FH Kärnten abgenommen'},
         },
       ],
       tags: ['frontend', 'consulting', 'other'],
     },
     {
-      label: 'Web&Söhne',
+      label: {en: "TODO", de: 'Web&Söhne'},
       time: { from: dayjs('21.01.2020', 'DD.MM.YYYY') },
       list: [
         {
           label:
-            'Greenfield-Project mit UNIQA aufgesetzt und begonnen',
+            {en: "TODO", de: 'Greenfield-Project mit UNIQA aufgesetzt und begonnen'},
         },
-        { label: 'Entwickeln interner Tools' },
+        { label: {en: "TODO", de: 'Entwickeln interner Tools'} },
         {
           label:
-            'diverse kleine Projekte mit Bestandskunden, oft mit Legacy-Code',
+            {en: "TODO", de: 'diverse kleine Projekte mit Bestandskunden, oft mit Legacy-Code'},
         },
       ],
       tags: [
@@ -96,24 +96,24 @@ const cvJobItems: CvSectionType = {
       ],
     },
     {
-      label: 'Projektarbeiten und Freelancing',
+      label: {en: "TODO", de: 'Projektarbeiten und Freelancing'},
       time: { from: dayjs('11/2018', 'MM/YYYY') },
       list: [
         {
           label:
-            'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User',
+            {en: "TODO", de: 'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User',
+        }},
+        {
+          label:
+            {en: "TODO", de: 'für Ada - Power Woman (Technical Consulting)'},
         },
         {
           label:
-            'für Ada - Power Woman (Technical Consulting)',
+            {en: "TODO", de: 'für sgreening (Webdevelopment & Consulting)'},
         },
         {
           label:
-            'für sgreening (Webdevelopment & Consulting)',
-        },
-        {
-          label:
-            'Porsche Wien Mitte (WordPress-Development & Consulting)',
+            {en: "TODO", de: 'Porsche Wien Mitte (WordPress-Development & Consulting)'},
         },
       ],
       tags: [
@@ -124,8 +124,8 @@ const cvJobItems: CvSectionType = {
       ],
     },
     {
-      label: 'der brutkasten',
-      tagLine: 'WordPress & Frontend Developer',
+      label: {en: "TODO", de: 'der brutkasten'},
+      tagLine: {en: "TODO", de: 'WordPress & Frontend Developer'},
       time: {
         from: dayjs('01.04.2018', 'DD.MM.YYYY'),
         to: dayjs('30.11.2018', 'DD.MM.YYYY'),
@@ -133,19 +133,18 @@ const cvJobItems: CvSectionType = {
       list: [
         {
           label:
-            'WordPress Theme-Programmierung mit altem Legacy Code',
+            {en: "TODO", de: 'WordPress Theme-Programmierung mit altem Legacy Code'},
         },
-        { label: 'Erstellung eines internen CRM' },
+        { label: {en: "TODO", de: 'Erstellung eines internen CRM'} },
         {
           label:
-            'Content- und Businessstrategie aus technischer Perspektive',
+            {en: "TODO", de: 'Content- und Businessstrategie aus technischer Perspektive'},
         },
       ],
       tags: ['frontend', 'devops/sre'],
     },
     {
-      label: 'Projektarbeiten',
-      tagLine: '',
+      label: {en: "TODO", de: 'Projektarbeiten'},
       time: {
         from: dayjs('01/2008', 'MM/YYYY'),
         to: dayjs('12/2018', 'MM/YYYY'),
@@ -153,55 +152,55 @@ const cvJobItems: CvSectionType = {
       list: [
         {
           label:
-            'Logo- und Corporatedesign für <a href="https://sgreening.io/">sgreening</a>',
+            {en: "TODO", de: 'Logo- und Corporatedesign für <a href="https://sgreening.io/">sgreening</a>'},
         },
         {
           label:
-            'Umsetzen von Audio- und Videoprojekten für Radio Arabella',
+            {en: "TODO", de: 'Umsetzen von Audio- und Videoprojekten für Radio Arabella'},
         },
         {
           label:
-            'Programmieren von Texterstellungstools für das Bezirksamt Hernals',
+            {en: "TODO", de: 'Programmieren von Texterstellungstools für das Bezirksamt Hernals'},
         },
         {
           label:
-            'Mitarbeit an Marketingkonzept für Radio NRJ',
+            {en: "TODO", de: 'Mitarbeit an Marketingkonzept für Radio NRJ'},
         },
         {
           label:
-            'Mitarbeit an TV-Sendungsformat "Brennweite" der FH Wien',
+            {en: "TODO", de: 'Mitarbeit an TV-Sendungsformat "Brennweite" der FH Wien'},
         },
-        { label: 'Mitarbeit an Sendungen für Radio NJoy' },
+        { label: {en: "TODO", de: 'Mitarbeit an Sendungen für Radio NJoy'} },
         {
           label:
-            'Logo- und Corporatedesign für lectureclips.com <i>(nicht mehr aktiv)',
+            {en: "TODO", de: 'Logo- und Corporatedesign für lectureclips.com <i>(nicht mehr aktiv)'},
         },
       ],
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Bezirksämter 16 & 17',
-      tagLine: 'Verwaltungstrafen und Gewerberecht',
+      label: {en: "TODO", de: 'Bezirksämter 16 & 17'},
+      tagLine: {en: "TODO", de: 'Verwaltungstrafen und Gewerberecht'},
       time: {
         from: dayjs('01.05.2015', 'DD.MM.YYYY'),
         to: dayjs('31.12.2020', 'DD.MM.YYYY'),
       },
       list: [
-        { label: 'gewissenhaftes juristisches Arbeiten' },
+        { label: {en: "TODO", de: 'gewissenhaftes juristisches Arbeiten'} },
         {
           label:
-            'enge Zusammenarbeit mit Wirtschaftstreibenden in Funktion als Behörde',
+            {en: "TODO", de: 'enge Zusammenarbeit mit Wirtschaftstreibenden in Funktion als Behörde'},
         },
         {
           label:
-            'Einsatz in einer Vielzahl von Rechtsmaterien (u.A.: GewO, NAG, LMSVG, AWEG, AuslBG, etc.)',
+            {en: "TODO", de: 'Einsatz in einer Vielzahl von Rechtsmaterien (u.A.: GewO, NAG, LMSVG, AWEG, AuslBG, etc.)'},
         },
       ],
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'MA 35',
-      tagLine: 'Einwanderungsverfahren',
+      label: {en: "TODO", de: 'MA 35'},
+      tagLine: {en: "TODO", de: 'Einwanderungsverfahren'},
       time: {
         from: dayjs('22.12.2012', 'DD.MM.YYYY'),
         to: dayjs('30.04.2015', 'DD.MM.YYYY'),
@@ -209,24 +208,24 @@ const cvJobItems: CvSectionType = {
       list: [
         {
           label:
-            'brisante politische und rechtliche Materie',
+            {en: "TODO", de: 'brisante politische und rechtliche Materie'},
         },
-        { label: 'herausfordernder Kundenkontakt' },
-        { label: 'enormes Arbeitsvolumen' },
+        { label: {en: "TODO", de: 'herausfordernder Kundenkontakt'} },
+        { label: {en: "TODO", de: 'enormes Arbeitsvolumen'} },
       ],
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'diverse Praktika',
+      label: {en: "TODO", de: 'diverse Praktika'},
       time: {
         from: dayjs('06/2008', 'MM/YYYY'),
         to: dayjs('12/2012', 'MM/YYYY'),
       },
       list: [
-        { label: 'Vetoquinol' },
-        { label: 'Hausverwaltung Rosenberger' },
-        { label: 'Wiener Volkshochschulen' },
-        { label: 'Erzdiözese Wien' },
+        { label: {en: "TODO", de: 'Vetoquinol'} },
+        { label: {en: "TODO", de: 'Hausverwaltung Rosenberger'} },
+        { label: {en: "TODO", de: 'Wiener Volkshochschulen'} },
+        { label: {en: "TODO", de: 'Erzdiözese Wien'} },
       ],
       tags: ['non&#8209;tech'],
     },
@@ -234,294 +233,295 @@ const cvJobItems: CvSectionType = {
 }
 
 const cvEduItems: CvSectionType = {
-  heading: 'Schul- und Berufsausbilungen',
+  heading: {en: "TODO", de: 'Schul- und Berufsausbilungen'},
   items: [
     {
-      label: 'FH der WKW',
+      label: {en: "TODO", de: 'FH der WKW'},
       time: {
         from: dayjs('09/2015', 'MM/YYYY'),
         to: dayjs('10/2018', 'MM/YYYY'),
       },
       tagLine:
-        'Studium “Contentproduktion & digitales Medienmanagement”, Abschlussmit Auszeichnung',
+        {en: "TODO", de: 'Studium “Contentproduktion & digitales Medienmanagement”, Abschlussmit Auszeichnung'},
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Magistrat Wien',
+      label: {en: "TODO", de: 'Magistrat Wien'},
       time: {
         from: dayjs('12/2014', 'MM/YYYY'),
         to: dayjs('12/2014', 'MM/YYYY'),
       },
       tagLine:
-        'Dienstprüfungskurs und Dienstprüfung <i>(hauptsächlich öffentliches Recht.)</i>',
+        {en: "TODO", de: 'Dienstprüfungskurs und Dienstprüfung <i>(hauptsächlich öffentliches Recht.)</i>'},
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Universität Wien',
+      label: {en: "TODO", de: 'Universität Wien'},
       time: {
         from: dayjs('09/2010', 'MM/YYYY'),
         to: dayjs('06/2011', 'MM/YYYY'),
       },
 
       tagLine:
-        'Katholische Theologie und Latein - Lehramtsstudium',
+        {en: "TODO", de: 'Katholische Theologie und Latein - Lehramtsstudium'},
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Wirtschaftsuniversität Wien',
+      label: {en: "TODO", de: 'Wirtschaftsuniversität Wien'},
       time: {
         from: dayjs('09/2009', 'MM/YYYY'),
         to: dayjs('06/2010', 'MM/YYYY'),
       },
-      tagLine: 'Studium der Betriebswirtschaftslehre',
+      tagLine: {en: "TODO", de: 'Studium der Betriebswirtschaftslehre'},
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Universität Wien',
+      label: {en: "TODO", de: 'Universität Wien'},
       time: {
         from: dayjs('09/2008', 'MM/YYYY'),
         to: dayjs('06/2009', 'MM/YYYY'),
       },
-      tagLine: 'Studium der kath. Fachtheologie',
+      tagLine: {en: "TODO", de: 'Studium der kath. Fachtheologie'},
       tags: ['non&#8209;tech'],
     },
     {
-      label: 'Bundesgymnasium Wien XIX',
+      label: {en: "TODO", de: 'Bundesgymnasium Wien XIX'},
       time: {
         from: dayjs('09/2000', 'MM/YYYY'),
         to: dayjs('06/2008', 'MM/YYYY'),
       },
-      tagLine: 'AHS Matura (humanistischer Zweig)',
+      tagLine: {en: "TODO", de: 'AHS Matura (humanistischer Zweig)'},
       tags: ['non&#8209;tech'],
     },
   ],
 }
 
 const skills: SkillSectionType = {
-  heading: 'Skills',
+  heading: {intl: 'Skills'},
   items: [
     {
-      heading: 'Markup',
+      heading: {intl: 'Markup'},
       items: [
-        { label: 'HTML', level: 5, tags: ['frontend'] },
+        { label: {intl: 'HTML'}, level: 5, tags: ['frontend'] },
         {
-          label: 'XML/JSON',
+          label: {intl: 'XML/JSON'},
           level: 4,
           tags: ['frontend', 'backend'],
         },
         {
-          label: 'JSX/TSX',
+          label: {intl: 'JSX/TSX'},
           level: 4,
           tags: ['frontend'],
         },
-        { label: 'Markdown', level: 4, tags: ['frontend'] },
-        { label: 'Pug', level: 4, tags: ['frontend'] },
+        { label: {intl: 'Markdown'}, level: 4, tags: ['frontend'] },
+        { label: {intl: 'Pug'}, level: 4, tags: ['frontend'] },
         {
-          label: 'Jinja2',
+          label: {intl: 'Jinja2'},
           level: 3,
           tags: ['frontend', 'devops/sre'],
         },
         {
-          label: 'Handlebars',
+          label: {intl: 'Handlebars'},
           level: 2,
           tags: ['frontend'],
         },
       ],
     },
     {
-      heading: 'Styles',
+      heading: {intl: 'Styles'},
       items: [
-        { label: 'CSS', level: 4, tags: ['frontend'] },
+        { label: {intl: 'CSS'}, level: 4, tags: ['frontend'] },
         {
-          label: 'Sass & SCSS',
+          label: {intl: 'Sass & SCSS'},
           level: 4,
           tags: ['frontend'],
         },
         {
-          label: 'styled-components & emotionJS',
+          label: {intl: 'styled-components & emotionJS'},
           level: 5,
           tags: ['frontend'],
         },
         {
-          label: 'Tailwind CSS',
+          label: {intl: 'Tailwind CSS'},
           level: 3,
           tags: ['frontend'],
         },
         {
-          label: 'Material UI',
+          label: {intl: 'Material UI'},
           level: 4,
           tags: ['frontend'],
         },
         {
-          label: 'Bootstrap',
+          label: {intl: 'Bootstrap'},
           level: 2,
           tags: ['frontend'],
         },
       ],
     },
     {
-      heading: 'JavaScript',
+      heading: {intl: 'JavaScript'},
       items: [
         {
-          label: 'VanillaJS',
+          label: {intl: 'VanillaJS'},
           level: 4,
           tags: ['frontend', 'backend'],
         },
         {
-          label: 'TypeScript',
+          label: {intl: 'TypeScript'},
           level: 4,
           tags: ['frontend', 'backend'],
         },
-        { label: 'jQuery', level: 2, tags: ['frontend'] },
-        { label: 'ReactJS', level: 5, tags: ['frontend'] },
-        { label: 'NodeJS', level: 3, tags: ['backend'] },
-        { label: 'ExpressJS', level: 2, tags: ['backend'] },
-        { label: 'NextJS', level: 3, tags: ['frontend'] },
-        { label: 'NestJS', level: 3, tags: ['backend'] },
-        { label: 'Svelte', level: 3, tags: ['frontend'] },
-        { label: 'D3.js', level: 1, tags: ['frontend'] },
-        { label: 'socketIO', level: 2, tags: ['backend'] },
-        { label: 'ThreeJS', level: 1, tags: ['frontend'] },
+        { label: {intl: 'jQuery'}, level: 2, tags: ['frontend'] },
+        { label: {intl: 'ReactJS'}, level: 5, tags: ['frontend'] },
+        { label: {intl: 'NodeJS'}, level: 3, tags: ['backend'] },
+        { label: {intl: 'ExpressJS'}, level: 2, tags: ['backend'] },
+        { label: {intl: 'NextJS'}, level: 3, tags: ['frontend'] },
+        { label: {intl: 'NestJS'}, level: 3, tags: ['backend'] },
+        { label: {intl: 'nx.js'}, level: 1, tags: ['frontend', 'backend', 'devops/sre', 'tech&#8239;health'] },
+        { label: {intl: 'Svelte'}, level: 3, tags: ['frontend'] },
+        { label: {intl: 'D3.js'}, level: 1, tags: ['frontend'] },
+        { label: {intl: 'socketIO'}, level: 2, tags: ['backend'] },
+        { label: {intl: 'ThreeJS'}, level: 1, tags: ['frontend'] },
       ],
     },
     {
-      heading: 'Weitere Skills',
+      heading: {intl:'Weitere Skills'},
       items: [
-        { label: 'Python', level: 3, tags: ['backend'] },
+        { label: {intl: 'Python'}, level: 3, tags: ['backend'] },
         {
-          label: 'Flask, SQAlchemy + Ecosystem',
+          label: {intl: 'Flask, SQAlchemy + Ecosystem'},
           level: 2,
           tags: ['backend'],
         },
-        { label: 'Kotlin', level: 2, tags: ['backend'] },
+        { label: {intl: 'Kotlin'}, level: 2, tags: ['backend'] },
         {
-          label: 'PHP für WordPress',
+          label: {intl: 'PHP für WordPress'},
           level: 3,
           tags: ['frontend', 'backend'],
         },
         {
-          label: 'Rust',
+          label: {intl: 'Rust'},
           level: 1,
           tags: ['frontend', 'backend'],
         },
         {
-          label: 'GraphQL',
+          label: {intl: 'GraphQL'},
           level: 3,
           tags: ['frontend', 'backend'],
         },
-        { label: 'REST', level: 4, tags: ['backend'] },
-        { label: 'Heroku', level: 2, tags: ['devops/sre'] },
-        { label: 'Docker', level: 2, tags: ['devops/sre'] },
-        { label: 'SQL', level: 3, tags: ['backend'] },
-        { label: 'Jira', level: 3, tags: ['other'] },
-        { label: 'git', level: 4, tags: ['devops/sre'] },
-        { label: 'Gitlab', level: 3, tags: ['devops/sre', 'other'] },
-        { label: 'BitBucket', level: 2, tags: ['devops/sre', 'other'] },
+        { label: {intl: 'REST'}, level: 4, tags: ['backend'] },
+        { label: {intl: 'Heroku'}, level: 2, tags: ['devops/sre'] },
+        { label: {intl: 'Docker'}, level: 2, tags: ['devops/sre'] },
+        { label: {intl: 'SQL'}, level: 3, tags: ['backend'] },
+        { label: {intl: 'Jira'}, level: 3, tags: ['other'] },
+        { label: {intl: 'git'}, level: 4, tags: ['devops/sre'] },
+        { label: {intl: 'Gitlab'}, level: 3, tags: ['devops/sre', 'other'] },
+        { label: {intl: 'BitBucket'}, level: 2, tags: ['devops/sre', 'other'] },
         {
-          label: 'CypressJS',
+          label: {intl: 'CypressJS'},
           level: 3,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'SonarQube',
+          label: {intl: 'SonarQube'},
           level: 2,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'Grafana',
+          label: {intl: 'Grafana'},
           level: 2,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'Prometheus',
+          label: {intl: 'Prometheus'},
           level: 1,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'Sentry',
+          label: {intl: 'Sentry'},
           level: 2,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'Lighthouse',
+          label: {intl: 'Lighthouse'},
           level: 3,
           tags: ['tech&#8239;health'],
         },
         {
-          label: 'Storybook',
+          label: {intl: 'Storybook'},
           level: 3,
           tags: ['frontend'],
         },
         {
-          label: 'Agile Workflow',
+          label: {intl: 'Agile Workflow'},
           level: 3,
           tags: ['other'],
         },
-        { label: 'Scrum', level: 3, tags: ['other'] },
-        { label: 'Confluence', level: 3, tags: ['other'] },
+        { label: {intl: 'Scrum'}, level: 3, tags: ['other'] },
+        { label: {intl: 'Confluence'}, level: 3, tags: ['other'] },
       ],
     },
     {
-      heading: 'persönliche Roadmap',
+      heading: {intl: 'persönliche Roadmap'},
       items: [
-        { label: 'Rust', tags: ['backend'] },
+        { label: {intl: 'Rust'}, tags: ['backend'] },
         {
-          label: 'Rust for WebAssembly',
+          label: {intl: 'Rust for WebAssembly'},
           tags: ['frontend'],
         },
-        { label: 'Web3', tags: ['frontend'] },
-        { label: 'yew', tags: ['frontend'] },
-        { label: 'Russisch', tags: ['non&#8209;tech'] },
+        { label: {intl: 'Web3'}, tags: ['frontend'] },
+        { label: {intl: 'yew'}, tags: ['frontend'] },
+        { label: {intl: 'Russisch'}, tags: ['non&#8209;tech'] },
       ],
     },
     {
-      heading: 'Sprachen',
+      heading: {en: "TODO", de: 'Sprachen'},
       items: [
         {
-          label: 'Deutsch <i>(Muttersprache)</i>',
+          label: {en: "TODO", de: 'Deutsch <i>(Muttersprache)</i>'},
           tags: ['non&#8209;tech'],
         },
         {
           label:
-            'Englisch <i>(muttersprachliches Niveau)</i>',
+            {en: "TODO", de: 'Englisch <i>(muttersprachliches Niveau)</i>'},
           tags: ['non&#8209;tech'],
         },
         {
-          label: 'Latein <i>(sehr hilfreich)</i>',
+          label: {en: "TODO", de: 'Latein <i>(sehr hilfreich)</i>'},
           tags: ['non&#8209;tech'],
         },
         {
           label:
-            'Altgriechisch <i>(noch viel hilfreicher)</i>',
+            {en: "TODO", de: 'Altgriechisch <i>(noch viel hilfreicher)</i>'},
           tags: ['non&#8209;tech'],
         },
         {
-          label: 'Russisch <i>(A2)</i>',
+          label: {en: "TODO", de: 'Russisch <i>(A2)</i>'},
           tags: ['non&#8209;tech'],
         },
       ],
     },
     {
-      heading: 'schon wieder verlernte Skills',
+      heading: {en: "TODO", de: 'schon wieder verlernte Skills'},
       items: [
         {
-          label: 'Adobe After Effects',
+          label: {en: "TODO", de: 'Adobe After Effects'},
           tags: ['non&#8209;tech'],
         },
         {
-          label: 'Adobe Illustrator',
+          label: {en: "TODO", de: 'Adobe Illustrator'},
           tags: ['non&#8209;tech'],
         },
         {
-          label: 'Adobe InDesign',
+          label: {en: "TODO", de: 'Adobe InDesign'},
           tags: ['non&#8209;tech'],
         },
         {
-          label: 'Adobe Photoshop',
+          label: {en: "TODO", de: 'Adobe Photoshop'},
           tags: ['non&#8209;tech'],
         },
-        { label: 'Blender 3D', tags: ['non&#8209;tech'] },
-        { label: 'Godot', tags: ['non&#8209;tech'] },
+        { label: {en: "TODO", de: 'Blender 3D'}, tags: ['non&#8209;tech'] },
+        { label: {en: "TODO", de: 'Godot'}, tags: ['non&#8209;tech'] },
       ],
     },
   ],

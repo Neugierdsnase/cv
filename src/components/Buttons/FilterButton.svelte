@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { update } from 'lodash'
   import { FunnelSimple } from 'phosphor-svelte'
-  import { showSidebar } from '../../stores/ui'
+  import { showSidebarState } from '../../stores/ui'
   import ButtonContainer from './ButtonContainer.svelte'
 </script>
 
 <ButtonContainer
-  onClick={() => showSidebar.update((s) => !s)}
+  onClick={() => showSidebarState.update((s) => !s)}
 >
   <FunnelSimple size="36px" />
 </ButtonContainer>

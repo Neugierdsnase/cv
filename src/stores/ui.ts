@@ -1,3 +1,5 @@
 import { writable } from 'svelte/store'
+import { LanguageType } from '../types'
 
-export const showSidebar = writable(false)
+export const showSidebarState = writable(false)
+export const contentLangState = writable<LanguageType>('de')
