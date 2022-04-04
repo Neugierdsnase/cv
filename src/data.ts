@@ -414,8 +414,9 @@ const skills: SkillSectionType = {
         { label: 'Docker', level: 2, tags: ['devops/sre'] },
         { label: 'SQL', level: 3, tags: ['backend'] },
         { label: 'Jira', level: 3, tags: ['other'] },
-        { label: 'Gitlab', level: 3, tags: ['other'] },
-        { label: 'BitBucket', level: 2, tags: ['other'] },
+        { label: 'git', level: 4, tags: ['devops/sre'] },
+        { label: 'Gitlab', level: 3, tags: ['devops/sre', 'other'] },
+        { label: 'BitBucket', level: 2, tags: ['devops/sre', 'other'] },
         {
           label: 'CypressJS',
           level: 3,
