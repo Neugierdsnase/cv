@@ -12,8 +12,10 @@
 >
   {#if dayjs(to).isSame(from)}
     <span>{from.format(DATE_FORMAT)}</span>
+  {:else}
+    {#if !to}<span>{`seit `}</span>{/if}
+    <span>{from.format(DATE_FORMAT)}</span>
+    {#if to}<span>{` - ${to.format(DATE_FORMAT)}`}</span
+      >{/if}
   {/if}
-  {#if !to}<span>{`seit `}</span>{/if}
-  <span>{from.format(DATE_FORMAT)}</span>
-  {#if to}<span>{` - ${to.format(DATE_FORMAT)}`}</span>{/if}
 </div>
