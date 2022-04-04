@@ -10,10 +10,10 @@ dayjs.extend(customParseFormat)
 
 const introText: IntlContentType<string[]> = {
   de: [
-    'Hallo, ich bin der Konstantin. Webentwickler, spezialisiert auf das Frontend. Manchmal kann ich gra nicht glauben, dass ich für etwas, das so viel Spaß macht, bezahlt werde.',
-    'Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln. Wenn Du das hier ließt, dann vermutlich weil wir schon in Kontakt stehen und Du einen Lebenslauf von mir haben wolltest.',
-    'Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.',
-    'Wenn Du zu dem Schluss kommen solltest, dass wir uns (weiter) kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.',
+    'Hallo, ich bin der Konstantin. Webentwickler, spezialisiert auf das Frontend. Manchmal kann ich gar nicht glauben, dass ich für etwas, das so viel Spaß macht, bezahlt werde.',
+    'Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln. Wenn Du das hier liest, dann vermutlich weil wir schon in Kontakt stehen und Du einen Lebenslauf von mir haben wolltest.',
+    'Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein, kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufes als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.',
+    'Wenn Du zu dem Schluss kommst, dass wir uns (weiter) kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.',
   ],
   en: [
     "Hi, my name is Konstantin. Web developer, focusing on the front end. Sometimes I can't believe I'm getting paid for something, that is this much fun.",
