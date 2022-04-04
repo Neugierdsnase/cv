@@ -10,16 +10,16 @@ dayjs.extend(customParseFormat)
 
 const introText: IntlContentType<string> = {
   de: `
-<p>
+<p class="pb-4">
 Hallo, ich bin der Konstantin. Webentwickler, hauptsächlich Frontend.
 </p>
-<p>
+<p class="pb-4">
 Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln.
 </p>
-<p>
+<p class="pb-4">
 Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.
 </p>
-<p>Wenn Du zu dem Schluss kommen solltest, dass wir uns kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.</p>
+<p class="pb-4">Wenn Du zu dem Schluss kommen solltest, dass wir uns kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.</p>
 `,
   en: `TODO`,
 }

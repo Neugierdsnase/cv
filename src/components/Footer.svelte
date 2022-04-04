@@ -1,19 +1,25 @@
+<script>
+  import { contentLangState } from '../stores/ui'
+  import { contactMe, email, linkedIn } from '../ui-text'
+  import { getIntlContent } from './../utility.ts'
+</script>
+
 <footer class="mt-16 flex flex-col items-center py-8 px-8">
   <p class="mx-auto">
-    Gefällt Dir, was Du siehst? Ich bin offen für etwas
-    Neues! Kontaktiere mich:
+    {getIntlContent(contactMe, $contentLangState)}
   </p>
   <div class="flex justify-around">
     <span>
-      E-Mail Adresse:
+      {`${getIntlContent(email, $contentLangState)}: `}
       <a href="mailto:mail@vomkonstant.in"
         >mail@vomkonstant.in</a
       >
     </span>
+    <span>{` || `}</span>
     <span class="print:hidden">
       <a
         href="https://www.linkedin.com/in/konstantin-kovar-5301494b/"
-        >LinkedIn Profil</a
+        >{getIntlContent(linkedIn, $contentLangState)}</a
       >
     </span>
   </div>

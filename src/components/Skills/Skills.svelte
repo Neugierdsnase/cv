@@ -1,9 +1,6 @@
 <script lang="ts">
   import SectionHeading from './../SectionHeading.svelte'
-  import {
-    CvSectionType,
-    SkillSectionType,
-  } from '../../types'
+  import { SkillSectionType } from '../../types'
   import Legend from './Legend.svelte'
 
   import Skill from './Skill.svelte'

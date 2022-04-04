@@ -1,6 +1,8 @@
 <script lang="ts">
+  import { getIntlContent } from './../../utility'
   import { CvSectionType } from './../../types/index'
   import SkillList from './SkillList.svelte'
+  import { contentLangState } from '../../stores/ui'
 
   export let skill: CvSectionType
   const { heading, items } = skill
@@ -11,7 +13,7 @@
     class="min-w-[40%] grow print:break-inside-avoid"
   >
     <h2 class="font-display text-2xl font-bold">
-      {heading}
+      {@html getIntlContent(heading, $contentLangState)}
     </h2>
     <SkillList {items} />
   </section>

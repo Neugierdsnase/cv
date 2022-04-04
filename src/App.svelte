@@ -28,7 +28,7 @@
 </div>
 <FilterSidebar />
 <div
-  class="fixed right-12 bottom-0 z-20 flex h-1/4 flex-col justify-around align-middle print:hidden"
+  class="fixed right-12 bottom-0 z-20 flex h-1/3 flex-col justify-around align-middle print:hidden"
 >
   <FilterButton />
   <TranslateButton />

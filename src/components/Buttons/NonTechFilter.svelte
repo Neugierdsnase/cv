@@ -5,6 +5,9 @@
     filterData,
     hideNonTechState,
   } from '../../stores/filters'
+  import { contentLangState } from '../../stores/ui'
+  import { nonTechFilterLabel } from '../../ui-text'
+  import { getIntlContent } from '../../utility'
 
   const handleClick = (
     e: Event & {
@@ -59,6 +62,6 @@
   </div>
 
   <label for="hideNonTechState">
-    non-tech verstecken
+    {getIntlContent(nonTechFilterLabel, $contentLangState)}
   </label>
 </div>

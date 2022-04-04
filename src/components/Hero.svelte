@@ -4,6 +4,9 @@
     hideNonTechState,
     skillLevelFilterState,
   } from '../stores/filters'
+  import { contentLangState } from '../stores/ui'
+  import { subTitle } from '../ui-text'
+  import { getIntlContent } from '../utility'
 
   let y: number
 </script>
@@ -23,7 +26,7 @@
         Konstantin Kovar
       </h1>
       <subtitle class="mx-8 text-2xl text-babyBlue-400">
-        Lebenslauf
+        {@html getIntlContent(subTitle, $contentLangState)}
       </subtitle>
     </div>
   </div>
@@ -32,7 +35,9 @@
 <!-- Print version -->
 <section class="mt-8 hidden text-center print:block">
   <h1 class="text-5xl">Konstantin Kovar</h1>
-  <subtitle class="text-3xl"> Lebenslauf </subtitle>
+  <subtitle class="text-3xl">
+    {@html getIntlContent(subTitle, $contentLangState)}
+  </subtitle>
   <div class="text-xs text-gray-400" />
   <p>
     Disclaimer: This document was generated from an
