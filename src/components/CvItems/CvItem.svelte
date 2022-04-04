@@ -19,7 +19,7 @@
   <div class="flex flex-col lg:flex-row">
     {#if tags}
       <ul
-        class="flex h-10 flex-row items-stretch overflow-x-scroll border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:border-r-4"
+        class="flex h-10 flex-row items-stretch overflow-x-scroll border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:overflow-x-hidden lg:border-r-4"
       >
         <li
           class="stripes mr-2 w-24 print:hidden lg:hidden"
