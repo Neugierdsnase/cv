@@ -22953,8 +22953,8 @@ var app = (function () {
     			}
 
     			attr_dev(li, "class", "stripes mr-2 w-24 print:hidden lg:hidden");
-    			add_location(li, file$8, 19, 8, 632);
-    			attr_dev(ul, "class", "flex h-10 flex-row items-stretch border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:border-r-4");
+    			add_location(li, file$8, 19, 8, 650);
+    			attr_dev(ul, "class", "flex h-10 flex-row items-stretch overflow-x-scroll border-babyBlue-300 lg:mr-8 lg:h-auto lg:flex-col lg:border-r-4");
     			add_location(ul, file$8, 16, 6, 499);
     		},
     		m: function mount(target, anchor) {
@@ -23084,7 +23084,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			attr_dev(p, "class", "font-cover w-2/3");
-    			add_location(p, file$8, 36, 8, 1033);
+    			add_location(p, file$8, 36, 8, 1051);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23147,9 +23147,9 @@ var app = (function () {
     			}
 
     			attr_dev(div, "class", div_class_value = `${clsx('w-fit', 'transition-transform', 'fill-babyBlue-300', 'ml-auto', 'cursor-pointer', 'print:hidden', /*listOpen*/ ctx[0] && 'rotate-180')}`);
-    			add_location(div, file$8, 44, 4, 1167);
+    			add_location(div, file$8, 44, 4, 1185);
     			attr_dev(ul, "class", "mt-8 bg-cultured bg-opacity-10");
-    			add_location(ul, file$8, 60, 4, 1517);
+    			add_location(ul, file$8, 60, 4, 1535);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -23303,7 +23303,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			attr_dev(p, "class", "font-cover w-2/3");
-    			add_location(p, file$8, 74, 4, 1864);
+    			add_location(p, file$8, 74, 4, 1882);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -23351,7 +23351,7 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "my-4");
-    			add_location(ul, file$8, 80, 4, 1983);
+    			add_location(ul, file$8, 80, 4, 2001);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -23536,17 +23536,17 @@ var app = (function () {
     			t7 = space();
     			if (if_block4) if_block4.c();
     			attr_dev(h30, "class", "text-h3 w-2/3 font-display font-bold leading-none");
-    			add_location(h30, file$8, 29, 6, 862);
+    			add_location(h30, file$8, 29, 6, 880);
     			attr_dev(div0, "class", "relative mt-4 flex w-full flex-col");
-    			add_location(div0, file$8, 28, 4, 807);
+    			add_location(div0, file$8, 28, 4, 825);
     			attr_dev(div1, "class", "flex flex-col lg:flex-row");
     			add_location(div1, file$8, 14, 2, 438);
     			attr_dev(article, "class", "border-t-4 border-babyBlue-300 px-4 pb-8 print:hidden lg:mx-auto lg:w-2/3 lg:pt-8");
     			add_location(article, file$8, 11, 0, 333);
     			attr_dev(h31, "class", "font-cover text-2xl");
-    			add_location(h31, file$8, 70, 2, 1776);
+    			add_location(h31, file$8, 70, 2, 1794);
     			attr_dev(div2, "class", "hidden break-inside-avoid print:block");
-    			add_location(div2, file$8, 69, 0, 1722);
+    			add_location(div2, file$8, 69, 0, 1740);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
