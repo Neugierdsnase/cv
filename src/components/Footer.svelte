@@ -15,7 +15,7 @@
         >mail@vomkonstant.in</a
       >
     </span>
-    <span>{` || `}</span>
+    <span class="print:hidden">{` || `}</span>
     <span class="print:hidden">
       <a
         href="https://www.linkedin.com/in/konstantin-kovar-5301494b/"

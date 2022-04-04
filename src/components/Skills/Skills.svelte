@@ -11,17 +11,21 @@
   $: items = skills.items
 </script>
 
-{#if items && items.length}
-  <SectionHeading>
-    {@html getIntlContent(
-      skills.heading,
-      $contentLangState,
-    )}
-  </SectionHeading>
-  <Legend />
-  <div class="mx-auto flex flex-wrap gap-4 lg:w-2/3">
-    {#each items as skill (skill)}
-      <Skill {skill} />
-    {/each}
-  </div>
-{/if}
+<div class="print:break-inside-avoid">
+  {#if items && items.length}
+    <SectionHeading>
+      {@html getIntlContent(
+        skills.heading,
+        $contentLangState,
+      )}
+    </SectionHeading>
+    <Legend />
+    <div
+      class="mx-auto flex flex-wrap gap-4 print:w-full print:flex-col lg:w-2/3"
+    >
+      {#each items as skill (skill)}
+        <Skill {skill} />
+      {/each}
+    </div>
+  {/if}
+</div>
