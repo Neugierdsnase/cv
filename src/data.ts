@@ -8,20 +8,19 @@ import {
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 dayjs.extend(customParseFormat)
 
-const introText: IntlContentType<string> = {
-  de: `
-<p class="pb-4">
-Hallo, ich bin der Konstantin. Webentwickler, hauptsächlich Frontend.
-</p>
-<p class="pb-4">
-Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln.
-</p>
-<p class="pb-4">
-Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.
-</p>
-<p class="pb-4">Wenn Du zu dem Schluss kommen solltest, dass wir uns kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.</p>
-`,
-  en: `TODO`,
+const introText: IntlContentType<string[]> = {
+  de: [
+    'Hallo, ich bin der Konstantin. Webentwickler, spezialisiert auf das Frontend. Manchmal kann ich gra nicht glauben, dass ich für etwas, das so viel Spaß macht, bezahlt werde.',
+    'Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln. Wenn Du das hier ließt, dann vermutlich weil wir schon in Kontakt stehen und Du einen Lebenslauf von mir haben wolltest.',
+    'Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufen als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.',
+    'Wenn Du zu dem Schluss kommen solltest, dass wir uns (weiter) kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.',
+  ],
+  en: [
+    "Hi, my name is Konstantin. Web developer, focusing on the front end. Sometimes I can't believe I'm getting paid for something, that is this much fun.",
+    'Now that I have gathered some years of experience with professional work in this field (mainly with ReactJS), I am looking for a new exciting challenge to take on. Something that allows me to further develop my skills. If you are reading this, I guess it is likely we are already in touch with each other and you asked me for a CV.',
+    "I hope this document provides you with all the information you need to decide whether or not to persue this further. If the information is too dense for you, you can filter it on the right. This way you can also print out only the parts that are relevant to you as a PDF. Don't worry, the whole document has print styles, so you won't overcharge your printer.",
+    'Should you come to the conclusion that we should get to know each other (better), you can find my relevant contact info in the footer.',
+  ],
 }
 
 const cvJobItems: CvSectionType = {
@@ -585,7 +584,7 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'nx.js' },
-          level: 1,
+          level: 3,
           tags: [
             'frontend',
             'backend',

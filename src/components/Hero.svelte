@@ -7,6 +7,7 @@
   import { contentLangState } from '../stores/ui'
   import { subTitle } from '../ui-text'
   import { getIntlContent } from '../utility'
+  import TranslateButton from './Buttons/TranslateButton.svelte'
 
   let y: number
 </script>
@@ -21,6 +22,9 @@
   <div
     class="hero-clip-path flex h-full w-full items-center justify-center"
   >
+    <div class="absolute top-6 right-6">
+      <TranslateButton showText />
+    </div>
     <div class="flex flex-col items-start md:items-center">
       <h1 class="text-h1 mx-8 font-bold text-babyBlue-400">
         Konstantin Kovar

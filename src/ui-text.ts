@@ -1,5 +1,9 @@
 import { IntlContentType } from './types'
 
+export const language: IntlContentType<string> = {
+  en: 'German',
+  de: 'English',
+}
 export const subTitle: IntlContentType<string> = {
   en: 'CV',
   de: 'Lebenslauf',
