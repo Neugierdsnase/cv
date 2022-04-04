@@ -588,8 +588,6 @@ const skills: SkillSectionType = {
           tags: [
             'frontend',
             'backend',
-            'devops/sre',
-            'tech&#8239;health',
           ],
         },
         {
