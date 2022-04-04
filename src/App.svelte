@@ -16,7 +16,7 @@
 
 <Hero />
 <div
-  class="print-transform-reset px-8 transition-transform print:p-0 md:px-12 lg:px-32"
+  class="print-transform-reset px-8 transition-transform delay-75 print:p-0 md:px-12 lg:px-32"
   style={y < SCROLL_OFFSET
     ? `transform: translateY(${y}px);`
     : `transform: translateY(${SCROLL_OFFSET}px);`}

@@ -21633,32 +21633,43 @@ var app = (function () {
 
     function create_fragment$g(ctx) {
     	let footer;
+    	let p;
+    	let t1;
+    	let div;
     	let span0;
-    	let t0;
-    	let a0;
     	let t2;
+    	let a0;
+    	let t4;
     	let span1;
     	let a1;
 
     	const block = {
     		c: function create() {
     			footer = element("footer");
+    			p = element("p");
+    			p.textContent = "Gefällt Dir, was Du siehst? Ich bin offen für etwas\n    Neues! Kontaktiere mich:";
+    			t1 = space();
+    			div = element("div");
     			span0 = element("span");
-    			t0 = text("E-Mail Adresse:\n    ");
+    			t2 = text("E-Mail Adresse:\n      ");
     			a0 = element("a");
     			a0.textContent = "mail@vomkonstant.in";
-    			t2 = space();
+    			t4 = space();
     			span1 = element("span");
     			a1 = element("a");
     			a1.textContent = "LinkedIn Profil";
+    			attr_dev(p, "class", "mx-auto");
+    			add_location(p, file$f, 1, 2, 62);
     			attr_dev(a0, "href", "mailto:mail@vomkonstant.in");
-    			add_location(a0, file$f, 3, 4, 86);
-    			add_location(span0, file$f, 1, 2, 55);
+    			add_location(a0, file$f, 8, 6, 249);
+    			add_location(span0, file$f, 6, 4, 214);
     			attr_dev(a1, "href", "https://www.linkedin.com/in/konstantin-kovar-5301494b/");
-    			add_location(a1, file$f, 8, 4, 203);
+    			add_location(a1, file$f, 13, 6, 376);
     			attr_dev(span1, "class", "print:hidden");
-    			add_location(span1, file$f, 7, 2, 171);
-    			attr_dev(footer, "class", "mt-16 flex justify-around py-4 px-8");
+    			add_location(span1, file$f, 12, 4, 342);
+    			attr_dev(div, "class", "flex justify-around");
+    			add_location(div, file$f, 5, 2, 176);
+    			attr_dev(footer, "class", "mt-16 flex flex-col items-center py-8 px-8");
     			add_location(footer, file$f, 0, 0, 0);
     		},
     		l: function claim(nodes) {
@@ -21666,11 +21677,14 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, footer, anchor);
-    			append_dev(footer, span0);
-    			append_dev(span0, t0);
+    			append_dev(footer, p);
+    			append_dev(footer, t1);
+    			append_dev(footer, div);
+    			append_dev(div, span0);
+    			append_dev(span0, t2);
     			append_dev(span0, a0);
-    			append_dev(footer, t2);
-    			append_dev(footer, span1);
+    			append_dev(div, t4);
+    			append_dev(div, span1);
     			append_dev(span1, a1);
     		},
     		p: noop,
@@ -25798,7 +25812,7 @@ var app = (function () {
     			create_component(filterbutton.$$.fragment);
     			t5 = space();
     			create_component(pdfbutton.$$.fragment);
-    			attr_dev(div0, "class", "print-transform-reset px-8 transition-transform print:p-0 md:px-12 lg:px-32");
+    			attr_dev(div0, "class", "print-transform-reset px-8 transition-transform delay-75 print:p-0 md:px-12 lg:px-32");
 
     			attr_dev(div0, "style", div0_style_value = /*y*/ ctx[0] < SCROLL_OFFSET
     			? `transform: translateY(${/*y*/ ctx[0]}px);`
@@ -25806,7 +25820,7 @@ var app = (function () {
 
     			add_location(div0, file, 16, 0, 554);
     			attr_dev(div1, "class", "fixed right-12 bottom-0 z-20 flex h-1/4 flex-col justify-around align-middle print:hidden");
-    			add_location(div1, file, 27, 0, 848);
+    			add_location(div1, file, 27, 0, 857);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
