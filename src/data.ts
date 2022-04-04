@@ -763,7 +763,7 @@ const skills: SkillSectionType = {
         {
           label: {
             en: 'Rust for WebAssembly',
-            de: 'Rust for WebAssembly',
+            de: 'Rust für WebAssembly',
           },
           tags: ['frontend'],
         },
