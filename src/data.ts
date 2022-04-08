@@ -585,10 +585,7 @@ const skills: SkillSectionType = {
         {
           label: { intl: 'nx.js' },
           level: 3,
-          tags: [
-            'frontend',
-            'backend',
-          ],
+          tags: ['frontend', 'backend'],
         },
         {
           label: { intl: 'svelteJS' },
