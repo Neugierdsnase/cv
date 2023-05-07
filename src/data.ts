@@ -11,16 +11,16 @@ dayjs.extend(customParseFormat)
 
 const introText: IntlContentType<string[]> = {
   de: [
-    'Hallo, ich bin der Konstantin. Webentwickler, spezialisiert auf das Frontend. Manchmal kann ich gar nicht glauben, dass ich für etwas, das so viel Spaß macht, bezahlt werde.',
-    'Mittlerweile habe ich einige Jahre professioneller Arbeit (hauptächlich mit ReactJS) auf dem Buckel und suche zur Zeit nach einer neuen spannenden Herausforderung, die es mir ermöglicht mich weiterzuentwickeln. Wenn Du das hier liest, dann vermutlich weil wir schon in Kontakt stehen und Du einen Lebenslauf von mir haben wolltest.',
-    'Ich hoffe, Du findest hier alles, was Du an Informationen brauchst, um zu entscheiden, ob wir gut zusammenpassen. Sollte Dir die Information zu dicht sein, kannst du rechts filtern, wonach du suchst. Du kannst dann den für Dich relevanten Teil des Lebenslaufes als PDF speichern. Keine Angst, das ganze Dokument hat eigene Print-Styles und Du wirst Deinen Drucker damit nicht überfordern.',
-    'Wenn Du zu dem Schluss kommst, dass wir uns (weiter) kennenlernen sollten, dann findest du meine Kontaktdaten im Footer.',
+    'Manchmal kann ich gar nicht glauben, dass ich für etwas bezahlt werde, das so viel Spass macht. Ich habe ein unbändiges Verlangen danach, großartige Dinge zu bauen, komplexe Probleme auf einem hohen Niveau zu lösen und neue, schwierige Dinge zu lernen.',
+    'Hi. Mein Name ist Konstantin und ddas ist mein interaktiver Lebenslauf. Bitte schau Dich um! Ich hoffe, dass dir die UX, die ich implementiert habe hilft, die Informationen, die Du suchst, schneller zu finden. Falls Du den Lebenslauf ausgedruckt brauchst, dann kannst du das ganz leicht machen, die Seite hat CSS speziell für die gedruckter Version.',
+    'Ich bin ein Webentwickler, der gerne in technisch herausforderndere Gefielde vorstoßen würde. Ich habe in der Vergangenheit sowohl an großen, als auch an kleinen Projekten gearbeitet, hauptsächlich im Frontend mit React. Obwohl ich es sehr genieße in diesem Bereich zu arbeiten, werden mein Durst nach etwas Neuem and meine Neugier auf Technologien "näher am Metall" zunehmend lauter.',
+    'Aus diesem Grund, und weil ich meine Leistungsbereitschaft derzeit nicht voll ausgeschöpft sehe, suche ich nach neuen Herausforderungen in der Rust Programmiersprache. Idealerweise (aber nicht zwingend), wäre es eine Aufgabe, in der ich auch meine bisherig erlangte Expertise einsetzen kann, was zum Beispiel bei webAssembly der Fall wäre.',
   ],
   en: [
-    "Hi, my name is Konstantin. Web developer, focusing on the front end. Sometimes I can't believe I'm getting paid for something, that is this much fun.",
-    'Now that I have gathered some years of experience with professional work in this field (mainly with ReactJS), I am looking for a new exciting challenge to take on. Something that allows me to further develop my skills. If you are reading this, I guess it is likely we are already in touch with each other and you asked me for a CV.',
-    "I hope this document provides you with all the information you need to decide whether or not to persue this further. If the information is too dense for you, you can filter it on the right. This way you can also print out only the parts that are relevant to you as a PDF. Don't worry, the whole document has print styles, so you won't overcharge your printer.",
-    'Should you come to the conclusion that we should get to know each other (better), you can find my relevant contact info in the footer.',
+    "Sometimes I can't believe I get paid for something that is so much fun. I have an undying desire to build great things, solve complex problems on a high level and learn new, challenging things.",
+    'Hi. My name is Konstantin, and this is my interactive CV. Please have a look around. I hope the UX I have implemented helps you find the information you seek more easily. If you need to print the CV, you can easily do so. The page comes with print styles.',
+    'I am a web developer looking to make his way onto technically more challenging and sophisticated waters. I have worked on large and small projects in recent years, mainly on the front end using React. While I like working in this domain, my thirst for learning something new and my curiosity about getting "closer to the metal" has become increasingly harder to ignore. ',
+    "This, and because I don't currently see my vigour fully utilized, is why I am looking to take on a new challenge using the Rust programming language. Ideally(not a must), I could also leverage the knowledge I have already gained by working as a web dev, which would, for example, be the case for working with webAssembly.",
   ],
 }
 
@@ -440,7 +440,6 @@ const cvEduItems: CvSectionType = {
         from: dayjs('09/2010', DATE_FORMAT),
         to: dayjs('06/2011', DATE_FORMAT),
       },
-
       tagLine: {
         en: 'Catholic Theology and Latin',
         de: 'Katholische Theologie und Latein - Lehramtsstudium',
@@ -513,7 +512,7 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'JSX/TSX' },
-          level: 4,
+          level: 5,
           tags: ['frontend'],
         },
         {
@@ -528,12 +527,12 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'Jinja2' },
-          level: 3,
+          level: 2,
           tags: ['frontend', 'devops/sre'],
         },
         {
           label: { intl: 'Handlebars' },
-          level: 2,
+          level: 1,
           tags: ['frontend'],
         },
       ],
@@ -553,17 +552,17 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'styled-components & emotionJS' },
-          level: 5,
+          level: 4,
           tags: ['frontend'],
         },
         {
           label: { intl: 'Tailwind CSS' },
-          level: 3,
+          level: 5,
           tags: ['frontend'],
         },
         {
           label: { intl: 'Material UI' },
-          level: 4,
+          level: 3,
           tags: ['frontend'],
         },
         {
@@ -613,17 +612,22 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'NestJS' },
-          level: 3,
+          level: 4,
           tags: ['backend'],
         },
         {
           label: { intl: 'nx.js' },
-          level: 3,
+          level: 2,
           tags: ['frontend', 'backend'],
         },
         {
           label: { intl: 'svelteJS' },
-          level: 3,
+          level: 4,
+          tags: ['frontend'],
+        },
+        {
+          label: { intl: 'yew' },
+          level: 2,
           tags: ['frontend'],
         },
         {
@@ -644,21 +648,11 @@ const skills: SkillSectionType = {
       ],
     },
     {
-      heading: { intl: 'Weitere Skills' },
+      heading: { de: 'Weitere Skills', en: 'Other skills' },
       items: [
         {
           label: { intl: 'Python' },
           level: 3,
-          tags: ['backend'],
-        },
-        {
-          label: { intl: 'Flask' },
-          level: 2,
-          tags: ['backend'],
-        },
-        {
-          label: { intl: 'SQAlchemy' },
-          level: 2,
           tags: ['backend'],
         },
         {
@@ -667,11 +661,21 @@ const skills: SkillSectionType = {
           tags: ['backend'],
         },
         {
+          label: { intl: 'Vim' },
+          level: 3,
+          tags: ['other'],
+        },
+        {
+          label: { intl: 'AI Prompting' },
+          level: 3,
+          tags: ['other'],
+        },
+        {
           label: {
             de: 'PHP für WordPress',
             en: 'PHP for WordPress',
           },
-          level: 3,
+          level: 2,
           tags: ['frontend', 'backend'],
         },
         {
@@ -679,17 +683,17 @@ const skills: SkillSectionType = {
             de: 'technische SEO',
             en: 'technical SEO',
           },
-          level: 4,
+          level: 3,
           tags: ['frontend', 'backend'],
         },
         {
           label: { intl: 'Rust' },
-          level: 1,
+          level: 2,
           tags: ['frontend', 'backend'],
         },
         {
           label: { intl: 'GraphQL' },
-          level: 3,
+          level: 4,
           tags: ['frontend', 'backend'],
         },
         {
@@ -714,7 +718,7 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'Jira' },
-          level: 3,
+          level: 4,
           tags: ['other'],
         },
         {
@@ -734,7 +738,7 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'CypressJS' },
-          level: 3,
+          level: 4,
           tags: ['tech&#8239;health'],
         },
         {
@@ -759,7 +763,7 @@ const skills: SkillSectionType = {
         },
         {
           label: { intl: 'Lighthouse' },
-          level: 3,
+          level: 4,
           tags: ['tech&#8239;health'],
         },
         {
@@ -782,6 +786,16 @@ const skills: SkillSectionType = {
           level: 3,
           tags: ['other'],
         },
+        {
+          label: { intl: 'Notion' },
+          level: 3,
+          tags: ['other'],
+        },
+        {
+          label: { intl: 'Obsidian' },
+          level: 2,
+          tags: ['other'],
+        },
       ],
     },
     {
@@ -798,8 +812,15 @@ const skills: SkillSectionType = {
           },
           tags: ['frontend'],
         },
+        {
+          label: { intl: 'GameDev with Bevy' },
+          tags: ['other'],
+        },
         { label: { intl: 'Web3' }, tags: ['frontend'] },
-        { label: { intl: 'yew' }, tags: ['frontend'] },
+        {
+          label: { intl: 'AutoGPT-type stuff' },
+          tags: ['other'],
+        },
         {
           label: { de: 'Russisch', en: 'Russian' },
           tags: ['non&#8209;tech'],
