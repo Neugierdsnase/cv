@@ -6,6 +6,7 @@ import {
   SkillSectionType,
 } from './types'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
+import { DATE_FORMAT } from './constants'
 dayjs.extend(customParseFormat)
 
 const introText: IntlContentType<string[]> = {
@@ -27,8 +28,35 @@ const cvJobItems: CvSectionType = {
   heading: { de: 'Berufserfahrung', en: 'Work Experience' },
   items: [
     {
+      label: { intl: 'Seatti' },
+      time: { from: dayjs('07/2022') },
+      list: [
+        {
+          label: {
+            en: 'part of a very early stage startup',
+            de: 'Teil eines Startups im sehr früher Stadium',
+          },
+        },
+        {
+          label: {
+            en: 'integral part of facing challenges of scaling tech, product and team',
+            de: 'direkt in der Arbeit an den Herausforderungen eines wachsenden Produkts, Infrastruktur und Teams beteiligt',
+          },
+        },
+        {
+          label: {
+            en: 'deep insights into other areas of developing a VC-funded startup (Marketing, Sales, Finance, Investor relations)',
+            de: 'tiefe Einblicke in die anderen Bereiche eines VC-finanzierten Startups (Marketing, Sales, Finance, Investor Relations)',
+          },
+        },
+      ],
+    },
+    {
       label: { intl: 'willhaben' },
-      time: { from: dayjs('05/2021', 'MM/YYYY') },
+      time: {
+        from: dayjs('05/2021', DATE_FORMAT),
+        to: dayjs('04/2022', DATE_FORMAT),
+      },
       list: [
         {
           label: {
@@ -82,7 +110,10 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: { intl: 'Coding School & Academy Wörthersee' },
-      time: { from: dayjs('05/2021', 'MM/YYYY') },
+      time: {
+        from: dayjs('05/2021', DATE_FORMAT),
+        to: dayjs('06/2022', DATE_FORMAT),
+      },
       list: [
         {
           label: {
@@ -113,7 +144,10 @@ const cvJobItems: CvSectionType = {
     },
     {
       label: { intl: 'Web&Söhne' },
-      time: { from: dayjs('21.01.2020', 'DD.MM.YYYY') },
+      time: {
+        from: dayjs('01/2020', 'DD.MM.YYYY'),
+        to: dayjs('04/2022', DATE_FORMAT),
+      },
       list: [
         {
           label: {
@@ -146,7 +180,7 @@ const cvJobItems: CvSectionType = {
         en: 'Projects & Freelancing',
         de: 'Projektarbeiten & Freelancing',
       },
-      time: { from: dayjs('11/2018', 'MM/YYYY') },
+      time: { from: dayjs('11/2018', DATE_FORMAT) },
       list: [
         {
           label: {
@@ -215,8 +249,8 @@ const cvJobItems: CvSectionType = {
     {
       label: { en: 'Projects', de: 'Projektarbeiten' },
       time: {
-        from: dayjs('01/2008', 'MM/YYYY'),
-        to: dayjs('12/2018', 'MM/YYYY'),
+        from: dayjs('01/2008', DATE_FORMAT),
+        to: dayjs('12/2018', DATE_FORMAT),
       },
       list: [
         {
@@ -337,8 +371,8 @@ const cvJobItems: CvSectionType = {
         de: 'diverse Praktika',
       },
       time: {
-        from: dayjs('06/2008', 'MM/YYYY'),
-        to: dayjs('12/2012', 'MM/YYYY'),
+        from: dayjs('06/2008', DATE_FORMAT),
+        to: dayjs('12/2012', DATE_FORMAT),
       },
       list: [
         { label: { intl: 'Vetoquinol' } },
@@ -373,8 +407,8 @@ const cvEduItems: CvSectionType = {
         de: 'FH der WKW',
       },
       time: {
-        from: dayjs('09/2015', 'MM/YYYY'),
-        to: dayjs('10/2018', 'MM/YYYY'),
+        from: dayjs('09/2015', DATE_FORMAT),
+        to: dayjs('10/2018', DATE_FORMAT),
       },
       tagLine: {
         en: 'Content Production & Digital Media Management, graduated with honors',
@@ -388,8 +422,8 @@ const cvEduItems: CvSectionType = {
         de: 'Magistrat Wien',
       },
       time: {
-        from: dayjs('12/2014', 'MM/YYYY'),
-        to: dayjs('12/2014', 'MM/YYYY'),
+        from: dayjs('12/2014', DATE_FORMAT),
+        to: dayjs('12/2014', DATE_FORMAT),
       },
       tagLine: {
         en: 'Service exam of the municipal district of Vienna (mainly public law)',
@@ -403,8 +437,8 @@ const cvEduItems: CvSectionType = {
         de: 'Universität Wien',
       },
       time: {
-        from: dayjs('09/2010', 'MM/YYYY'),
-        to: dayjs('06/2011', 'MM/YYYY'),
+        from: dayjs('09/2010', DATE_FORMAT),
+        to: dayjs('06/2011', DATE_FORMAT),
       },
 
       tagLine: {
@@ -419,8 +453,8 @@ const cvEduItems: CvSectionType = {
         de: 'Wirtschaftsuniversität Wien',
       },
       time: {
-        from: dayjs('09/2009', 'MM/YYYY'),
-        to: dayjs('06/2010', 'MM/YYYY'),
+        from: dayjs('09/2009', DATE_FORMAT),
+        to: dayjs('06/2010', DATE_FORMAT),
       },
       tagLine: {
         en: 'Economics',
@@ -434,8 +468,8 @@ const cvEduItems: CvSectionType = {
         de: 'Universität Wien',
       },
       time: {
-        from: dayjs('09/2008', 'MM/YYYY'),
-        to: dayjs('06/2009', 'MM/YYYY'),
+        from: dayjs('09/2008', DATE_FORMAT),
+        to: dayjs('06/2009', DATE_FORMAT),
       },
       tagLine: {
         en: 'Catholic Theology',
@@ -449,8 +483,8 @@ const cvEduItems: CvSectionType = {
         de: 'Bundesgymnasium Wien XIX',
       },
       time: {
-        from: dayjs('09/2000', 'MM/YYYY'),
-        to: dayjs('06/2008', 'MM/YYYY'),
+        from: dayjs('09/2000', DATE_FORMAT),
+        to: dayjs('06/2008', DATE_FORMAT),
       },
       tagLine: {
         en: 'graduated with Austrian "Matura"',
