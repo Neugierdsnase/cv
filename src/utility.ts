@@ -1,4 +1,3 @@
-import { contentLangState } from './stores/ui'
 import {
   CvItemType,
   IntlContentType,

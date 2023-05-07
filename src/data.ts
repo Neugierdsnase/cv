@@ -29,7 +29,7 @@ const cvJobItems: CvSectionType = {
   items: [
     {
       label: { intl: 'Seatti' },
-      time: { from: dayjs('07/2022') },
+      time: { from: dayjs('07/2022', DATE_FORMAT) },
       list: [
         {
           label: {
@@ -50,6 +50,7 @@ const cvJobItems: CvSectionType = {
           },
         },
       ],
+      tags: ['frontend', 'backend', 'tech&#8239;health'],
     },
     {
       label: { intl: 'willhaben' },
@@ -145,7 +146,7 @@ const cvJobItems: CvSectionType = {
     {
       label: { intl: 'Web&Söhne' },
       time: {
-        from: dayjs('01/2020', 'DD.MM.YYYY'),
+        from: dayjs('01/2020', DATE_FORMAT),
         to: dayjs('04/2022', DATE_FORMAT),
       },
       list: [
@@ -184,8 +185,8 @@ const cvJobItems: CvSectionType = {
       list: [
         {
           label: {
-            en: 'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User',
-            de: 'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User',
+            en: 'own <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> for atomic-css users (now deprecated)',
+            de: 'eigene <a href="https://marketplace.visualstudio.com/items?itemName=KonstantinKovar.classnames-rainbow" target="_blank">VSCode-Extension</a> für atomic-css User (deprecated)',
           },
         },
         {
