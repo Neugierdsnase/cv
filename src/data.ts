@@ -616,6 +616,11 @@ const skills: SkillSectionType = {
           tags: ['backend'],
         },
         {
+          label: { intl: 'MongoDB' },
+          level: 3,
+          tags: ['backend'],
+        },
+        {
           label: { intl: 'nx.js' },
           level: 2,
           tags: ['frontend', 'backend'],
