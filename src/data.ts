@@ -20,7 +20,7 @@ const introText: IntlContentType<string[]> = {
     "Sometimes I can't believe I get paid for something that is so much fun. I have an undying desire to build great things, solve complex problems on a high level and learn new, challenging things.",
     'Hi. My name is Konstantin, and this is my interactive CV. Please have a look around. I hope the UX I have implemented helps you find the information you seek more easily. If you need to print the CV, you can easily do so. The page comes with print styles.',
     'I am a web developer looking to make his way onto technically more challenging and sophisticated waters. I have worked on large and small projects in recent years, mainly on the front end using React. While I like working in this domain, my thirst for learning something new and my curiosity about getting "closer to the metal" has become increasingly harder to ignore. ',
-    "This, and because I don't currently see my vigour fully utilized, is why I am looking to take on a new challenge using the Rust programming language. Ideally(not a must), I could also leverage the knowledge I have already gained by working as a web dev, which would, for example, be the case for working with webAssembly.",
+    "This, and because I don't currently see my vigour fully utilized, is why I am looking to take on a new challenge using the Rust programming language. Ideally (not a must), I could also leverage the knowledge I have already gained by working as a web dev, which would, for example, be the case for working with webAssembly.",
   ],
 }
 

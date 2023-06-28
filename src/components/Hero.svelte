@@ -46,7 +46,10 @@
   <p>
     Disclaimer: This document was generated from an
     intercative website and might not display the full
-    content.
+    content. Please visit <b
+      >https://konstantin-kovar-cv.vercel.app"</b
+    >
+    to view the whole document.
   </p>
   {#if $activeFiltersState.length}
     <p>The following filters have been activated:</p>

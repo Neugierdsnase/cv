@@ -34,6 +34,6 @@ export const nonTechFilterLabel: IntlContentType<string> = {
   de: 'non-tech verstecken',
 }
 export const contactMe: IntlContentType<string> = {
-  en: 'Do you like what you see? I am open for something new! Contact me here:',
-  de: 'Gefällt Dir, was Du siehst? Ich bin offen für etwas Neues! Kontaktiere mich:',
+  en: 'Do you think I might be a good fit for your company? I am open for something new! Contact me:',
+  de: 'Glaubst Du, wir würden gut zusammen passen? Ich bin offen für etwas Neues! Kontaktiere mich:',
 }
