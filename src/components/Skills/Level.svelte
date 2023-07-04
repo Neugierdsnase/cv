@@ -1,28 +1,27 @@
 <script lang="ts">
-  import { Star } from 'phosphor-svelte'
+  import { LevelEnum } from '../../types'
 
-  import { LevelType } from '../../types'
-
-  export let level: LevelType
+  export let level: LevelEnum
 </script>
 
 <template>
   {#if level}
     <div
-      title={LevelType[level - 1]}
+      title={LevelEnum[level]}
       class="flex fill-babyBlue-300 print:hidden"
     >
-      {#each [1, 2, 3, 4, 5] as n}
-        <Star
-          color="inherit"
-          weight={level < n ? 'light' : 'fill'}
+      {#each [0, 1, 2, 3, 4] as n}
+        <i
+          class="ph-star"
+          class:ph-light={level < n}
+          class:ph-fill={level >= n}
         />
       {/each}
     </div>
 
     <!-- Print version -->
     <div class="hidden print:block">
-      <span>{`${level}/5`}</span>
+      <span>{`${level + 1}/5`}</span>
     </div>
   {/if}
 </template>

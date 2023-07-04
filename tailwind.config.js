@@ -1,31 +1,21 @@
 module.exports = {
   content: ['src/*.{svelte,ts}', 'src/**/*.{svelte,ts}'],
-  theme: {
-    extend: {
-      colors: {
-        black: { rich: '#0e1116', dark: '#28303e' },
-        cultured: '#f4f4f6',
-        babyBlue: {
-          400: '#19749F',
-          300: '#61bbe5',
-          200: '#84caeb',
-          100: '#b9e1f4',
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: '#3c9190',
+          secondary: '#e3ab5e',
+          accent: '#d9693a',
+          neutral: '#6b4b39',
+          'base-100': '#191b26',
+          info: '#3c9190',
+          success: '#22c55e',
+          warning: '#ea580c',
+          error: '#991b1b',
         },
       },
-      fontFamily: {
-        display:
-          '"Passion One", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
-      },
-      keyframes: {
-        gradientAnimation: {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 0%' },
-        },
-      },
-    },
+    ],
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-    require('daisyui'),
-  ],
+  plugins: [require('daisyui')],
 }

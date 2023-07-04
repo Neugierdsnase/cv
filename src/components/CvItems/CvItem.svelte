@@ -4,7 +4,6 @@
 
   import ListItem from './ListItem.svelte'
   import CvItemTag from './CvItemTag.svelte'
-  import { CaretDown } from 'phosphor-svelte'
   import Time from './Time.svelte'
   import { getIntlContent } from '../../utility'
   import { contentLangState } from '../../stores/ui'
@@ -62,7 +61,7 @@
         listOpen && 'rotate-180',
       )}`}
     >
-      <CaretDown size="36px" color="inherit" />
+      <i class="ph-bold ph-caret-down" />
     </div>
     <ul class="mt-8 bg-cultured bg-opacity-10">
       {#each list as listItem, index}

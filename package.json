@@ -7,7 +7,7 @@
     "watch:tailwind": "npx tailwind -i src/app.css -o public/build/bundle.css --watch",
     "format": "npx prettier --write .",
     "build": "npm run format && rollup -c",
-    "dev": "concurrently \"rollup -c -w\" \"npm run watch:tailwind\"",
+    "dev": "rollup -c -w",
     "start": "sirv public --no-clear",
     "check": "svelte-check --tsconfig tsconfig.json"
   },
@@ -15,11 +15,9 @@
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
-    "@tailwindcss/line-clamp": "^0.3.1",
     "@types/lodash": "^4.14.181",
     "autoprefixer": "^10.4.4",
     "daisyui": "^3.1.6",
-    "phosphor-svelte": "^1.1.2",
     "postcss": "^8.4.12",
     "prettier": "^2.6.1",
     "prettier-plugin-tailwindcss": "^0.1.8",
@@ -36,6 +34,7 @@
     "typescript": "^4.6.3"
   },
   "dependencies": {
+    "@phosphor-icons/web": "^2.0.3",
     "clsx": "^1.1.1",
     "dayjs": "^1.11.0",
     "lodash": "^4.17.21",

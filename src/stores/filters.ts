@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { writable } from 'svelte/store'
 import { HIDE_NON_TECH_INITIALLY } from '../constants'
 import data from '../data'
-import { CvItemType, LevelType, TagType } from '../types'
+import { CvItemType, LevelEnum, TagType } from '../types'
 import { filterNonTech } from '../utility'
 import {
   cvJobItemsState,
@@ -11,7 +11,7 @@ import {
 } from './data'
 
 export const activeFiltersState = writable<TagType[]>([])
-export const skillLevelFilterState = writable<LevelType>(1)
+export const skillLevelFilterState = writable<LevelEnum>(1)
 export const hideNonTechState = writable(
   HIDE_NON_TECH_INITIALLY,
 )

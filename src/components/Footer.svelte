@@ -4,7 +4,9 @@
   import { getIntlContent } from './../utility.ts'
 </script>
 
-<footer class="mt-16 flex flex-col items-center py-8 px-8">
+<footer
+  class="footer footer-center bg-base-300 p-4 text-base-content"
+>
   <p class="mx-auto">
     {getIntlContent(contactMe, $contentLangState)}
   </p>

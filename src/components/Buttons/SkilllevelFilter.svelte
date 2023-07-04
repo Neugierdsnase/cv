@@ -1,15 +1,15 @@
 <script lang="ts">
-  import { Star } from 'phosphor-svelte'
   import data from '../../data'
   import { skillsState } from '../../stores/data'
   import { skillLevelFilterState } from '../../stores/filters'
   import { contentLangState } from '../../stores/ui'
-  import { LevelType } from '../../types'
+  import { LevelEnum } from '../../types'
   import { skillLevelFilterLabel } from '../../ui-text'
   import { getIntlContent } from '../../utility'
-  const skillLevels: LevelType[] = [1, 2, 3, 4, 5]
+  const skillLevels: LevelEnum[] = [0, 1, 2, 3, 4]
 
-  const setSkillsFilter = (n: LevelType) => {
+  // This belongs in the store
+  const setSkillsFilter = (n: LevelEnum) => {
     skillLevelFilterState.set(n)
     skillsState.set({
       ...data.skills,
@@ -31,18 +31,19 @@
     )}
   </p>
   <div
-    title={LevelType[$skillLevelFilterState]}
+    title={LevelEnum[$skillLevelFilterState]}
     class="flex fill-babyBlue-300"
   >
     {#each skillLevels as n}
       <button on:click={() => setSkillsFilter(n)}>
-        <Star
-          size="48px"
-          color="inherit"
-          weight={$skillLevelFilterState < n
-            ? 'light'
-            : 'fill'}
-        />
+        <i class="ph-light ph-star" />
+        <!-- <Star -->
+        <!--   size="48px" -->
+        <!--   color="inherit" -->
+        <!--   weight={$skillLevelFilterState < n -->
+        <!--     ? 'light' -->
+        <!--     : 'fill'} -->
+        <!-- /> -->
       </button>
     {/each}
   </div>

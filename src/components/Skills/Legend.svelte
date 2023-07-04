@@ -1,17 +1,13 @@
 <script lang="ts">
-  import { LevelType } from '../../types'
+  import { LevelEnum } from '../../types'
   import Level from './Level.svelte'
 </script>
 
-<div
-  class="my-4 flex flex-wrap justify-around p-4 print:hidden"
->
-  {#each [1, 2, 3, 4, 5] as n}
-    <div
-      class="mr-8 mt-4 flex w-full items-center border-2 border-babyBlue-300 fill-babyBlue-300 py-1 px-2 md:w-auto md:last:mr-0"
-    >
+<div class="join">
+  {#each [0, 1, 2, 3, 4] as n}
+    <div class="join-item">
       <Level level={n} />
-      <span class="ml-4">{LevelType[n - 1]}</span>
+      <span class="ml-4">{LevelEnum[n]}</span>
     </div>
   {/each}
 </div>
