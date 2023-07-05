@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">=19.6"
+    "node": "18.x"
   },
   "scripts": {
     "watch:tailwind": "npx tailwind -i src/app.css -o public/build/bundle.css --watch",
