@@ -29,7 +29,10 @@ const cvJobItems: CvSectionType = {
   items: [
     {
       label: { intl: 'Seatti' },
-      time: { from: dayjs('07/2022', DATE_FORMAT) },
+      time: {
+        from: dayjs('07/22', DATE_FORMAT),
+        to: dayjs('08/23', DATE_FORMAT),
+      },
       list: [
         {
           label: {
@@ -55,8 +58,8 @@ const cvJobItems: CvSectionType = {
     {
       label: { intl: 'willhaben' },
       time: {
-        from: dayjs('05/2021', DATE_FORMAT),
-        to: dayjs('04/2022', DATE_FORMAT),
+        from: dayjs('05/21', DATE_FORMAT),
+        to: dayjs('04/22', DATE_FORMAT),
       },
       list: [
         {
@@ -112,8 +115,8 @@ const cvJobItems: CvSectionType = {
     {
       label: { intl: 'Coding School & Academy Wörthersee' },
       time: {
-        from: dayjs('05/2021', DATE_FORMAT),
-        to: dayjs('06/2022', DATE_FORMAT),
+        from: dayjs('05/21', DATE_FORMAT),
+        to: dayjs('06/22', DATE_FORMAT),
       },
       list: [
         {
@@ -146,8 +149,8 @@ const cvJobItems: CvSectionType = {
     {
       label: { intl: 'Web&Söhne' },
       time: {
-        from: dayjs('01/2020', DATE_FORMAT),
-        to: dayjs('04/2022', DATE_FORMAT),
+        from: dayjs('01/20', DATE_FORMAT),
+        to: dayjs('04/22', DATE_FORMAT),
       },
       list: [
         {
@@ -181,7 +184,7 @@ const cvJobItems: CvSectionType = {
         en: 'Projects & Freelancing',
         de: 'Projektarbeiten & Freelancing',
       },
-      time: { from: dayjs('11/2018', DATE_FORMAT) },
+      time: { from: dayjs('11/18', DATE_FORMAT) },
       list: [
         {
           label: {
@@ -222,8 +225,8 @@ const cvJobItems: CvSectionType = {
         en: 'WordPress & Frontend Developer',
       },
       time: {
-        from: dayjs('01.04.2018', 'DD.MM.YYYY'),
-        to: dayjs('30.11.2018', 'DD.MM.YYYY'),
+        from: dayjs('04/18', DATE_FORMAT),
+        to: dayjs('11/18', DATE_FORMAT),
       },
       list: [
         {
@@ -250,8 +253,8 @@ const cvJobItems: CvSectionType = {
     {
       label: { en: 'Projects', de: 'Projektarbeiten' },
       time: {
-        from: dayjs('01/2008', DATE_FORMAT),
-        to: dayjs('12/2018', DATE_FORMAT),
+        from: dayjs('01/08', DATE_FORMAT),
+        to: dayjs('12/18', DATE_FORMAT),
       },
       list: [
         {
@@ -309,8 +312,8 @@ const cvJobItems: CvSectionType = {
         de: 'Verwaltungstrafen und Gewerberecht',
       },
       time: {
-        from: dayjs('01.05.2015', 'DD.MM.YYYY'),
-        to: dayjs('31.12.2020', 'DD.MM.YYYY'),
+        from: dayjs('05/15', 'MM/YYYY'),
+        to: dayjs('12/20', 'MM/YYYY'),
       },
       list: [
         {
@@ -341,8 +344,8 @@ const cvJobItems: CvSectionType = {
         de: 'Einwanderungsverfahren',
       },
       time: {
-        from: dayjs('22.12.2012', 'DD.MM.YYYY'),
-        to: dayjs('30.04.2015', 'DD.MM.YYYY'),
+        from: dayjs('12/12', DATE_FORMAT),
+        to: dayjs('04/15', DATE_FORMAT),
       },
       list: [
         {
@@ -372,8 +375,8 @@ const cvJobItems: CvSectionType = {
         de: 'diverse Praktika',
       },
       time: {
-        from: dayjs('06/2008', DATE_FORMAT),
-        to: dayjs('12/2012', DATE_FORMAT),
+        from: dayjs('06/08', DATE_FORMAT),
+        to: dayjs('12/12', DATE_FORMAT),
       },
       list: [
         { label: { intl: 'Vetoquinol' } },

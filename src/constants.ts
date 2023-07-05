@@ -13,4 +13,3 @@ export const ALL_TAGS: TagType[] = [
 export const HIDE_NON_TECH_INITIALLY = true
 export const SCROLL_OFFSET = 750
 export const DATE_FORMAT = 'MM/YY'
-export const DETAILED_DATE_FORMAT = 'DD.MM.YYYY'
