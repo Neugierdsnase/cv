@@ -3,12 +3,8 @@
   import FilterSidebar from './components/FilterSidebar.svelte'
   import Footer from './components/Footer.svelte'
   import Hero from './components/Hero.svelte'
-  import Intro from './components/Intro.svelte'
   import Main from './components/Main.svelte'
-  import data from './data'
-  import { contentLangState } from './stores/ui'
-  import '@phosphor-icons/web/fill'
-  import '@phosphor-icons/web/light'
+  import { showSidebarState } from './stores/ui'
   import '@phosphor-icons/web/bold'
   let y: number
 </script>
@@ -17,26 +13,23 @@
 
 <Hero />
 <div>
-  <Intro text={data.introText} />
   <Main />
   <Footer />
 </div>
 <FilterSidebar />
 <div
-  class="fixed bottom-0 right-12 z-20 flex h-2/5 flex-col justify-around align-middle print:hidden"
+  class="fixed bottom-0 right-12 z-20 flex h-1/5 flex-col justify-around align-middle print:hidden"
 >
-  <button>
+  <button
+    on:click={() => showSidebarState.set(true)}
+    class="btn-primary btn-outline btn h-12 w-12 rounded-full text-xl"
+  >
     <i class="ph-bold ph-funnel-simple" />
   </button>
   <button
-    on:click={() =>
-      contentLangState.update((s) =>
-        s === 'de' ? 'en' : 'de',
-      )}
+    class="btn-primary btn-outline btn h-12 w-12 rounded-full text-xl"
+    on:click={() => window.print()}
   >
     <i class="ph-bold ph-file-pdf" />
-  </button>
-  <button on:click={window.print}>
-    <i class="ph-bold ph-printer" />
   </button>
 </div>

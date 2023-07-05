@@ -6,6 +6,8 @@
   } from '../stores/data'
   import CvItems from './CvItems/CvItems.svelte'
   import Skills from './Skills/Skills.svelte'
+  import { showModalState } from '../stores/ui'
+  import DetailsModal from './DetailsModal.svelte'
 </script>
 
 <main>
@@ -13,3 +15,7 @@
   <CvItems cvItems={$cvEduItemsState} />
   <Skills skills={$skillsState} />
 </main>
+
+{#if $showModalState !== undefined}
+  <DetailsModal />
+{/if}

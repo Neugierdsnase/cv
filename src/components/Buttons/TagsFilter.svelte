@@ -2,8 +2,8 @@
   import { tagsFilterLabel } from './../../ui-text'
   import { getIntlContent } from './../../utility'
   import { ALL_TAGS } from '../../constants'
-  import Tag from '../Tag.svelte'
   import { contentLangState } from '../../stores/ui'
+  import Tag from './Tag.svelte'
 </script>
 
 <div>
@@ -12,7 +12,7 @@
   </p>
   <div class="flex flex-wrap gap-2">
     {#each ALL_TAGS as tag}
-      <Tag size="m" {tag} />
+      <Tag {tag} />
     {/each}
   </div>
 </div>

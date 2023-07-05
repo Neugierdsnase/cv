@@ -4,24 +4,28 @@
 
 @layer base {
   body {
-    @apply w-screen overflow-x-hidden bg-babyBlue-400 text-babyBlue-200 print:bg-white print:text-black-rich;
-    max-width: 100vw;
+    @apply overflow-x-hidden bg-base-200 text-base-content print:bg-white print:text-base-100;
   }
 }
 
 @layer components {
-  .text-h1 {
+  .h1 {
     font-size: clamp(2.3rem, 9vw, 5rem);
   }
 
-  .text-h2 {
-    @apply relative mr-4 pr-4;
+  .h2 {
+    @apply relative pr-4 pt-4;
     font-size: clamp(1.8rem, 8vw, 5rem);
   }
 
-  .text-h2::after {
+  .h2::after {
     content: '';
-    @apply absolute right-0 h-1/4 w-1/5 border-t-8 border-r-8 border-babyBlue-400;
+    @apply absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary;
+  }
+
+  .h2::before {
+    content: '';
+    @apply absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary;
   }
 
   @media print {
@@ -30,71 +34,7 @@
     }
   }
 
-  .text-h3 {
+  .h3 {
     font-size: clamp(2.4rem, 7vw, 3.6rem);
-  }
-
-  .hero-clip-path {
-    @apply bg-babyBlue-300 text-black-rich;
-    clip-path: polygon(
-      0% 90%,
-      15% 80%,
-      30% 100%,
-      50% 80%,
-      70% 100%,
-      85% 80%,
-      100% 90%,
-      100% 0%,
-      0% 0%
-    );
-  }
-
-  .stripes {
-    @apply bg-transparent;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2361bbe5' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
-  }
-}
-
-@layer utilities {
-  @media print {
-    .print-transform-reset {
-      transform: translate(0, 0) !important;
-    }
-  }
-
-  .custom-delay-0 {
-    transition-delay: 0ms;
-  }
-
-  .custom-delay-1 {
-    transition-delay: 150ms;
-  }
-
-  .custom-delay-2 {
-    transition-delay: 300ms;
-  }
-
-  .custom-delay-3 {
-    transition-delay: 450ms;
-  }
-
-  .custom-delay-4 {
-    transition-delay: 600ms;
-  }
-
-  .custom-delay-5 {
-    transition-delay: 750ms;
-  }
-
-  .custom-delay-6 {
-    transition-delay: 900ms;
-  }
-
-  .custom-delay-7 {
-    transition-delay: 1050ms;
-  }
-
-  .custom-delay-8 {
-    transition-delay: 1200ms;
   }
 }

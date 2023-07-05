@@ -4,13 +4,15 @@
   import { showSidebarState } from '../stores/ui'
   import SkilllevelFilter from './Buttons/SkilllevelFilter.svelte'
   import TagsFilter from './Buttons/TagsFilter.svelte'
+
+  $: showSidebar = $showSidebarState
 </script>
 
 <div
   use:clickOutside
   on:outsideClick={() => showSidebarState.set(false)}
-  class="fixed bottom-0 right-0 top-0 z-40 flex h-screen w-80 flex-col rounded-l-md bg-black-dark p-8 transition-transform"
-  class:translate-x-80={!showSidebarState}
+  class="fixed bottom-0 right-0 top-0 z-40 flex h-screen w-80 flex-col rounded-l-md bg-base-100 p-8 transition-transform"
+  class:translate-x-80={!showSidebar}
 >
   <div class="flex h-2/3 flex-col justify-between">
     <TagsFilter />

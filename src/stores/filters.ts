@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import { writable } from 'svelte/store'
 import { HIDE_NON_TECH_INITIALLY } from '../constants'
 import data from '../data'
@@ -23,10 +22,14 @@ const compareFiltersToItems = (
   if (!filters.length) {
     return items
   }
+
   const newItems = items.filter(({ tags }) => {
-    const inter = _.intersection(tags, filters)
+    const inter = tags.filter((tag) =>
+      filters.includes(tag),
+    )
     return Boolean(inter.length)
   })
+
   return newItems
 }
 
@@ -57,6 +60,19 @@ export const filterData = (
       items: filterNonTech(
         hideNonTechState,
         compareFiltersToItems(skill.items, filters),
+      ),
+    })),
+  })
+}
+
+export const filterSkills = (n: LevelEnum) => {
+  skillLevelFilterState.set(n)
+  skillsState.set({
+    ...data.skills,
+    items: data.skills.items.map((skill) => ({
+      ...skill,
+      items: skill.items.filter(
+        ({ level }) => level >= n || !level,
       ),
     })),
   })

@@ -5,24 +5,16 @@
 </script>
 
 <footer
-  class="footer footer-center bg-base-300 p-4 text-base-content"
+  class="footer footer-center mt-8 bg-base-300 p-8 text-base-content"
 >
   <p class="mx-auto">
     {getIntlContent(contactMe, $contentLangState)}
+    <a href="mailto:mail@vomkonstant.in"
+      >mail@vomkonstant.in</a
+    >
+    <a
+      href="https://www.linkedin.com/in/konstantin-kovar-5301494b/"
+      >{getIntlContent(linkedIn, $contentLangState)}</a
+    >
   </p>
-  <div class="flex justify-around">
-    <span>
-      {`${getIntlContent(email, $contentLangState)}: `}
-      <a href="mailto:mail@vomkonstant.in"
-        >mail@vomkonstant.in</a
-      >
-    </span>
-    <span class="print:hidden">{` || `}</span>
-    <span class="print:hidden">
-      <a
-        href="https://www.linkedin.com/in/konstantin-kovar-5301494b/"
-        >{getIntlContent(linkedIn, $contentLangState)}</a
-      >
-    </span>
-  </div>
 </footer>

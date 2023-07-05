@@ -7,38 +7,37 @@
   import { contentLangState } from '../stores/ui'
   import { subTitle } from '../ui-text'
   import { getIntlContent } from '../utility'
+  import '@phosphor-icons/web/bold'
 
-  let y: number
+  let y = 0
 </script>
 
 <svelte:window bind:scrollY={y} />
 
 <section
-  id="hero"
-  class="fixed top-0 z-30 h-[105vh] w-full print:hidden"
-  style={`transform: translateY(-${y}px);`}
+  class="relative flex h-screen w-screen flex-col justify-end overflow-hidden bg-base-100 shadow-2xl print:hidden"
 >
-  <div
-    class="hero-clip-path flex h-full w-full items-center justify-center"
+  <button
+    class="btn-secondary btn-outline btn absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
+    on:click={() =>
+      contentLangState.update((s) =>
+        s === 'de' ? 'en' : 'de',
+      )}
   >
-    <button
-      class="absolute right-6 top-6"
-      on:click={() =>
-        contentLangState.update((s) =>
-          s === 'de' ? 'en' : 'de',
-        )}
-    >
-      <i class="ph-bold ph-translate" />
-    </button>
-    <div class="flex flex-col items-start md:items-center">
-      <h1 class="text-h1 mx-8 font-bold text-babyBlue-400">
-        Konstantin Kovar
-      </h1>
-      <subtitle class="mx-8 text-2xl text-babyBlue-400">
-        {@html getIntlContent(subTitle, $contentLangState)}
-      </subtitle>
-    </div>
+    <i class="ph-bold ph-translate" />
+  </button>
+  <div
+    class=" px-32 leading-[18rem]"
+    style={`transform: translateY(${y / 6}px);`}
+  >
+    <h1 class="h1 text-[20rem]">Konstantin<br />Kovar</h1>
+    <subtitle class="text-[8rem]">
+      {@html getIntlContent(subTitle, $contentLangState)}
+    </subtitle>
   </div>
+  <div
+    class="absolute bottom-0 h-4/5 w-full bg-[url('../img/hero.png')] bg-contain bg-right bg-no-repeat"
+  />
 </section>
 
 <!-- Print version -->

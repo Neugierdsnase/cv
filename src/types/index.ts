@@ -17,6 +17,14 @@ export enum LevelEnum {
   'expert',
 }
 
+export type ModalContentType = {
+  heading: string
+  list: ListItemType[]
+  time: TimeType
+  logo: string
+  tags: TagType[]
+}
+
 export type LanguageType = 'en' | 'de'
 type MultiLanguageContent<T> = {
   [key in LanguageType]: T

@@ -5,7 +5,7 @@ export const language: IntlContentType<string> = {
   de: 'English',
 }
 export const subTitle: IntlContentType<string> = {
-  en: 'CV',
+  en: 'Curriculum Vitæ',
   de: 'Lebenslauf',
 }
 export const since: IntlContentType<string> = {
@@ -25,15 +25,15 @@ export const tagsFilterLabel: IntlContentType<string> = {
   de: 'nach Schlagworten filtern',
 }
 export const skillLevelFilterLabel: IntlContentType<string> =
-  {
-    en: 'only show skills with following self-assessment (or higher)',
-    de: 'nur Skills mit folgender Selbsteinschätzung (und höher) anzeigen',
-  }
+{
+  en: 'only show skills with following self-assessment (or higher)',
+  de: 'nur Skills mit folgender Selbsteinschätzung (und höher) anzeigen',
+}
 export const nonTechFilterLabel: IntlContentType<string> = {
   en: 'hide non-tech',
   de: 'non-tech verstecken',
 }
 export const contactMe: IntlContentType<string> = {
-  en: 'Do you think I might be a good fit for your company? I am open for something new! Contact me:',
-  de: 'Glaubst Du, wir würden gut zusammen passen? Ich bin offen für etwas Neues! Kontaktiere mich:',
+  en: 'Do you think I might be a good fit for your company? I am open for something new!',
+  de: 'Glaubst Du, wir würden gut zusammen passen? Ich bin offen für etwas Neues!',
 }
