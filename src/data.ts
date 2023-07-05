@@ -42,6 +42,12 @@ const cvJobItems: CvSectionType = {
         },
         {
           label: {
+            en: 'involved in underlying architectural and technical decisions and evaluations',
+            de: 'involviert in der Entscheidungsfindung bei grundlegenden technischen Entscheidungen und Evaluierungen',
+          },
+        },
+        {
+          label: {
             en: 'integral part of facing challenges of scaling tech, product and team',
             de: 'direkt in der Arbeit an den Herausforderungen eines wachsenden Produkts, Infrastruktur und Teams beteiligt',
           },

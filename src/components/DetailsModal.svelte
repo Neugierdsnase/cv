@@ -13,7 +13,7 @@
   let list: ListItemType[]
   let time: TimeType
   let tags: TagType[]
-  let logo: string
+  let heading: string
 
   $: {
     const state = $showModalState
@@ -21,7 +21,7 @@
       list = state.list
       time = state.time
       tags = state.tags
-      logo = state.logo
+      heading = state.heading
     }
   }
 </script>
@@ -45,12 +45,11 @@
     >
       <DetailsCard
         index={2}
-        className="w-full col-span-1 row-span-3 p-2"
-      >
-        <div
-          class="h-full w-full bg-contain bg-center bg-no-repeat"
-          style="background-image: url(https://global-uploads.webflow.com/61d317e7c4dcc5ada574f22c/61d37b018c30ea6a223c8b2c_Webclip.png)"
-        /></DetailsCard
+        className="w-full col-span-1 bg-secondary/40 row-span-3"
+        ><span
+          class="border-l-4 border-secondary pl-4 text-2xl font-bold"
+          >{heading}</span
+        ></DetailsCard
       >
       <DetailsCard
         index={1}
@@ -84,7 +83,7 @@
         innerClassName="flex flex-col justify-center items-center"
       >
         <p class="text-2xl font-bold text-base-content/80">
-          <Time {time} detailed />
+          <Time {time} />
         </p>
       </DetailsCard>
 

@@ -2208,6 +2208,10 @@ body {
   border-bottom-width: 2px;
 }
 
+.border-l-4 {
+  border-left-width: 4px;
+}
+
 .border-primary {
   --tw-border-opacity: 1;
   border-color: hsl(var(--p) / var(--tw-border-opacity));
@@ -2216,6 +2220,11 @@ body {
 .border-base-content {
   --tw-border-opacity: 1;
   border-color: hsl(var(--bc) / var(--tw-border-opacity));
+}
+
+.border-secondary {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
 }
 
 .border-b-base-content {
@@ -2256,6 +2265,10 @@ body {
 
 .bg-primary\/30 {
   background-color: hsl(var(--p) / 0.3);
+}
+
+.bg-secondary\/20 {
+  background-color: hsl(var(--s) / 0.2);
 }
 
 .bg-opacity-10 {
@@ -2345,6 +2358,10 @@ body {
 
 .pr-1 {
   padding-right: 0.25rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-center {

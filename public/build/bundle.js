@@ -206,14 +206,6 @@ var app = (function () {
     function children(element) {
         return Array.from(element.childNodes);
     }
-    function set_style(node, key, value, important) {
-        if (value == null) {
-            node.style.removeProperty(key);
-        }
-        else {
-            node.style.setProperty(key, value, important ? 'important' : '');
-        }
-    }
     function toggle_class(element, name, toggle) {
         element.classList[toggle ? 'add' : 'remove'](name);
     }
@@ -1163,6 +1155,12 @@ var app = (function () {
                         label: {
                             en: 'part of a very early stage startup',
                             de: 'Teil eines Startups im sehr früher Stadium'
+                        }
+                    },
+                    {
+                        label: {
+                            en: 'involved in underlying architectural and technical decisions and evaluations',
+                            de: 'involviert in der Entscheidungsfindung bei grundlegenden technischen Entscheidungen und Evaluierungen'
                         }
                     },
                     {
@@ -6787,23 +6785,27 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (39:6) <DetailsCard         index={2}         className="w-full col-span-1 row-span-3 p-2"       >
+    // (39:6) <DetailsCard         index={2}         className="w-full col-span-1 bg-secondary/40 row-span-3"         >
     function create_default_slot_3(ctx) {
-    	let div;
+    	let span;
+    	let t;
 
     	const block = {
     		c: function create() {
-    			div = element("div");
-    			attr_dev(div, "class", "h-full w-full bg-contain bg-center bg-no-repeat");
-    			set_style(div, "background-image", "url(https://global-uploads.webflow.com/61d317e7c4dcc5ada574f22c/61d37b018c30ea6a223c8b2c_Webclip.png)");
-    			add_location(div, file$2, 42, 8, 1206);
+    			span = element("span");
+    			t = text(/*heading*/ ctx[3]);
+    			attr_dev(span, "class", "border-l-4 border-secondary pl-4 text-2xl font-bold");
+    			add_location(span, file$2, 41, 9, 1220);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, span, anchor);
+    			append_dev(span, t);
     		},
-    		p: noop,
+    		p: function update(ctx, dirty) {
+    			if (dirty & /*heading*/ 8) set_data_dev(t, /*heading*/ ctx[3]);
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(span);
     		}
     	};
 
@@ -6811,14 +6813,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full col-span-1 row-span-3 p-2\\\"       >",
+    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full col-span-1 bg-secondary/40 row-span-3\\\"         >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:8) {#if list && list.length}
+    // (51:8) {#if list && list.length}
     function create_if_block$1(ctx) {
     	let ul;
     	let current;
@@ -6842,7 +6844,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$2, 52, 10, 1578);
+    			add_location(ul, file$2, 51, 10, 1485);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -6856,7 +6858,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*getIntlContent, list, $contentLangState*/ 9) {
+    			if (dirty & /*getIntlContent, list, $contentLangState*/ 17) {
     				each_value_1 = /*list*/ ctx[0];
     				validate_each_argument(each_value_1);
     				let i;
@@ -6912,18 +6914,18 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(52:8) {#if list && list.length}",
+    		source: "(51:8) {#if list && list.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (54:12) {#each list as item, index}
+    // (53:12) {#each list as item, index}
     function create_each_block_1(ctx) {
     	let li;
     	let html_tag;
-    	let raw_value = getIntlContent(/*item*/ ctx[9].label, /*$contentLangState*/ ctx[3]) + "";
+    	let raw_value = getIntlContent(/*item*/ ctx[9].label, /*$contentLangState*/ ctx[4]) + "";
     	let t;
     	let li_intro;
     	let li_outro;
@@ -6936,7 +6938,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(li, "class", "flex h-20 items-center border-b-2 border-base-content first:border-t-2");
-    			add_location(li, file$2, 54, 14, 1637);
+    			add_location(li, file$2, 53, 14, 1544);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -6945,7 +6947,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*list, $contentLangState*/ 9) && raw_value !== (raw_value = getIntlContent(/*item*/ ctx[9].label, /*$contentLangState*/ ctx[3]) + "")) html_tag.p(raw_value);
+    			if ((!current || dirty & /*list, $contentLangState*/ 17) && raw_value !== (raw_value = getIntlContent(/*item*/ ctx[9].label, /*$contentLangState*/ ctx[4]) + "")) html_tag.p(raw_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -6985,14 +6987,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(54:12) {#each list as item, index}",
+    		source: "(53:12) {#each list as item, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:6) <DetailsCard         index={1}         className="col-span-2 row-span-4"       >
+    // (47:6) <DetailsCard         index={1}         className="col-span-2 row-span-4"       >
     function create_default_slot_2(ctx) {
     	let if_block_anchor;
     	let current;
@@ -7051,21 +7053,21 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(48:6) <DetailsCard         index={1}         className=\\\"col-span-2 row-span-4\\\"       >",
+    		source: "(47:6) <DetailsCard         index={1}         className=\\\"col-span-2 row-span-4\\\"       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:6) <DetailsCard         index={3}         className="col-span-1 row-span-1 row-start-4 col-start-1"         innerClassName="flex flex-col justify-center items-center"       >
+    // (73:6) <DetailsCard         index={3}         className="col-span-1 row-span-1 row-start-4 col-start-1"         innerClassName="flex flex-col justify-center items-center"       >
     function create_default_slot_1(ctx) {
     	let p;
     	let time_1;
     	let current;
 
     	time_1 = new Time({
-    			props: { time: /*time*/ ctx[1], detailed: true },
+    			props: { time: /*time*/ ctx[1] },
     			$$inline: true
     		});
 
@@ -7074,7 +7076,7 @@ var app = (function () {
     			p = element("p");
     			create_component(time_1.$$.fragment);
     			attr_dev(p, "class", "text-2xl font-bold text-base-content/80");
-    			add_location(p, file$2, 78, 8, 2377);
+    			add_location(p, file$2, 77, 8, 2284);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -7105,14 +7107,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(74:6) <DetailsCard         index={3}         className=\\\"col-span-1 row-span-1 row-start-4 col-start-1\\\"         innerClassName=\\\"flex flex-col justify-center items-center\\\"       >",
+    		source: "(73:6) <DetailsCard         index={3}         className=\\\"col-span-1 row-span-1 row-start-4 col-start-1\\\"         innerClassName=\\\"flex flex-col justify-center items-center\\\"       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:8) {#each tags as tag, index}
+    // (89:8) {#each tags as tag, index}
     function create_each_block(ctx) {
     	let span;
     	let html_tag;
@@ -7129,7 +7131,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(span, "class", "badge badge-primary badge-sm");
-    			add_location(span, file$2, 90, 10, 2728);
+    			add_location(span, file$2, 89, 10, 2626);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -7178,14 +7180,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(90:8) {#each tags as tag, index}",
+    		source: "(89:8) {#each tags as tag, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:6) <DetailsCard         index={4}         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"         innerClassName="flex justify-end items-center gap-1"       >
+    // (84:6) <DetailsCard         index={4}         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"         innerClassName="flex justify-end items-center gap-1"       >
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7276,7 +7278,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(85:6) <DetailsCard         index={4}         className=\\\"col-span-3 bg-primary/30 pr-1 h-6 p-0\\\"         innerClassName=\\\"flex justify-end items-center gap-1\\\"       >",
+    		source: "(84:6) <DetailsCard         index={4}         className=\\\"col-span-3 bg-primary/30 pr-1 h-6 p-0\\\"         innerClassName=\\\"flex justify-end items-center gap-1\\\"       >",
     		ctx
     	});
 
@@ -7307,7 +7309,7 @@ var app = (function () {
     	detailscard0 = new DetailsCard({
     			props: {
     				index: 2,
-    				className: "w-full col-span-1 row-span-3 p-2",
+    				className: "w-full col-span-1 bg-secondary/40 row-span-3",
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -7362,15 +7364,15 @@ var app = (function () {
     			t3 = space();
     			create_component(detailscard3.$$.fragment);
     			attr_dev(i, "class", "ph-bold ph-x cursor-pointer");
-    			add_location(i, file$2, 33, 6, 961);
+    			add_location(i, file$2, 33, 6, 970);
     			attr_dev(button, "class", "absolute -right-12 top-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90");
-    			add_location(button, file$2, 28, 4, 713);
+    			add_location(button, file$2, 28, 4, 722);
     			attr_dev(div0, "class", "relative inset-0 grid h-full w-full grid-cols-3 gap-8");
-    			add_location(div0, file$2, 35, 4, 1021);
+    			add_location(div0, file$2, 35, 4, 1030);
     			attr_dev(div1, "class", "fixed inset-1/3");
-    			add_location(div1, file$2, 26, 2, 653);
+    			add_location(div1, file$2, 26, 2, 662);
     			attr_dev(div2, "class", "fixed inset-0 z-30 bg-base-100/70");
-    			add_location(div2, file$2, 21, 0, 527);
+    			add_location(div2, file$2, 21, 0, 536);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -7399,14 +7401,14 @@ var app = (function () {
     		p: function update(ctx, [dirty]) {
     			const detailscard0_changes = {};
 
-    			if (dirty & /*$$scope*/ 2048) {
+    			if (dirty & /*$$scope, heading*/ 2056) {
     				detailscard0_changes.$$scope = { dirty, ctx };
     			}
 
     			detailscard0.$set(detailscard0_changes);
     			const detailscard1_changes = {};
 
-    			if (dirty & /*$$scope, list, $contentLangState*/ 2057) {
+    			if (dirty & /*$$scope, list, $contentLangState*/ 2065) {
     				detailscard1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -7488,15 +7490,15 @@ var app = (function () {
     	let $showModalState;
     	let $contentLangState;
     	validate_store(showModalState, 'showModalState');
-    	component_subscribe($$self, showModalState, $$value => $$invalidate(4, $showModalState = $$value));
+    	component_subscribe($$self, showModalState, $$value => $$invalidate(5, $showModalState = $$value));
     	validate_store(contentLangState, 'contentLangState');
-    	component_subscribe($$self, contentLangState, $$value => $$invalidate(3, $contentLangState = $$value));
+    	component_subscribe($$self, contentLangState, $$value => $$invalidate(4, $contentLangState = $$value));
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('DetailsModal', slots, []);
     	let list;
     	let time;
     	let tags;
-    	let logo;
+    	let heading;
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -7515,7 +7517,7 @@ var app = (function () {
     		list,
     		time,
     		tags,
-    		logo,
+    		heading,
     		$showModalState,
     		$contentLangState
     	});
@@ -7524,7 +7526,7 @@ var app = (function () {
     		if ('list' in $$props) $$invalidate(0, list = $$props.list);
     		if ('time' in $$props) $$invalidate(1, time = $$props.time);
     		if ('tags' in $$props) $$invalidate(2, tags = $$props.tags);
-    		if ('logo' in $$props) logo = $$props.logo;
+    		if ('heading' in $$props) $$invalidate(3, heading = $$props.heading);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -7532,7 +7534,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*$showModalState*/ 16) {
+    		if ($$self.$$.dirty & /*$showModalState*/ 32) {
     			{
     				const state = $showModalState;
 
@@ -7540,13 +7542,13 @@ var app = (function () {
     					$$invalidate(0, list = state.list);
     					$$invalidate(1, time = state.time);
     					$$invalidate(2, tags = state.tags);
-    					logo = state.logo;
+    					$$invalidate(3, heading = state.heading);
     				}
     			}
     		}
     	};
 
-    	return [list, time, tags, $contentLangState, $showModalState];
+    	return [list, time, tags, heading, $contentLangState, $showModalState];
     }
 
     class DetailsModal extends SvelteComponentDev {
