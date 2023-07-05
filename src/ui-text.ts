@@ -25,10 +25,10 @@ export const tagsFilterLabel: IntlContentType<string> = {
   de: 'nach Schlagworten filtern',
 }
 export const skillLevelFilterLabel: IntlContentType<string> =
-{
-  en: 'only show skills with following self-assessment (or higher)',
-  de: 'nur Skills mit folgender Selbsteinschätzung (und höher) anzeigen',
-}
+  {
+    en: 'only show skills with following self-assessment (or higher)',
+    de: 'nur Skills mit folgender Selbsteinschätzung (und höher) anzeigen',
+  }
 export const nonTechFilterLabel: IntlContentType<string> = {
   en: 'hide non-tech',
   de: 'non-tech verstecken',
