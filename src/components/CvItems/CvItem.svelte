@@ -1,7 +1,7 @@
 <script lang="ts">
   import { CvItemType } from '../../types'
 
-  import Time from './Time.svelte'
+  import Time from '../Time.svelte'
   import { getIntlContent } from '../../utility'
   import {
     contentLangState,
@@ -33,7 +33,11 @@
         <h3 class="h3 w-2/3 font-bold leading-none">
           {@html getIntlContent(label, $contentLangState)}
         </h3>
-        <Time {time} />
+        <div
+          class="absolute right-4 top-4 w-1/4 rotate-90 text-2xl font-bold opacity-60 print:static print:rotate-0 md:rotate-0 md:text-right"
+        >
+          <Time {time} />
+        </div>
         {#if Boolean(tagLine)}
           <p class="font-cover  w-2/3">
             {@html getIntlContent(
@@ -47,12 +51,16 @@
 
     {#if list && list.length}
       <button
-        on:click={openModalWithValues({
-          list,
-          heading: getIntlContent(label, $contentLangState),
-          tags,
-          time,
-        })}
+        on:click={() =>
+          openModalWithValues({
+            list,
+            heading: getIntlContent(
+              label,
+              $contentLangState,
+            ),
+            tags,
+            time,
+          })}
         class="btn-primary btn-outline btn mb-0 ml-auto mt-8"
       >
         Details

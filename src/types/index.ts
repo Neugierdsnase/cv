@@ -21,7 +21,7 @@ export type ModalContentType = {
   heading: string
   list: ListItemType[]
   time: TimeType
-  logo: string
+  logo?: string
   tags: TagType[]
 }
 

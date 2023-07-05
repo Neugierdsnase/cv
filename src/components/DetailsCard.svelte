@@ -4,6 +4,7 @@
 
   export let index: number = 0
   export let className: string = ''
+  export let innerClassName: string = ''
 </script>
 
 <section
@@ -21,7 +22,9 @@
     easing: circIn,
   }}
 >
-  <div class="z-10 h-full text-base-content">
+  <div
+    class={`z-10 h-full text-base-content ${innerClassName}`}
+  >
     <slot />
   </div>
 </section>
