@@ -1762,7 +1762,7 @@ h2 {
 }
 
 h2::after {
-  content: "";
+  content: '';
   position: absolute;
   right: 0px;
   display: none;
@@ -1787,7 +1787,7 @@ h2::after {
 }
 
 h2::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0px;
   top: 0px;
@@ -1892,14 +1892,6 @@ h2::before {
   grid-column: span 1 / span 1;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
-.col-span-3 {
-  grid-column: span 3 / span 3;
-}
-
 .col-start-1 {
   grid-column-start: 1;
 }
@@ -1908,20 +1900,13 @@ h2::before {
   grid-row: span 1 / span 1;
 }
 
-.row-span-3 {
-  grid-row: span 3 / span 3;
-}
-
-.row-span-4 {
-  grid-row: span 4 / span 4;
-}
-
-.row-start-4 {
-  grid-row-start: 4;
-}
-
 .m-1 {
   margin: 0.25rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .mx-auto {
@@ -1939,17 +1924,8 @@ h2::before {
   margin-bottom: 2rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mb-0 {
   margin-bottom: 0px;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
 }
 
 .mb-8 {
@@ -1964,12 +1940,12 @@ h2::before {
   margin-left: 1rem;
 }
 
-.mr-1 {
-  margin-right: 0.25rem;
+.ml-8 {
+  margin-left: 2rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
+.mr-1 {
+  margin-right: 0.25rem;
 }
 
 .mt-4 {
@@ -1978,10 +1954,6 @@ h2::before {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-8 {
-  margin-left: 2rem;
 }
 
 .line-clamp-1 {
@@ -2029,10 +2001,6 @@ h2::before {
 
 .h-20 {
   height: 5rem;
-}
-
-.h-6 {
-  height: 1.5rem;
 }
 
 .h-8 {
@@ -2159,10 +2127,6 @@ h2::before {
        break-inside: avoid;
 }
 
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -2235,12 +2199,12 @@ h2::before {
   border-radius: 9999px;
 }
 
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-l-md {
@@ -2335,6 +2299,11 @@ h2::before {
   padding-right: 0.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -2343,11 +2312,6 @@ h2::before {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .pb-4 {
@@ -2472,26 +2436,6 @@ h2::before {
 }
 
 @media print {
-  .print\:join-vertical.join {
-    flex-direction: column;
-  }
-
-  .print\:join-vertical.join .join-item:first-child:not(:last-child),.print\:join-vertical
-  .join *:first-child:not(:last-child) .join-item {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-  }
-
-  .print\:join-vertical.join .join-item:last-child:not(:first-child),.print\:join-vertical
-  .join *:last-child:not(:first-child) .join-item {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
-  }
-
   .print\:join-horizontal.join {
     flex-direction: row;
   }
@@ -2510,12 +2454,6 @@ h2::before {
     border-top-left-radius: 0;
     border-bottom-right-radius: inherit;
     border-top-right-radius: inherit;
-  }
-
-  .print\:join-vertical.join > :where(*:not(:first-child)) {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: -1px;
   }
 
   .print\:join-horizontal.join > :where(*:not(:first-child)) {
@@ -2559,10 +2497,6 @@ h2::before {
 
 .odd\:bg-primary\/20:nth-child(odd) {
   background-color: hsl(var(--p) / 0.2);
-}
-
-.odd\:bg-opacity-20:nth-child(odd) {
-  --tw-bg-opacity: 0.2;
 }
 
 .hover\:rotate-90:hover {
@@ -2635,18 +2569,14 @@ h2::before {
     border-color: rgb(209 213 219 / var(--tw-border-opacity));
   }
 
-  .print\:bg-transparent {
-    background-color: transparent;
+  .print\:\!bg-white {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   }
 
   .print\:bg-white {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  }
-
-  .print\:\!bg-white {
-    --tw-bg-opacity: 1 !important;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
   }
 
   .print\:text-black {
@@ -2671,17 +2601,13 @@ h2::before {
 }
 
 @media (min-width: 1024px) {
-  .lg\:col-span-1 {
-    grid-column: span 1 / span 1;
-  }
-
-  .lg\:row-span-3 {
-    grid-row: span 3 / span 3;
-  }
-
   .lg\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
   }
 
   .lg\:ml-auto {
@@ -2690,10 +2616,6 @@ h2::before {
 
   .lg\:mr-8 {
     margin-right: 2rem;
-  }
-
-  .lg\:mb-24 {
-    margin-bottom: 6rem;
   }
 
   .lg\:mt-12 {
@@ -2710,10 +2632,6 @@ h2::before {
 
   .lg\:w-2\/3 {
     width: 66.666667%;
-  }
-
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:flex-row {

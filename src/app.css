@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-base-200 text-base-content print:bg-white print:text-black print:p-8;
+    @apply overflow-x-hidden bg-base-200 text-base-content print:bg-white print:p-8 print:text-black;
   }
 }
 
@@ -19,12 +19,12 @@
   }
 
   h2::after {
-    content: "";
-    @apply hidden xl:block absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary print:hidden;
+    content: '';
+    @apply absolute right-0 hidden h-3/4 w-1/5 border-r-8 border-t-8 border-secondary print:hidden xl:block;
   }
 
   h2::before {
-    content: "";
-    @apply hidden xl:block absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden;
+    content: '';
+    @apply absolute left-0 top-0 hidden h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden xl:block;
   }
 }
