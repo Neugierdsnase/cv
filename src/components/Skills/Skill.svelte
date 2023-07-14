@@ -12,7 +12,7 @@
   <section
     class="min-w-[40%] grow print:break-inside-avoid"
   >
-    <h2 class="font-display text-2xl font-bold">
+    <h2 class="ml-8 text-2xl font-bold">
       {@html getIntlContent(heading, $contentLangState)}
     </h2>
     <SkillList {items} />

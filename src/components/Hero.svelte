@@ -15,7 +15,7 @@
 <svelte:window bind:scrollY={y} />
 
 <section
-  class="relative flex h-screen w-screen flex-col justify-end overflow-hidden bg-base-100 shadow-2xl print:hidden"
+  class="relative flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0"
 >
   <button
     class="btn-secondary btn-outline btn absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
@@ -27,16 +27,18 @@
     <i class="ph-bold ph-translate" />
   </button>
   <div
-    class=" px-32 leading-[18rem]"
+    class="ml-2 leading-[8rem] lg:px-32 lg:leading-[18rem]"
     style={`transform: translateY(${y / 6}px);`}
   >
-    <h1 class="h1 text-[20rem]">Konstantin<br />Kovar</h1>
-    <subtitle class="text-[8rem]">
+    <h1 class="text-7xl lg:text-[20rem]">
+      Konstantin<br />Kovar
+    </h1>
+    <subtitle class="text-3xl lg:text-[8rem]">
       {@html getIntlContent(subTitle, $contentLangState)}
     </subtitle>
   </div>
   <div
-    class="absolute bottom-0 h-4/5 w-full bg-[url('../img/hero.png')] bg-contain bg-right bg-no-repeat"
+    class="absolute bottom-0 h-2/5 w-full bg-[url('../img/hero.png')] bg-cover bg-right bg-no-repeat lg:h-3/5"
   />
 </section>
 

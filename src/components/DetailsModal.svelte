@@ -31,10 +31,10 @@
   out:fade={{ duration: 300, delay: 300 }}
   class="fixed inset-0 z-30 bg-base-100/70"
 >
-  <div class="fixed inset-1/3">
+  <div class="fixed inset-8 top-16 xl:inset-1/4">
     <!-- Close Button -->
     <button
-      class="absolute -right-12 top-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90"
+      class="absolute -top-12 right-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90 xl:-right-12 xl:top-0"
       transition:fade={{ duration: 300, delay: 300 }}
       on:click={closeModal}
     >
@@ -45,9 +45,9 @@
     >
       <DetailsCard
         index={2}
-        className="w-full col-span-1 bg-secondary/40 row-span-3"
+        className="w-full relative col-span-1 bg-secondary/40 row-span-3"
         ><span
-          class="border-l-4 border-secondary pl-4 text-2xl font-bold"
+          class="max-w-fit origin-right -rotate-90 border-l-8 border-secondary pl-4 text-2xl font-bold xl:relative xl:rotate-0 xl:border-l-4"
           >{heading}</span
         ></DetailsCard
       >
@@ -91,7 +91,7 @@
       <DetailsCard
         index={4}
         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"
-        innerClassName="flex justify-end items-center gap-1"
+        innerClassName="flex justify-center items-center gap-1"
       >
         {#each tags as tag, index}
           <span

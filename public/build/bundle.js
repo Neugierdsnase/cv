@@ -3157,7 +3157,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (52:2) {#if $activeFiltersState.length}
+    // (54:2) {#if $activeFiltersState.length}
     function create_if_block_2$2(ctx) {
     	let p;
     	let t1;
@@ -3181,8 +3181,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$e, 52, 4, 1666);
-    			add_location(ul, file$e, 53, 4, 1720);
+    			add_location(p, file$e, 54, 4, 1752);
+    			add_location(ul, file$e, 55, 4, 1806);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3232,14 +3232,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(52:2) {#if $activeFiltersState.length}",
+    		source: "(54:2) {#if $activeFiltersState.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:6) {#each $activeFiltersState as filter}
+    // (57:6) {#each $activeFiltersState as filter}
     function create_each_block$8(ctx) {
     	let li;
     	let t_value = /*filter*/ ctx[7] + "";
@@ -3249,7 +3249,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$e, 55, 8, 1777);
+    			add_location(li, file$e, 57, 8, 1863);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3267,14 +3267,14 @@ var app = (function () {
     		block,
     		id: create_each_block$8.name,
     		type: "each",
-    		source: "(55:6) {#each $activeFiltersState as filter}",
+    		source: "(57:6) {#each $activeFiltersState as filter}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (61:2) {#if $skillLevelFilterState > 1}
+    // (63:2) {#if $skillLevelFilterState > 1}
     function create_if_block_1$2(ctx) {
     	let p;
     	let t0;
@@ -3287,7 +3287,7 @@ var app = (function () {
     			t0 = text("Only skills with an (self-assessed) skill level of ");
     			t1 = text(/*$skillLevelFilterState*/ ctx[3]);
     			t2 = text("/5\n      are being displayed.");
-    			add_location(p, file$e, 61, 4, 1867);
+    			add_location(p, file$e, 63, 4, 1953);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3307,14 +3307,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(61:2) {#if $skillLevelFilterState > 1}",
+    		source: "(63:2) {#if $skillLevelFilterState > 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:2) {#if $hideNonTechState}
+    // (70:2) {#if $hideNonTechState}
     function create_if_block$9(ctx) {
     	let p;
 
@@ -3322,7 +3322,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Non-tech items are being hidden.";
-    			add_location(p, file$e, 68, 4, 2030);
+    			add_location(p, file$e, 70, 4, 2116);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3336,7 +3336,7 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(68:2) {#if $hideNonTechState}",
+    		source: "(70:2) {#if $hideNonTechState}",
     		ctx
     	});
 
@@ -3425,30 +3425,30 @@ var app = (function () {
     			t15 = space();
     			if (if_block2) if_block2.c();
     			attr_dev(i, "class", "ph-bold ph-translate");
-    			add_location(i, file$e, 20, 4, 698);
+    			add_location(i, file$e, 20, 4, 719);
     			attr_dev(button, "class", "btn-secondary btn-outline btn absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white");
-    			add_location(button, file$e, 13, 2, 470);
-    			add_location(br, file$e, 26, 42, 882);
-    			attr_dev(h10, "class", "h1 text-[20rem]");
-    			add_location(h10, file$e, 26, 4, 844);
-    			attr_dev(subtitle0, "class", "text-[8rem]");
-    			add_location(subtitle0, file$e, 27, 4, 903);
-    			attr_dev(div0, "class", "px-32 leading-[18rem]");
+    			add_location(button, file$e, 13, 2, 491);
+    			add_location(br, file$e, 27, 16, 944);
+    			attr_dev(h10, "class", "text-7xl lg:text-[20rem]");
+    			add_location(h10, file$e, 26, 4, 890);
+    			attr_dev(subtitle0, "class", "text-3xl lg:text-[8rem]");
+    			add_location(subtitle0, file$e, 29, 4, 970);
+    			attr_dev(div0, "class", "ml-2 leading-[8rem] lg:px-32 lg:leading-[18rem]");
     			attr_dev(div0, "style", div0_style_value = `transform: translateY(${/*y*/ ctx[0] / 6}px);`);
-    			add_location(div0, file$e, 22, 2, 747);
-    			attr_dev(div1, "class", "absolute bottom-0 h-4/5 w-full bg-[url('../img/hero.png')] bg-contain bg-right bg-no-repeat");
-    			add_location(div1, file$e, 31, 2, 1019);
-    			attr_dev(section0, "class", "relative flex h-screen w-screen flex-col justify-end overflow-hidden bg-base-100 shadow-2xl print:hidden");
+    			add_location(div0, file$e, 22, 2, 768);
+    			attr_dev(div1, "class", "absolute bottom-0 h-2/5 w-full bg-[url('../img/hero.png')] bg-cover bg-right bg-no-repeat lg:h-3/5");
+    			add_location(div1, file$e, 33, 2, 1098);
+    			attr_dev(section0, "class", "relative flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0");
     			add_location(section0, file$e, 10, 0, 342);
-    			add_location(h11, file$e, 38, 2, 1224);
+    			add_location(h11, file$e, 40, 2, 1310);
     			attr_dev(subtitle1, "class", "text-3xl");
-    			add_location(subtitle1, file$e, 39, 2, 1252);
+    			add_location(subtitle1, file$e, 41, 2, 1338);
     			attr_dev(div2, "class", "text-xs text-gray-400");
-    			add_location(div2, file$e, 42, 2, 1352);
-    			add_location(b, file$e, 46, 26, 1529);
-    			add_location(p, file$e, 43, 2, 1392);
+    			add_location(div2, file$e, 44, 2, 1438);
+    			add_location(b, file$e, 48, 26, 1615);
+    			add_location(p, file$e, 45, 2, 1478);
     			attr_dev(section1, "class", "mt-8 hidden text-center print:block");
-    			add_location(section1, file$e, 37, 0, 1168);
+    			add_location(section1, file$e, 39, 0, 1254);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3674,10 +3674,10 @@ var app = (function () {
     			t = space();
     			h21 = element("h2");
     			if (default_slot_1) default_slot_1.c();
-    			attr_dev(h20, "class", "h2 mx-auto mb-24 mt-12 max-w-4xl font-bold print:hidden");
+    			attr_dev(h20, "class", "mx-auto my-8 max-w-fit text-xl font-bold print:hidden lg:mb-24 lg:mt-12 xl:max-w-4xl");
     			add_location(h20, file$d, 0, 0, 0);
     			attr_dev(h21, "class", "ml-4 hidden text-2xl font-bold print:block");
-    			add_location(h21, file$d, 7, 0, 113);
+    			add_location(h21, file$d, 7, 0, 142);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4101,7 +4101,7 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "flex h-10 flex-row items-stretch overflow-x-scroll border-primary pr-4 lg:mr-8 lg:h-auto lg:flex-col lg:overflow-x-hidden lg:border-r-4 lg:pr-8");
-    			add_location(ul, file$b, 16, 8, 519);
+    			add_location(ul, file$b, 16, 8, 532);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -4195,7 +4195,7 @@ var app = (function () {
     			li = element("li");
     			create_component(tag.$$.fragment);
     			t = space();
-    			add_location(li, file$b, 20, 12, 737);
+    			add_location(li, file$b, 20, 12, 750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4239,7 +4239,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			attr_dev(p, "class", "font-cover w-2/3");
-    			add_location(p, file$b, 37, 10, 1260);
+    			add_location(p, file$b, 37, 10, 1273);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4273,8 +4273,8 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "Details";
-    			attr_dev(button, "class", "btn-primary btn-outline btn mb-0 ml-auto mt-8");
-    			add_location(button, file$b, 48, 6, 1486);
+    			attr_dev(button, "class", "btn-primary btn-outline btn mb-0 mt-8 max-w-xs lg:ml-auto");
+    			add_location(button, file$b, 48, 6, 1499);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -4312,7 +4312,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			attr_dev(p, "class", "w-1/3");
-    			add_location(p, file$b, 73, 4, 2056);
+    			add_location(p, file$b, 73, 4, 2081);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -4356,7 +4356,7 @@ var app = (function () {
     			}
 
     			attr_dev(ul, "class", "list-inside list-disc py-4");
-    			add_location(ul, file$b, 79, 4, 2198);
+    			add_location(ul, file$b, 79, 4, 2223);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -4421,9 +4421,9 @@ var app = (function () {
     			li = element("li");
     			span = element("span");
     			t$1 = space();
-    			add_location(span, file$b, 87, 10, 2427);
+    			add_location(span, file$b, 87, 10, 2452);
     			attr_dev(li, "class", t('my-2 ml-4 list-item', /*index*/ ctx[10] % 2 !== 0 && 'border-gray-200'));
-    			add_location(li, file$b, 81, 8, 2284);
+    			add_location(li, file$b, 81, 8, 2309);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -4517,21 +4517,21 @@ var app = (function () {
     			t7 = space();
     			if (if_block4) if_block4.c();
     			attr_dev(h30, "class", "h3 w-2/3 font-bold leading-none");
-    			add_location(h30, file$b, 28, 8, 896);
+    			add_location(h30, file$b, 28, 8, 909);
     			attr_dev(div0, "class", "absolute right-4 top-4 w-1/4 rotate-90 text-2xl font-bold opacity-60 print:static print:rotate-0 md:rotate-0 md:text-right");
-    			add_location(div0, file$b, 31, 8, 1022);
+    			add_location(div0, file$b, 31, 8, 1035);
     			attr_dev(div1, "class", "relative mt-4 flex w-full flex-col");
-    			add_location(div1, file$b, 27, 6, 839);
+    			add_location(div1, file$b, 27, 6, 852);
     			attr_dev(div2, "class", "flex flex-col lg:flex-row");
-    			add_location(div2, file$b, 14, 4, 454);
+    			add_location(div2, file$b, 14, 4, 467);
     			attr_dev(div3, "class", "flex flex-col");
-    			add_location(div3, file$b, 13, 2, 422);
-    			attr_dev(article, "class", "relative z-10 rounded-xl bg-base-100 p-8 print:hidden");
+    			add_location(div3, file$b, 13, 2, 435);
+    			attr_dev(article, "class", "relative z-10 mx-4 rounded-xl bg-base-100 p-8 print:hidden lg:mx-0");
     			add_location(article, file$b, 10, 0, 345);
     			attr_dev(h31, "class", "font-cover text-xl");
-    			add_location(h31, file$b, 69, 2, 1934);
+    			add_location(h31, file$b, 69, 2, 1959);
     			attr_dev(div4, "class", "hidden break-inside-avoid print:block");
-    			add_location(div4, file$b, 68, 0, 1880);
+    			add_location(div4, file$b, 68, 0, 1905);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5349,9 +5349,9 @@ var app = (function () {
     			span = element("span");
     			t1 = text(t1_value);
     			t2 = space();
-    			add_location(span, file$8, 13, 8, 409);
+    			add_location(span, file$8, 13, 8, 437);
     			attr_dev(div, "class", "join-item flex flex-col items-center bg-base-300 p-4 print:bg-white print:text-black");
-    			add_location(div, file$8, 9, 6, 259);
+    			add_location(div, file$8, 9, 6, 287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5414,7 +5414,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "join flex max-w-4xl print:bg-white print:text-black");
+    			attr_dev(div0, "class", "join join-vertical max-w-4xl lg:join-horizontal print:bg-white print:text-black");
     			add_location(div0, file$8, 5, 2, 147);
     			attr_dev(div1, "class", "mb-8 flex justify-center");
     			add_location(div1, file$8, 4, 0, 106);
@@ -5861,8 +5861,8 @@ var app = (function () {
     		c: function create() {
     			dl = element("dl");
     			create_component(skilllistitem.$$.fragment);
-    			attr_dev(dl, "class", "odd:bg-babyBlue-300 flex items-center justify-between px-2 py-1 odd:bg-opacity-20 print:mx-1 print:w-1/4 print:break-inside-avoid print:border-t-2 print:border-gray-300 print:bg-transparent print:first:border-0");
-    			add_location(dl, file$6, 7, 4, 197);
+    			attr_dev(dl, "class", "flex items-center justify-between rounded-lg px-2 py-1 odd:bg-primary/20 print:mx-1 print:w-1/4 print:break-inside-avoid print:border-t-2 print:border-gray-300 print:bg-transparent print:first:border-0");
+    			add_location(dl, file$6, 7, 4, 202);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, dl, anchor);
@@ -5923,7 +5923,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "print:flex print:flex-wrap");
+    			attr_dev(div, "class", "px-8 print:flex print:flex-wrap");
     			add_location(div, file$6, 5, 0, 121);
     		},
     		l: function claim(nodes) {
@@ -6083,7 +6083,7 @@ var app = (function () {
     			h2 = element("h2");
     			t = space();
     			create_component(skilllist.$$.fragment);
-    			attr_dev(h2, "class", "font-display text-2xl font-bold");
+    			attr_dev(h2, "class", "ml-8 text-2xl font-bold");
     			add_location(h2, file$5, 12, 4, 358);
     			attr_dev(section, "class", "min-w-[40%] grow print:break-inside-avoid");
     			add_location(section, file$5, 9, 2, 287);
@@ -6862,7 +6862,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (39:6) <DetailsCard         index={2}         className="w-full col-span-1 bg-secondary/40 row-span-3"         >
+    // (39:6) <DetailsCard         index={2}         className="w-full relative col-span-1 bg-secondary/40 row-span-3"         >
     function create_default_slot_3(ctx) {
     	let span;
     	let t;
@@ -6871,8 +6871,8 @@ var app = (function () {
     		c: function create() {
     			span = element("span");
     			t = text(/*heading*/ ctx[3]);
-    			attr_dev(span, "class", "border-l-4 border-secondary pl-4 text-2xl font-bold");
-    			add_location(span, file$2, 41, 9, 1220);
+    			attr_dev(span, "class", "max-w-fit origin-right -rotate-90 border-l-8 border-secondary pl-4 text-2xl font-bold xl:relative xl:rotate-0 xl:border-l-4");
+    			add_location(span, file$2, 41, 9, 1269);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6890,7 +6890,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full col-span-1 bg-secondary/40 row-span-3\\\"         >",
+    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full relative col-span-1 bg-secondary/40 row-span-3\\\"         >",
     		ctx
     	});
 
@@ -6921,7 +6921,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$2, 51, 10, 1485);
+    			add_location(ul, file$2, 51, 10, 1606);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -7015,7 +7015,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(li, "class", "flex h-20 items-center border-b-2 border-base-content first:border-t-2");
-    			add_location(li, file$2, 53, 14, 1544);
+    			add_location(li, file$2, 53, 14, 1665);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -7153,7 +7153,7 @@ var app = (function () {
     			p = element("p");
     			create_component(time_1.$$.fragment);
     			attr_dev(p, "class", "text-2xl font-bold text-base-content/80");
-    			add_location(p, file$2, 77, 8, 2284);
+    			add_location(p, file$2, 77, 8, 2405);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -7208,7 +7208,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(span, "class", "badge badge-primary badge-sm");
-    			add_location(span, file$2, 89, 10, 2626);
+    			add_location(span, file$2, 89, 10, 2750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -7264,7 +7264,7 @@ var app = (function () {
     	return block;
     }
 
-    // (84:6) <DetailsCard         index={4}         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"         innerClassName="flex justify-end items-center gap-1"       >
+    // (84:6) <DetailsCard         index={4}         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"         innerClassName="flex justify-center items-center gap-1"       >
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7355,7 +7355,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(84:6) <DetailsCard         index={4}         className=\\\"col-span-3 bg-primary/30 pr-1 h-6 p-0\\\"         innerClassName=\\\"flex justify-end items-center gap-1\\\"       >",
+    		source: "(84:6) <DetailsCard         index={4}         className=\\\"col-span-3 bg-primary/30 pr-1 h-6 p-0\\\"         innerClassName=\\\"flex justify-center items-center gap-1\\\"       >",
     		ctx
     	});
 
@@ -7386,7 +7386,7 @@ var app = (function () {
     	detailscard0 = new DetailsCard({
     			props: {
     				index: 2,
-    				className: "w-full col-span-1 bg-secondary/40 row-span-3",
+    				className: "w-full relative col-span-1 bg-secondary/40 row-span-3",
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -7418,7 +7418,7 @@ var app = (function () {
     			props: {
     				index: 4,
     				className: "col-span-3 bg-primary/30 pr-1 h-6 p-0",
-    				innerClassName: "flex justify-end items-center gap-1",
+    				innerClassName: "flex justify-center items-center gap-1",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -7441,12 +7441,12 @@ var app = (function () {
     			t3 = space();
     			create_component(detailscard3.$$.fragment);
     			attr_dev(i, "class", "ph-bold ph-x cursor-pointer");
-    			add_location(i, file$2, 33, 6, 970);
-    			attr_dev(button, "class", "absolute -right-12 top-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90");
-    			add_location(button, file$2, 28, 4, 722);
+    			add_location(i, file$2, 33, 6, 1010);
+    			attr_dev(button, "class", "absolute -top-12 right-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90 xl:-right-12 xl:top-0");
+    			add_location(button, file$2, 28, 4, 740);
     			attr_dev(div0, "class", "relative inset-0 grid h-full w-full grid-cols-3 gap-8");
-    			add_location(div0, file$2, 35, 4, 1030);
-    			attr_dev(div1, "class", "fixed inset-1/3");
+    			add_location(div0, file$2, 35, 4, 1070);
+    			attr_dev(div1, "class", "fixed inset-8 top-16 xl:inset-1/4");
     			add_location(div1, file$2, 26, 2, 662);
     			attr_dev(div2, "class", "fixed inset-0 z-30 bg-base-100/70");
     			add_location(div2, file$2, 21, 0, 536);

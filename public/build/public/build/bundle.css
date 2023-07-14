@@ -15,17 +15,17 @@
   }
 
   h2 {
-    @apply relative pr-4 pt-4 print:text-lg print:font-normal;
+    @apply relative pr-4 pt-4 print:text-lg;
   }
 
   h2::after {
     content: "";
-    @apply absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary print:hidden;
+    @apply hidden xl:block absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary print:hidden;
   }
 
   h2::before {
     content: "";
-    @apply absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden;
+    @apply hidden xl:block absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden;
   }
 }
 @font-face {

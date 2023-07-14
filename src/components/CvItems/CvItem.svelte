@@ -16,7 +16,7 @@
 </script>
 
 <article
-  class="relative z-10 rounded-xl bg-base-100 p-8 print:hidden"
+  class="relative z-10 mx-4 rounded-xl bg-base-100 p-8 print:hidden lg:mx-0"
 >
   <div class="flex flex-col">
     <div class="flex flex-col lg:flex-row">
@@ -64,7 +64,7 @@
             tags,
             time,
           })}
-        class="btn-primary btn-outline btn mb-0 ml-auto mt-8"
+        class="btn-primary btn-outline btn mb-0 mt-8 max-w-xs lg:ml-auto"
       >
         Details
       </button>
