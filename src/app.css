@@ -4,37 +4,27 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden bg-base-200 text-base-content print:bg-white print:text-base-100;
+    @apply overflow-x-hidden bg-base-200 text-base-content print:bg-white print:text-black print:p-8;
   }
 }
 
 @layer components {
-  .h1 {
-    font-size: clamp(2.3rem, 9vw, 5rem);
+  h1 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    @apply print:text-5xl;
   }
 
-  .h2 {
-    @apply relative pr-4 pt-4;
-    font-size: clamp(1.8rem, 8vw, 5rem);
+  h2 {
+    @apply relative pr-4 pt-4 print:text-lg print:font-normal;
   }
 
-  .h2::after {
-    content: '';
-    @apply absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary;
+  h2::after {
+    content: "";
+    @apply absolute right-0 h-3/4 w-1/5 border-r-8 border-t-8 border-secondary print:hidden;
   }
 
-  .h2::before {
-    content: '';
-    @apply absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary;
-  }
-
-  @media print {
-    .text-h2::after {
-      display: none;
-    }
-  }
-
-  .h3 {
-    font-size: clamp(2.4rem, 7vw, 3.6rem);
+  h2::before {
+    content: "";
+    @apply absolute left-0 top-0 h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden;
   }
 }

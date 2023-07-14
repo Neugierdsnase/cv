@@ -42,7 +42,7 @@
 
 <!-- Print version -->
 <section class="mt-8 hidden text-center print:block">
-  <h1 class="text-5xl">Konstantin Kovar</h1>
+  <h1>Konstantin Kovar</h1>
   <subtitle class="text-3xl">
     {@html getIntlContent(subTitle, $contentLangState)}
   </subtitle>
@@ -66,7 +66,7 @@
 
   {#if $skillLevelFilterState > 1}
     <p>
-      Only skills with an assigned skill level of {$skillLevelFilterState}/5
+      Only skills with an (self-assessed) skill level of {$skillLevelFilterState}/5
       are being displayed.
     </p>
   {/if}

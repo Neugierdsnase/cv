@@ -164,11 +164,6 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
-"@types/lodash@^4.14.181":
-  version "4.14.195"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.195.tgz#bafc975b252eb6cea78882ce8a7b6bf22a6de632"
-  integrity sha512-Hwx9EUgdwf2GLarOjQp5ZH8ZmblzcbTBC2wtQWNKARBSxM9ezRIAUpeDTgoQRAFB0+8CNWXVA9+MaSOzOF3nPg==
-
 "@types/node@*":
   version "20.3.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.3.2.tgz#fa6a90f2600e052a03c18b8cb3fd83dd4e599898"
@@ -323,6 +318,11 @@ chalk@^2.0.0:
     readdirp "~3.6.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+classix@^2.1.33:
+  version "2.1.33"
+  resolved "https://registry.yarnpkg.com/classix/-/classix-2.1.33.tgz#ee0b923b46fa2998120863a535c8f2af55a5c5f2"
+  integrity sha512-AiR6VoOprdFFf/Ae5SabKVIhMUfLEpIIRUgYAyhIye8b4DH4nX6zeGJMcWckGS44ecOHtcReCiyKraVvAglMnw==
 
 color-convert@^1.9.0:
   version "1.9.3"

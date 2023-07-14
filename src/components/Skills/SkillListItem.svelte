@@ -14,7 +14,6 @@
 </dt>
 {#if tags && tags.length}
   <dd class="ml-4 flex max-w-full items-center">
-    <Level {level} />
     <ul class="flex flex-row-reverse print:hidden">
       {#each tags as tag}
         <li>
@@ -22,5 +21,6 @@
         </li>
       {/each}
     </ul>
+    <Level {level} />
   </dd>
 {/if}

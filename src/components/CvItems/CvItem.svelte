@@ -1,4 +1,5 @@
 <script lang="ts">
+  import cx from 'classix'
   import { CvItemType } from '../../types'
 
   import Time from '../Time.svelte'
@@ -14,7 +15,9 @@
   let { label, time, tagLine, list, tags } = cvItem
 </script>
 
-<article class="relative z-10 rounded-xl bg-base-100 p-8">
+<article
+  class="relative z-10 rounded-xl bg-base-100 p-8 print:hidden"
+>
   <div class="flex flex-col">
     <div class="flex flex-col lg:flex-row">
       {#if tags}
@@ -71,19 +74,31 @@
 
 <!-- Print version -->
 <div class="hidden break-inside-avoid print:block">
-  <h3 class="font-cover text-2xl">
+  <h3 class="font-cover text-xl">
     {@html getIntlContent(label, $contentLangState)}
   </h3>
   {#if Boolean(tagLine)}
-    <p class="font-cover  w-2/3">
+    <p class="w-1/3">
       {@html getIntlContent(tagLine, $contentLangState)}
     </p>
   {/if}
   <Time {time} />
   {#if list && list.length}
-    <ul class="my-4">
+    <ul class="list-inside list-disc py-4">
       {#each list as listItem, index}
-        <!-- <ListItem {index} {listItem} show /> -->
+        <li
+          class={cx(
+            'my-2 ml-4 list-item',
+            index % 2 !== 0 && 'border-gray-200',
+          )}
+        >
+          <span
+            >{@html getIntlContent(
+              listItem.label,
+              $contentLangState,
+            )}
+          </span>
+        </li>
       {/each}
     </ul>
   {/if}
