@@ -41,11 +41,11 @@
       <i class="ph-bold ph-x cursor-pointer" />
     </button>
     <div
-      class="relative inset-0 grid h-full w-full grid-cols-3 gap-8"
+      class="relative inset-0 grid h-full w-full grid-cols-1 gap-8 xl:grid-cols-3"
     >
       <DetailsCard
         index={2}
-        className="w-full relative col-span-1 bg-secondary/40 row-span-3"
+        className="w-full relative col-span-1 bg-secondary/40 xl:row-span-3"
         ><span
           class="max-w-fit origin-right -rotate-90 border-l-8 border-secondary pl-4 text-2xl font-bold xl:relative xl:rotate-0 xl:border-l-4"
           >{heading}</span
@@ -53,7 +53,7 @@
       >
       <DetailsCard
         index={1}
-        className="col-span-2 row-span-4"
+        className="xl:col-span-2 xl:row-span-4"
       >
         {#if list && list.length}
           <ul>
@@ -79,7 +79,7 @@
       <!-- Time -->
       <DetailsCard
         index={3}
-        className="col-span-1 row-span-1 row-start-4 col-start-1"
+        className="col-span-1 row-span-1 xl:row-start-4 col-start-1"
         innerClassName="flex flex-col justify-center items-center"
       >
         <p class="text-2xl font-bold text-base-content/80">
@@ -90,7 +90,7 @@
       <!-- Tags -->
       <DetailsCard
         index={4}
-        className="col-span-3 bg-primary/30 pr-1 h-6 p-0"
+        className="xl:col-span-3 bg-primary/30 pr-1 xl:h-6 p-0"
         innerClassName="flex justify-center items-center gap-1"
       >
         {#each tags as tag, index}

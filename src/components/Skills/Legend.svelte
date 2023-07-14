@@ -5,7 +5,7 @@
 
 <div class="mb-8 flex justify-center">
   <div
-    class="join join-vertical max-w-4xl lg:join-horizontal print:bg-white print:text-black"
+    class="join join-vertical max-w-4xl print:join-horizontal lg:join-horizontal print:bg-white print:text-black"
   >
     {#each [0, 1, 2, 3, 4] as n}
       <div

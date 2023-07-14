@@ -5349,9 +5349,9 @@ var app = (function () {
     			span = element("span");
     			t1 = text(t1_value);
     			t2 = space();
-    			add_location(span, file$8, 13, 8, 437);
+    			add_location(span, file$8, 13, 8, 459);
     			attr_dev(div, "class", "join-item flex flex-col items-center bg-base-300 p-4 print:bg-white print:text-black");
-    			add_location(div, file$8, 9, 6, 287);
+    			add_location(div, file$8, 9, 6, 309);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -5414,7 +5414,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div0, "class", "join join-vertical max-w-4xl lg:join-horizontal print:bg-white print:text-black");
+    			attr_dev(div0, "class", "join join-vertical max-w-4xl print:join-horizontal lg:join-horizontal print:bg-white print:text-black");
     			add_location(div0, file$8, 5, 2, 147);
     			attr_dev(div1, "class", "mb-8 flex justify-center");
     			add_location(div1, file$8, 4, 0, 106);
@@ -5861,7 +5861,7 @@ var app = (function () {
     		c: function create() {
     			dl = element("dl");
     			create_component(skilllistitem.$$.fragment);
-    			attr_dev(dl, "class", "flex items-center justify-between rounded-lg px-2 py-1 odd:bg-primary/20 print:mx-1 print:w-1/4 print:break-inside-avoid print:border-t-2 print:border-gray-300 print:bg-transparent print:first:border-0");
+    			attr_dev(dl, "class", "flex items-center justify-between rounded-lg px-2 py-1 odd:bg-primary/20 print:mx-1 print:w-1/4 print:break-inside-avoid print:rounded-none print:border-t-2 print:border-gray-300 print:!bg-white print:first:border-0");
     			add_location(dl, file$6, 7, 4, 202);
     		},
     		m: function mount(target, anchor) {
@@ -6862,7 +6862,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (39:6) <DetailsCard         index={2}         className="w-full relative col-span-1 bg-secondary/40 row-span-3"         >
+    // (39:6) <DetailsCard         index={2}         className="w-full relative col-span-1 bg-secondary/40 xl:row-span-3"         >
     function create_default_slot_3(ctx) {
     	let span;
     	let t;
@@ -6872,7 +6872,7 @@ var app = (function () {
     			span = element("span");
     			t = text(/*heading*/ ctx[3]);
     			attr_dev(span, "class", "max-w-fit origin-right -rotate-90 border-l-8 border-secondary pl-4 text-2xl font-bold xl:relative xl:rotate-0 xl:border-l-4");
-    			add_location(span, file$2, 41, 9, 1269);
+    			add_location(span, file$2, 41, 9, 1287);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -6890,7 +6890,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full relative col-span-1 bg-secondary/40 row-span-3\\\"         >",
+    		source: "(39:6) <DetailsCard         index={2}         className=\\\"w-full relative col-span-1 bg-secondary/40 xl:row-span-3\\\"         >",
     		ctx
     	});
 
@@ -6921,7 +6921,7 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(ul, file$2, 51, 10, 1606);
+    			add_location(ul, file$2, 51, 10, 1630);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -7015,7 +7015,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(li, "class", "flex h-20 items-center border-b-2 border-base-content first:border-t-2");
-    			add_location(li, file$2, 53, 14, 1665);
+    			add_location(li, file$2, 53, 14, 1689);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -7071,7 +7071,7 @@ var app = (function () {
     	return block;
     }
 
-    // (47:6) <DetailsCard         index={1}         className="col-span-2 row-span-4"       >
+    // (47:6) <DetailsCard         index={1}         className="xl:col-span-2 xl:row-span-4"       >
     function create_default_slot_2(ctx) {
     	let if_block_anchor;
     	let current;
@@ -7130,14 +7130,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(47:6) <DetailsCard         index={1}         className=\\\"col-span-2 row-span-4\\\"       >",
+    		source: "(47:6) <DetailsCard         index={1}         className=\\\"xl:col-span-2 xl:row-span-4\\\"       >",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:6) <DetailsCard         index={3}         className="col-span-1 row-span-1 row-start-4 col-start-1"         innerClassName="flex flex-col justify-center items-center"       >
+    // (73:6) <DetailsCard         index={3}         className="col-span-1 row-span-1 xl:row-start-4 col-start-1"         innerClassName="flex flex-col justify-center items-center"       >
     function create_default_slot_1(ctx) {
     	let p;
     	let time_1;
@@ -7153,7 +7153,7 @@ var app = (function () {
     			p = element("p");
     			create_component(time_1.$$.fragment);
     			attr_dev(p, "class", "text-2xl font-bold text-base-content/80");
-    			add_location(p, file$2, 77, 8, 2405);
+    			add_location(p, file$2, 77, 8, 2432);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -7184,7 +7184,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(73:6) <DetailsCard         index={3}         className=\\\"col-span-1 row-span-1 row-start-4 col-start-1\\\"         innerClassName=\\\"flex flex-col justify-center items-center\\\"       >",
+    		source: "(73:6) <DetailsCard         index={3}         className=\\\"col-span-1 row-span-1 xl:row-start-4 col-start-1\\\"         innerClassName=\\\"flex flex-col justify-center items-center\\\"       >",
     		ctx
     	});
 
@@ -7208,7 +7208,7 @@ var app = (function () {
     			t = space();
     			html_tag.a = t;
     			attr_dev(span, "class", "badge badge-primary badge-sm");
-    			add_location(span, file$2, 89, 10, 2750);
+    			add_location(span, file$2, 89, 10, 2783);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -7264,7 +7264,7 @@ var app = (function () {
     	return block;
     }
 
-    // (84:6) <DetailsCard         index={4}         className="col-span-3 bg-primary/30 pr-1 h-6 p-0"         innerClassName="flex justify-center items-center gap-1"       >
+    // (84:6) <DetailsCard         index={4}         className="xl:col-span-3 bg-primary/30 pr-1 xl:h-6 p-0"         innerClassName="flex justify-center items-center gap-1"       >
     function create_default_slot(ctx) {
     	let each_1_anchor;
     	let current;
@@ -7355,7 +7355,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(84:6) <DetailsCard         index={4}         className=\\\"col-span-3 bg-primary/30 pr-1 h-6 p-0\\\"         innerClassName=\\\"flex justify-center items-center gap-1\\\"       >",
+    		source: "(84:6) <DetailsCard         index={4}         className=\\\"xl:col-span-3 bg-primary/30 pr-1 xl:h-6 p-0\\\"         innerClassName=\\\"flex justify-center items-center gap-1\\\"       >",
     		ctx
     	});
 
@@ -7386,7 +7386,7 @@ var app = (function () {
     	detailscard0 = new DetailsCard({
     			props: {
     				index: 2,
-    				className: "w-full relative col-span-1 bg-secondary/40 row-span-3",
+    				className: "w-full relative col-span-1 bg-secondary/40 xl:row-span-3",
     				$$slots: { default: [create_default_slot_3] },
     				$$scope: { ctx }
     			},
@@ -7396,7 +7396,7 @@ var app = (function () {
     	detailscard1 = new DetailsCard({
     			props: {
     				index: 1,
-    				className: "col-span-2 row-span-4",
+    				className: "xl:col-span-2 xl:row-span-4",
     				$$slots: { default: [create_default_slot_2] },
     				$$scope: { ctx }
     			},
@@ -7406,7 +7406,7 @@ var app = (function () {
     	detailscard2 = new DetailsCard({
     			props: {
     				index: 3,
-    				className: "col-span-1 row-span-1 row-start-4 col-start-1",
+    				className: "col-span-1 row-span-1 xl:row-start-4 col-start-1",
     				innerClassName: "flex flex-col justify-center items-center",
     				$$slots: { default: [create_default_slot_1] },
     				$$scope: { ctx }
@@ -7417,7 +7417,7 @@ var app = (function () {
     	detailscard3 = new DetailsCard({
     			props: {
     				index: 4,
-    				className: "col-span-3 bg-primary/30 pr-1 h-6 p-0",
+    				className: "xl:col-span-3 bg-primary/30 pr-1 xl:h-6 p-0",
     				innerClassName: "flex justify-center items-center gap-1",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
@@ -7444,7 +7444,7 @@ var app = (function () {
     			add_location(i, file$2, 33, 6, 1010);
     			attr_dev(button, "class", "absolute -top-12 right-0 flex h-12 w-12 items-center justify-center text-2xl text-base-content transition-transform hover:rotate-90 xl:-right-12 xl:top-0");
     			add_location(button, file$2, 28, 4, 740);
-    			attr_dev(div0, "class", "relative inset-0 grid h-full w-full grid-cols-3 gap-8");
+    			attr_dev(div0, "class", "relative inset-0 grid h-full w-full grid-cols-1 gap-8 xl:grid-cols-3");
     			add_location(div0, file$2, 35, 4, 1070);
     			attr_dev(div1, "class", "fixed inset-8 top-16 xl:inset-1/4");
     			add_location(div1, file$2, 26, 2, 662);
