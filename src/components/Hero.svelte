@@ -14,31 +14,33 @@
 
 <svelte:window bind:scrollY={y} />
 
-<section
-  class="relative flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0"
->
-  <button
-    class="btn-secondary btn-outline btn absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
-    on:click={() =>
-      contentLangState.update((s) =>
-        s === 'de' ? 'en' : 'de',
-      )}
-  >
-    <i class="ph-bold ph-translate" />
-  </button>
+<section class="relative">
   <div
-    class="ml-2 leading-[8rem] lg:px-32 lg:leading-[18rem]"
-    style={`transform: translateY(${y / 6}px);`}
+    class="flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0"
   >
-    <h1 class="text-7xl lg:text-[20rem]">
-      Konstantin<br />Kovar
-    </h1>
-    <subtitle class="text-3xl lg:text-[8rem]">
-      {@html getIntlContent(subTitle, $contentLangState)}
-    </subtitle>
+    <button
+      class="btn btn-secondary btn-outline absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
+      on:click={() =>
+        contentLangState.update((s) =>
+          s === 'de' ? 'en' : 'de',
+        )}
+    >
+      <i class="ph-bold ph-translate" />
+    </button>
+    <div
+      class="ml-2 leading-[8rem] lg:px-32 lg:leading-[18rem]"
+      style={`transform: translateY(${y / 6}px);`}
+    >
+      <h1 class="text-7xl lg:text-[20rem]">
+        Konstantin<br />Kovar
+      </h1>
+      <subtitle class="text-3xl lg:text-[8rem]">
+        {@html getIntlContent(subTitle, $contentLangState)}
+      </subtitle>
+    </div>
   </div>
   <div
-    class="absolute bottom-0 h-2/5 w-full bg-[url('../img/hero.png')] bg-cover bg-right bg-no-repeat lg:h-3/5"
+    class="absolute bottom-0 h-full w-full bg-[url('../img/hero.png')] bg-no-repeat"
   />
 </section>
 

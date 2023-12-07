@@ -27,6 +27,25 @@ const cvJobItems: CvSectionType = {
   heading: { de: 'Berufserfahrung', en: 'Work Experience' },
   items: [
     {
+      label: { intl: 'Indie Hacking' },
+      time: { from: dayjs('08/23', DATE_FORMAT) },
+      list: [
+        {
+          label: {
+            en: "<a href='https://prompt-dress.com'>Prompt Dress: </a> A browser extension to keep and organise AI prompts.",
+            de: "<a href='https://prompt-dress.com>Prompt Dress: </a> Eine Browsererweiterung, um AI-Prompts zu speichern und zu organisieren.",
+          },
+        },
+        {
+          label: {
+            en: "<a href='https://amazing-gpt.com'>Amazing GPT: </a> A curated list of custom GPTs.",
+            de: '<a href=\'https://amazing-gpt.com\'>Amazing GPT: </a> Eine kuratierte Liste von "custom GPTs."',
+          },
+        },
+      ],
+      tags: ['frontend', 'backend', 'devops/sre'],
+    },
+    {
       label: { intl: 'Seatti' },
       time: {
         from: dayjs('07/22', DATE_FORMAT),
