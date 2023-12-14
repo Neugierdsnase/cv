@@ -39,9 +39,6 @@
       </subtitle>
     </div>
   </div>
-  <div
-    class="absolute bottom-0 h-full w-full bg-[url('../img/hero.png')] bg-no-repeat"
-  />
 </section>
 
 <!-- Print version -->

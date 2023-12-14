@@ -3191,7 +3191,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (56:2) {#if $activeFiltersState.length}
+    // (53:2) {#if $activeFiltersState.length}
     function create_if_block_2$2(ctx) {
     	let p;
     	let t1;
@@ -3215,8 +3215,8 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(p, file$e, 56, 4, 1795);
-    			add_location(ul, file$e, 57, 4, 1849);
+    			add_location(p, file$e, 53, 4, 1698);
+    			add_location(ul, file$e, 54, 4, 1752);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3266,14 +3266,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2$2.name,
     		type: "if",
-    		source: "(56:2) {#if $activeFiltersState.length}",
+    		source: "(53:2) {#if $activeFiltersState.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (59:6) {#each $activeFiltersState as filter}
+    // (56:6) {#each $activeFiltersState as filter}
     function create_each_block$8(ctx) {
     	let li;
     	let t_value = /*filter*/ ctx[7] + "";
@@ -3283,7 +3283,7 @@ var app = (function () {
     		c: function create() {
     			li = element("li");
     			t = text(t_value);
-    			add_location(li, file$e, 59, 8, 1906);
+    			add_location(li, file$e, 56, 8, 1809);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, li, anchor);
@@ -3301,14 +3301,14 @@ var app = (function () {
     		block,
     		id: create_each_block$8.name,
     		type: "each",
-    		source: "(59:6) {#each $activeFiltersState as filter}",
+    		source: "(56:6) {#each $activeFiltersState as filter}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (65:2) {#if $skillLevelFilterState > 1}
+    // (62:2) {#if $skillLevelFilterState > 1}
     function create_if_block_1$2(ctx) {
     	let p;
     	let t0;
@@ -3321,7 +3321,7 @@ var app = (function () {
     			t0 = text("Only skills with an (self-assessed) skill level of ");
     			t1 = text(/*$skillLevelFilterState*/ ctx[3]);
     			t2 = text("/5\n      are being displayed.");
-    			add_location(p, file$e, 65, 4, 1996);
+    			add_location(p, file$e, 62, 4, 1899);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3341,14 +3341,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(65:2) {#if $skillLevelFilterState > 1}",
+    		source: "(62:2) {#if $skillLevelFilterState > 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (72:2) {#if $hideNonTechState}
+    // (69:2) {#if $hideNonTechState}
     function create_if_block$9(ctx) {
     	let p;
 
@@ -3356,7 +3356,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "Non-tech items are being hidden.";
-    			add_location(p, file$e, 72, 4, 2159);
+    			add_location(p, file$e, 69, 4, 2062);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3370,7 +3370,7 @@ var app = (function () {
     		block,
     		id: create_if_block$9.name,
     		type: "if",
-    		source: "(72:2) {#if $hideNonTechState}",
+    		source: "(69:2) {#if $hideNonTechState}",
     		ctx
     	});
 
@@ -3400,23 +3400,21 @@ var app = (function () {
     	let raw0_value = getIntlContent(subTitle, /*$contentLangState*/ ctx[1]) + "";
     	let div0_style_value;
     	let t4;
-    	let div2;
-    	let t5;
     	let section1;
     	let h11;
-    	let t7;
+    	let t6;
     	let subtitle1;
     	let raw1_value = getIntlContent(subTitle, /*$contentLangState*/ ctx[1]) + "";
+    	let t7;
+    	let div2;
     	let t8;
-    	let div3;
-    	let t9;
     	let p;
-    	let t10;
+    	let t9;
     	let b;
+    	let t11;
     	let t12;
     	let t13;
     	let t14;
-    	let t15;
     	let mounted;
     	let dispose;
     	add_render_callback(/*onwindowscroll*/ ctx[5]);
@@ -3439,26 +3437,24 @@ var app = (function () {
     			t3 = space();
     			subtitle0 = element("subtitle");
     			t4 = space();
-    			div2 = element("div");
-    			t5 = space();
     			section1 = element("section");
     			h11 = element("h1");
     			h11.textContent = "Konstantin Kovar";
-    			t7 = space();
+    			t6 = space();
     			subtitle1 = element("subtitle");
+    			t7 = space();
+    			div2 = element("div");
     			t8 = space();
-    			div3 = element("div");
-    			t9 = space();
     			p = element("p");
-    			t10 = text("Disclaimer: This document was generated from an\n    intercative website and might not display the full\n    content. Please visit ");
+    			t9 = text("Disclaimer: This document was generated from an\n    intercative website and might not display the full\n    content. Please visit ");
     			b = element("b");
     			b.textContent = "https://konstantin-kovar-cv.vercel.app\"";
-    			t12 = text("\n    to view the whole document.");
-    			t13 = space();
+    			t11 = text("\n    to view the whole document.");
+    			t12 = space();
     			if (if_block0) if_block0.c();
-    			t14 = space();
+    			t13 = space();
     			if (if_block1) if_block1.c();
-    			t15 = space();
+    			t14 = space();
     			if (if_block2) if_block2.c();
     			attr_dev(i, "class", "ph-bold ph-translate");
     			add_location(i, file$e, 21, 6, 755);
@@ -3474,19 +3470,17 @@ var app = (function () {
     			add_location(div0, file$e, 23, 4, 808);
     			attr_dev(div1, "class", "flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0");
     			add_location(div1, file$e, 11, 2, 371);
-    			attr_dev(div2, "class", "absolute bottom-0 h-full w-full bg-[url('../img/hero.png')] bg-no-repeat");
-    			add_location(div2, file$e, 35, 2, 1167);
     			attr_dev(section0, "class", "relative");
     			add_location(section0, file$e, 10, 0, 342);
-    			add_location(h11, file$e, 42, 2, 1353);
+    			add_location(h11, file$e, 39, 2, 1256);
     			attr_dev(subtitle1, "class", "text-3xl");
-    			add_location(subtitle1, file$e, 43, 2, 1381);
-    			attr_dev(div3, "class", "text-xs text-gray-400");
-    			add_location(div3, file$e, 46, 2, 1481);
-    			add_location(b, file$e, 50, 26, 1658);
-    			add_location(p, file$e, 47, 2, 1521);
+    			add_location(subtitle1, file$e, 40, 2, 1284);
+    			attr_dev(div2, "class", "text-xs text-gray-400");
+    			add_location(div2, file$e, 43, 2, 1384);
+    			add_location(b, file$e, 47, 26, 1561);
+    			add_location(p, file$e, 44, 2, 1424);
     			attr_dev(section1, "class", "mt-8 hidden text-center print:block");
-    			add_location(section1, file$e, 41, 0, 1297);
+    			add_location(section1, file$e, 38, 0, 1200);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3505,26 +3499,24 @@ var app = (function () {
     			append_dev(div0, t3);
     			append_dev(div0, subtitle0);
     			subtitle0.innerHTML = raw0_value;
-    			append_dev(section0, t4);
-    			append_dev(section0, div2);
-    			insert_dev(target, t5, anchor);
+    			insert_dev(target, t4, anchor);
     			insert_dev(target, section1, anchor);
     			append_dev(section1, h11);
-    			append_dev(section1, t7);
+    			append_dev(section1, t6);
     			append_dev(section1, subtitle1);
     			subtitle1.innerHTML = raw1_value;
+    			append_dev(section1, t7);
+    			append_dev(section1, div2);
     			append_dev(section1, t8);
-    			append_dev(section1, div3);
-    			append_dev(section1, t9);
     			append_dev(section1, p);
-    			append_dev(p, t10);
+    			append_dev(p, t9);
     			append_dev(p, b);
-    			append_dev(p, t12);
-    			append_dev(section1, t13);
+    			append_dev(p, t11);
+    			append_dev(section1, t12);
     			if (if_block0) if_block0.m(section1, null);
-    			append_dev(section1, t14);
+    			append_dev(section1, t13);
     			if (if_block1) if_block1.m(section1, null);
-    			append_dev(section1, t15);
+    			append_dev(section1, t14);
     			if (if_block2) if_block2.m(section1, null);
 
     			if (!mounted) {
@@ -3561,7 +3553,7 @@ var app = (function () {
     				} else {
     					if_block0 = create_if_block_2$2(ctx);
     					if_block0.c();
-    					if_block0.m(section1, t14);
+    					if_block0.m(section1, t13);
     				}
     			} else if (if_block0) {
     				if_block0.d(1);
@@ -3574,7 +3566,7 @@ var app = (function () {
     				} else {
     					if_block1 = create_if_block_1$2(ctx);
     					if_block1.c();
-    					if_block1.m(section1, t15);
+    					if_block1.m(section1, t14);
     				}
     			} else if (if_block1) {
     				if_block1.d(1);
@@ -3596,7 +3588,7 @@ var app = (function () {
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(section0);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t4);
     			if (detaching) detach_dev(section1);
     			if (if_block0) if_block0.d();
     			if (if_block1) if_block1.d();

@@ -28,3 +28,9 @@
     @apply absolute left-0 top-0 hidden h-4 w-1/6 border-l-8 border-t-8 border-secondary print:hidden xl:block;
   }
 }
+
+@layer utilities {
+  a {
+    @apply text-primary underline;
+  }
+}
