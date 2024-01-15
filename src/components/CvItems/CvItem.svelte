@@ -1,5 +1,4 @@
 <script lang="ts">
-  import cx from 'classix'
   import { CvItemType } from '../../types'
 
   import Time from '../Time.svelte'
@@ -73,25 +72,20 @@
 </article>
 
 <!-- Print version -->
-<div class="hidden break-inside-avoid print:block">
-  <h3 class="font-cover text-xl">
+<div class="mt-4 hidden break-inside-avoid print:block">
+  <h3 class="font-cover text-lg font-bold">
     {@html getIntlContent(label, $contentLangState)}
   </h3>
   {#if Boolean(tagLine)}
-    <p class="w-1/3">
+    <p class="text-md">
       {@html getIntlContent(tagLine, $contentLangState)}
     </p>
   {/if}
   <Time {time} />
   {#if list && list.length}
     <ul class="list-inside list-disc py-4">
-      {#each list as listItem, index}
-        <li
-          class={cx(
-            'my-2 ml-4 list-item',
-            index % 2 !== 0 && 'border-gray-200',
-          )}
-        >
+      {#each list as listItem}
+        <li class="list-item text-sm">
           <span
             >{@html getIntlContent(
               listItem.label,

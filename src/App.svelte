@@ -6,6 +6,7 @@
   import Main from './components/Main.svelte'
   import { showSidebarState } from './stores/ui'
   import '@phosphor-icons/web/bold'
+  import 'gutenberg-css'
   let y: number
 </script>
 

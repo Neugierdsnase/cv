@@ -6,9 +6,9 @@
 </script>
 
 <div class="px-8 print:flex print:flex-wrap">
-  {#each items as item, index}
+  {#each items as item}
     <dl
-      class="flex items-center justify-between rounded-lg px-2 py-1 odd:bg-primary/20 print:mx-1 print:w-1/4 print:break-inside-avoid print:rounded-none print:border-t-2 print:border-gray-300 print:!bg-white print:first:border-0"
+      class="flex items-center justify-between rounded-lg px-2 py-1 odd:bg-primary/20 print:mx-1 print:w-1/4 print:break-inside-avoid print:rounded-none print:!bg-white print:!p-0"
     >
       <SkillListItem {item} />
     </dl>

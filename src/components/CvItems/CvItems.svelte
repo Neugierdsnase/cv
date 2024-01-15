@@ -15,9 +15,17 @@
   <SectionHeading>
     {@html getIntlContent(heading, $contentLangState)}
   </SectionHeading>
-  <ul class="mx-auto max-w-4xl">
+  <ul class="mx-auto max-w-4xl print:hidden">
     {#each items as cvItem (cvItem)}
       <li class="mb-8">
+        <CvItem {cvItem} />
+      </li>
+    {/each}
+  </ul>
+
+  <ul class="hidden print:block">
+    {#each items as cvItem (cvItem)}
+      <li>
         <CvItem {cvItem} />
       </li>
     {/each}

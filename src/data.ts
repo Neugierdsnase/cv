@@ -106,7 +106,7 @@ const cvJobItems: CvSectionType = {
         },
         {
           label: {
-            en: 'knowledge both deepened and broadened, developeped T-shaped expertise',
+            en: 'knowledge both deepened and broadened, developed T-shaped expertise',
             de: 'Wissen vertieft, aber auch verbreitert, teaminterne T-shaped Expertise',
           },
         },

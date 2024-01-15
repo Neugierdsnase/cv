@@ -19,7 +19,7 @@
     class="flex h-screen w-screen flex-col overflow-hidden bg-base-100 pt-[30vh] shadow-2xl print:hidden lg:justify-end lg:pt-0"
   >
     <button
-      class="btn btn-secondary btn-outline absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
+      class="btn-secondary btn-outline btn absolute right-6 top-6 z-20 h-12 w-12 rounded-full text-xl text-white"
       on:click={() =>
         contentLangState.update((s) =>
           s === 'de' ? 'en' : 'de',
@@ -43,21 +43,21 @@
 
 <!-- Print version -->
 <section class="mt-8 hidden text-center print:block">
-  <h1>Konstantin Kovar</h1>
-  <subtitle class="text-3xl">
+  <h1 class="text-xl font-bold">Konstantin Kovar</h1>
+  <subtitle class="text-lg font-bold">
     {@html getIntlContent(subTitle, $contentLangState)}
   </subtitle>
   <div class="text-xs text-gray-400" />
-  <p>
+  <p class="text-xs">
     Disclaimer: This document was generated from an
     intercative website and might not display the full
-    content. Please visit <b
-      >https://konstantin-kovar-cv.vercel.app"</b
-    >
+    content. Please visit <b>https://cv.vomkonstant.in"</b>
     to view the whole document.
   </p>
   {#if $activeFiltersState.length}
-    <p>The following filters have been activated:</p>
+    <p class="text-xs">
+      The following filters have been activated:
+    </p>
     <ul>
       {#each $activeFiltersState as filter}
         <li>{filter}</li>
@@ -66,13 +66,13 @@
   {/if}
 
   {#if $skillLevelFilterState > 1}
-    <p>
+    <p class="text-xs">
       Only skills with an (self-assessed) skill level of {$skillLevelFilterState}/5
       are being displayed.
     </p>
   {/if}
 
   {#if $hideNonTechState}
-    <p>Non-tech items are being hidden.</p>
+    <p class="text-xs">Non-tech items are being hidden.</p>
   {/if}
 </section>

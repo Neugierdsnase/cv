@@ -9,11 +9,13 @@
   const { label, level, tags } = item
 </script>
 
-<dt class="line-clamp-1 shrink text-ellipsis">
+<dt
+  class="line-clamp-1 shrink text-ellipsis print:grow print:text-sm"
+>
   {@html getIntlContent(label, $contentLangState)}
 </dt>
 {#if tags && tags.length}
-  <dd class="ml-4 flex max-w-full items-center">
+  <dd class="ml-4 flex max-w-full items-center print:m-0">
     <ul class="flex flex-row-reverse print:hidden">
       {#each tags as tag}
         <li>

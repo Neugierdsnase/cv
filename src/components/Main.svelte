@@ -10,7 +10,7 @@
   import DetailsModal from './DetailsModal.svelte'
 </script>
 
-<main>
+<main class="container print:w-full">
   <CvItems cvItems={$cvJobItemsState} />
   <CvItems cvItems={$cvEduItemsState} />
   <Skills skills={$skillsState} />

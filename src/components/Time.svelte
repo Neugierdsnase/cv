@@ -11,11 +11,17 @@
 </script>
 
 {#if dayjs(to).isSame(from)}
-  <span>{from.format(DATE_FORMAT)}</span>
+  <span class="print:text-sm"
+    >{from.format(DATE_FORMAT)}</span
+  >
 {:else}
-  {#if !to}<span
+  {#if !to}<span class="print:text-sm"
       >{getIntlContent(since, $contentLangState)}</span
     >{/if}
-  <span>{from.format(DATE_FORMAT)}</span>
-  {#if to}<span>{` - ${to.format(DATE_FORMAT)}`}</span>{/if}
+  <span class="print:text-sm"
+    >{from.format(DATE_FORMAT)}</span
+  >
+  {#if to}<span class="print:text-sm"
+      >{` - ${to.format(DATE_FORMAT)}`}</span
+    >{/if}
 {/if}

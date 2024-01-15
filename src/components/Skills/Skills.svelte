@@ -11,7 +11,7 @@
   $: items = skills.items
 </script>
 
-<div class="print:break-inside-avoid">
+<div>
   {#if items && items.length}
     <SectionHeading>
       {@html getIntlContent(
@@ -21,7 +21,7 @@
     </SectionHeading>
     <Legend />
     <div
-      class="mx-auto flex flex-wrap gap-4 print:ml-4 print:w-full print:flex-col lg:w-2/3"
+      class="mx-auto flex flex-wrap gap-4 print:w-full print:flex-col print:gap-0 lg:w-2/3"
     >
       {#each items as skill (skill)}
         <Skill {skill} />

@@ -19,6 +19,6 @@
 
   <!-- Print version -->
   <div class="hidden print:block">
-    <span>{`${level + 1}/5`}</span>
+    <span>{`${level}/5`}</span>
   </div>
 {/if}
